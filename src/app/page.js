@@ -11,6 +11,7 @@ import BlogData from "@/Data/BlogData";
 import ServiceScrollSlider from "@/Components/ServiceScrollSlider";
 import ReviewSlider from "@/Components/ReviewSlider";
 import Footer from "@/Components/Footer";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -95,22 +96,22 @@ export default function Home() {
       <section className='container my-4'>
         <div className="row m-0 text-center">
           <div className="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-            <div className={`${styles.socialconatiner} ${styles.socialContent}`}>
-              <img className='img-fluid mb-2' src="/assets/img/svg-1.png" width={50} alt="" />
+            <div className={`${styles.socialconatiner} ${styles.socialContent}`}> 
+              <Image className='img-fluid mb-2' src="/assets/img/svg-1.png" width={50} height={50} alt="" />
               <h2 className='text-capitalize mb-2'>CARE</h2>
               <p className='px-lg-4'>Compassionate, gentle care for your pet's comfort and well-being.</p>
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
             <div className={`${styles.socialconatiner} ${styles.socialContent}`}>
-              <img className='img-fluid mb-2' src="/assets/img/svg-2.png" width={50} alt="" />
+              <Image className='img-fluid mb-2' src="/assets/img/svg-2.png" width={50} height={50} alt="" />
               <h2 className='text-capitalize mb-2'>SERVICE</h2>
               <p className='px-lg-4'>Comprehensive veterinary services for all your pet's health needs.</p>
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
             <div className={`${styles.socialconatiner} ${styles.socialContent}`}>
-              <img className='img-fluid mb-2 bg-transparent' src="/assets/img/svg-3.png" width={50} alt="" />
+              <Image className='img-fluid mb-2 bg-transparent' src="/assets/img/svg-3.png" width={50} height={50} alt="" />
               <h2 className='text-capitalize mb-2'>PROTECTION</h2>
               <p className='px-lg-4'>Safeguarding your pet's health with preventative measures and ongoing wellness.</p>
             </div>
@@ -122,13 +123,13 @@ export default function Home() {
         <div className="row">
           <div className="col-lg-6 col-md-6 col-sm-12 col-12">
             <div>
-              <img className='img-fluid' src="/assets/img/Home1.png" alt="HOne" />
+              <Image className='img-fluid' src="/assets/img/Home1.png" alt="" height={500} width={500}/>
             </div>
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12 col-12 find-dog-img-bg">
             <div className='d-flex'>
               <div className='d-lg-block d-none'>
-                <img src="/assets/img/findDogImg.png" width={120} alt="" />
+                <Image src="/assets/img/findDogImg.png" width={120} height={120} alt="" />
               </div>
               <div className='my-md-5'>
                 <h2> Nurturing Your Pet's Well-being</h2>
@@ -208,7 +209,7 @@ export default function Home() {
                   onClick={() => handleServiceClick("house sitting")}
                 >
                   <input type="radio" name="service" value="house sitting" defaultChecked style={{ display: "none" }} />
-                  <img className="img-fluid" src="/assets/img/input-svg-1.svg" width={30} alt="" />
+                  <Image className="img-fluid" src="/assets/img/input-svg-1.svg" width={30} height={30} alt="" />
                   <p className="font-size-small text-capitalize">house sitting</p>
                 </label>
                 <label
@@ -216,7 +217,7 @@ export default function Home() {
                   onClick={() => handleServiceClick("drop-in visits")}
                 >
                   <input type="radio" name="service" value="drop-in visits" style={{ display: "none" }} />
-                  <img className="img-fluid" src="/assets/img/input-svg-2.svg" width={30} alt="" />
+                  <Image className="img-fluid" src="/assets/img/input-svg-2.svg" width={30} height={30} alt="" />
                   <p className="font-size-small text-capitalize">drop-in visits</p>
                 </label>
                 <label
@@ -224,7 +225,7 @@ export default function Home() {
                   onClick={() => handleServiceClick("doggy care")}
                 >
                   <input type="radio" name="service" value="doggy care" style={{ display: "none" }} />
-                  <img className="img-fluid" src="/assets/img/input-svg-3.svg" width={30} alt="" />
+                  <Image className="img-fluid" src="/assets/img/input-svg-3.svg" width={30} height={30} alt="" />
                   <p className="font-size-small text-capitalize">doggy care</p>
                 </label>
                 <label
@@ -232,7 +233,7 @@ export default function Home() {
                   onClick={() => handleServiceClick("dog walking")}
                 >
                   <input type="radio" name="service" value="dog walking" style={{ display: "none" }} />
-                  <img className="img-fluid" src="/assets/img/input-svg-4.svg" width={30} alt="" />
+                  <Image className="img-fluid" src="/assets/img/input-svg-4.svg" width={30} height={30} alt="" />
                   <p className="font-size-small text-capitalize">dog walking</p>
                 </label>
               </div>
@@ -316,10 +317,10 @@ export default function Home() {
               <div className={styles.conatinerImg}>
                 <div>
                   <div >
-                    <img className={`img-fluid ${styles.customImgWidth}`} src="/assets/img/PetGrooming.jpg" alt="" />
+                    <Image className={`img-fluid ${styles.customImgWidth}`} src="/assets/img/PetGrooming.jpg" width={300} height={300} alt="" />
                   </div>
                   <div className='text-start text-sm-end'>
-                    <img className={`img-fluid me-lg-4 sm-mt-3 ${styles.customImgWidth}`} src="/assets/img/PetVaccinationsImg.jpg" alt="" />
+                    <Image className={`img-fluid me-lg-4 sm-mt-3 ${styles.customImgWidth}`} src="/assets/img/PetVaccinationsImg.jpg" height={300} width={300} alt="" />
                   </div>
                 </div>
               </div>
@@ -388,7 +389,7 @@ export default function Home() {
                   </div>
                   <p className='m-0'>{blogValue.creativity}</p>
                   <h5 className='fw-bold my-lg-4'>{blogValue.title}</h5>
-                  <img className='img-fluid' src={blogValue.image} alt={blogValue.title} />
+                  <Image className='img-fluid' width={300} height={300} src={blogValue.image} alt={blogValue.title} />
                   <p className='m-0 py-lg-4 py-3'>{blogValue.description}</p>
                   {/* <Link to={`/blog/${blogValue.id}`}> */}
                   <button className='custom-border'>read more</button>

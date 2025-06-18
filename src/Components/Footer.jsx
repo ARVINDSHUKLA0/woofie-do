@@ -2,6 +2,7 @@
 import React from 'react';
 import '../ComponentsStyle/Footer.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -12,7 +13,13 @@ const Footer = () => {
                         <div className="row m-0">
                             <div className="col-lg-5 col-sm-12 col-12 p-0">
                                 <Link href="/">
-                                    <img src="/assets/img/logo.png" width={150} alt="" />
+                                    <Image 
+                                        src="/assets/img/logo.png" 
+                                        width={150} 
+                                        height={50}
+                                        alt="Woofie Do Logo"
+                                        className="img-fluid"
+                                    />
                                 </Link>
                                 <p className='py-lg-3 fw-bold'>Woofie Do provides expert and gentle care for your beloved pet. Our comprehensive range of services, from routine check-ups to advanced treatments, ensures your furry family member always receives the highest quality veterinary attention.</p>
                             </div>
