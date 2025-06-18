@@ -1,0 +1,13 @@
+footer{
+    background-color: #F2F2F2;
+}
+.custom-border-top{
+    border-top: 3px solid black;
+    width: 98%;
+}
+.f-decoration-none{
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}

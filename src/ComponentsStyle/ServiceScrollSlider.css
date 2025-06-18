@@ -1,0 +1,104 @@
+.horizontal-scroller-wrapper .service-text-wrapper h2{
+    font-size: 300px;
+  }
+  
+  .service-text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  
+  .stroke-fill-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px black;  
+    background-image: linear-gradient(to right, black 0%, black 100%, transparent 100%); 
+    background-clip: text;
+    -webkit-background-clip: text; 
+    background-size:  0% 100%;  
+    background-repeat: no-repeat;
+    font-family:    sans-serif;
+  }
+  .scroller-wrapper{
+    height: 100vh;
+    overflow: hidden;
+    background: white;
+    position: relative;
+    padding: 50px 0px;
+  }
+
+  .scroller-display{
+    display: flex;
+    gap: 20px;
+    padding: 0px 50px;
+    height: 100%;
+  }
+  .scroll-width{
+    min-width: 98vw;
+  }
+  .scroll-item{
+    min-width: 500px;
+    padding: 50px;
+    align-self: center;
+    display: flex;
+    background: #F2F2F2;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.2s ease-out;
+
+  }
+  .service-hedding{
+    margin-bottom: 60px;
+    font-size: 45px;
+  }
+  .service-description{
+    line-height: 2;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .scoll-item-wrapper-width{
+    min-width: 80vw;
+  }
+
+  
+@media (min-width: 0px) and (max-width: 525px) {
+    .horizontal-scroller-wrapper .service-text-wrapper h2{
+        font-size: 70px;
+      }  
+      .scroll-item{
+        min-width: 300px;
+        padding: 50px;
+        align-self: center;
+        display: flex;
+        background: #F2F2F2;
+        flex-direction: column;
+        justify-content: center;
+        transition: transform 0.2s ease-out;
+        margin: 0px !important;
+    
+      }
+      .service-hedding{
+        margin-bottom: 60px;
+        font-size: 30px;
+      }
+      .service-description{
+        line-height:22px;
+        font-size: 16px;
+        font-weight: 400;
+      } 
+     }
+ 
+@media (min-width: 526px) and (max-width: 768px) {
+    .horizontal-scroller-wrapper .service-text-wrapper h2{
+        font-size: 150px;
+      }
+      
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .horizontal-scroller-wrapper .service-text-wrapper h2{
+        font-size: 100px; 
+      }
+      
+}
