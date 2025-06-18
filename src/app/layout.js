@@ -1,4 +1,3 @@
-'use client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './globals.css';
@@ -11,8 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head />
-      <body>{children}</body>
+      <head> 
+      </head>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
