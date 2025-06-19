@@ -61,17 +61,17 @@ const Navbar = () => {
                             <li className={`nav-item ${pathname === '/' ? 'active' : ''}`}>
                                 <Link className='text-decoration-none py-lg-5' href="/">Home</Link>
                             </li>
-                            <li className={`nav-item ${pathname === '/about' ? 'active' : ''}`}>
-                                <Link className='text-decoration-none py-lg-5' href="/about">About</Link>
+                            <li className={`nav-item ${pathname === '/About' ? 'active' : ''}`}>
+                                <Link className='text-decoration-none py-lg-5' href="/About">About</Link>
                             </li>
-                            <li className={`nav-item ${pathname === '/services' ? 'active' : ''}`}>
-                                <Link className='text-decoration-none py-lg-5' href="/services">Services</Link>
+                            <li className={`nav-item ${pathname === '/Services' ? 'active' : ''}`}>
+                                <Link className='text-decoration-none py-lg-5' href="/Services">Services</Link>
                             </li>
-                            <li className={`nav-item ${pathname === '/blog' ? 'active' : ''}`}>
-                                <Link className='text-decoration-none py-lg-5' href="/blog">Blog</Link>
+                            <li className={`nav-item ${pathname === '/Blog' ? 'active' : ''}`}>
+                                <Link className='text-decoration-none py-lg-5' href="/Blog">Blog</Link>
                             </li>
-                            <li className={`nav-item ${pathname === '/contact' ? 'active' : ''}`}>
-                                <Link className='text-decoration-none' href="/contact">Contact</Link>
+                            <li className={`nav-item ${pathname === '/Contact' ? 'active' : ''}`}>
+                                <Link className='text-decoration-none' href="/Contact">Contact</Link>
                             </li>
                         </ul>
                     </div>

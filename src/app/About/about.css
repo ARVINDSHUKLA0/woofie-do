@@ -1,0 +1,29 @@
+.about-banner-bg {
+  background-color: rgba(128, 128, 128, 0.349);
+  padding: 50px !important;
+}
+.custom-box-sodwo {
+  padding: 30px 30px;
+  display: block;
+  align-items: center;
+  height: 250px; 
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px 0px rgba(128, 128, 128, 0.377);
+}
+.custom-box-sodwo:hover{
+  background-color: #F38020;
+  color: white;
+  transition: .5s;
+}
+
+.imges-teams-height{
+  height: 300px; 
+  width: 100%;
+}
+.imges-teams-height img{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}

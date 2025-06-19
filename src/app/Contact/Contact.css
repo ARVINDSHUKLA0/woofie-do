@@ -1,0 +1,97 @@
+.background-imges{
+    background: url("/assets/img/ContactBannerimg.jpg");
+    height: 350px;
+    width: 100%;
+    object-fit: cover; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.custom-stroke-text{
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke: 1.2px black;
+    font-size: 50px;
+}
+.custom-margin{
+    margin-bottom: 50px;
+}
+
+.custom-rounded{
+    border-radius: 50%;
+}
+.custom-border-bootom{
+    border-bottom: 1px solid gray;
+    border-top: 0px;
+    border-left: 0px;
+    width: 45vw;
+    border-right: 0px;
+
+}
+.custom-submit-btn{
+    padding: 4px 29px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    background-color: transparent;
+}
+.custom-submit-btn:hover{
+    background-color: black;
+    color: white;
+}
+ 
+textarea:focus-visible{
+    outline:none !important;
+}
+.custom-border-bootom:focus-visible{
+    outline: none;
+}
+.custom-width-contact-one{
+    width: 50%;
+}
+.custom-width-contact-two{
+    width: 50%;
+}
+.conatct-banner-bg{
+    background-color: rgba(128, 128, 128, 0.349);
+    padding: 50px !important;
+  }
+.form-padding-inner::placeholder{
+    color: black; 
+}
+  
+@media (min-width: 0px) and (max-width: 525px) {
+    .background-imges{
+        height: 147px;
+    }
+    .custom-stroke-text{
+        font-size: 30px;
+    }
+    .custom-margin{
+        margin-bottom: 25px;
+        margin-top: 19px;
+    }
+    .custom-width-contact-one{
+        width: 100%;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .custom-width-contact-two{
+        width: 100%;
+    }
+    
+    .custom-border-bootom{
+        width: 100%; 
+    
+    }
+}
+@media (min-width: 526px) and (max-width: 768px) {
+    .custom-width-contact-one{
+        width: 100%;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .custom-width-contact-two{
+        width: 100%;
+    }
+ 
+}

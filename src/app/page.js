@@ -391,9 +391,9 @@ export default function Home() {
                   <h5 className='fw-bold my-lg-4'>{blogValue.title}</h5>
                   <Image className='img-fluid' width={300} height={300} src={blogValue.image} alt={blogValue.title} />
                   <p className='m-0 py-lg-4 py-3'>{blogValue.description}</p>
-                  {/* <Link to={`/blog/${blogValue.id}`}> */}
+                  <Link href={`/Blog/${blogValue.id}`}>
                   <button className='custom-border'>read more</button>
-                  {/* </Link> */}
+                  </Link>
                 </div>
 
               ))}
