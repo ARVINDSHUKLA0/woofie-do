@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/Components/Navbar';
 import '../Contact/Contact.css'
 import Footer from '@/components/Footer'; 
 import Link from 'next/link';
