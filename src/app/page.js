@@ -11,7 +11,7 @@ import BlogData from "@/Data/BlogData";
 import ServiceScrollSlider from "@/Components/ServiceScrollSlider";
 import ReviewSlider from "@/Components/ReviewSlider";
 import Footer from "@/Components/Footer";
-import Image from "next/image";
+import Image from "next/image"; 
 
 export default function Home() {
 
@@ -90,7 +90,7 @@ export default function Home() {
   ]
 
   return (
-    <>
+    <> 
       <Navbar />
       <Banner />
       <section className='container my-4'>
