@@ -1,13 +1,13 @@
 "use client";
 
-import React from 'react';
-import Navbar from '@/Components/Navbar';
-import '../Contact/Contact.css'
-import Footer from '@/components/Footer'; 
+import React from 'react'; 
+import '../Contact/Contact.css' 
 import Link from 'next/link';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from '@/Components/Navbar';
+import Footer from '@/Components/Footer';
 
 const Page = () => {
   const EnquirySend = (e) => {
