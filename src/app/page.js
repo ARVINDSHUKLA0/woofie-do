@@ -10,8 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import BlogData from "@/Data/BlogData";
 import ServiceScrollSlider from "@/Components/ServiceScrollSlider";
 import ReviewSlider from "@/Components/ReviewSlider";
-import Footer from "@/Components/Footer";
 import Image from "next/image"; 
+import Footer from "@/Components/Footer";
 
 export default function Home() {
 
