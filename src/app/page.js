@@ -1,5 +1,4 @@
-'use client'; 
-import Navbar from '../Components/Navbar';
+'use client';  
 import styles from './page.module.css';
 import Banner from "@/Components/Banner";
 import Link from "next/link";
@@ -10,9 +9,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import BlogData from "@/Data/BlogData";
 import ServiceScrollSlider from "@/Components/ServiceScrollSlider";
 import ReviewSlider from "@/Components/ReviewSlider";
-import Image from "next/image";  
-import Foter from '../Components/Footer'
-import Footer from '../Components/Footer';
+import Image from "next/image";    
+import Navbar from '@/Components/Navbar';
+import Footer from '@/Components/Footer';
 
 export default function Home() {
 
