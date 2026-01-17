@@ -1,7 +1,6 @@
 'use client';
 import styles from './page.module.css';
-// import Link from "next/link";
-import { useRef, useState } from "react";
+// import Link from "next/link"; 
 import 'react-toastify/dist/ReactToastify.css';
 // import BlogData from "@/Data/BlogData";
 // import ServiceScrollSlider from "@/Components/ServiceScrollSlider";
