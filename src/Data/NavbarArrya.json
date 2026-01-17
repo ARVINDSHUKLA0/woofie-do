@@ -1,0 +1,200 @@
+[
+  {
+    "character": "newborn puppies (0-2 months)",
+    "parent" : "dogs",
+    "subcharacter": [
+      "nutrition",
+      "Comfort & Warmth ",
+      "hygiene "
+    ]
+  },
+  {
+    "character": "early puppies (2-4 months)",
+    "parent" : "dogs",
+    "subcharacter": [
+      "feeding",
+      "potty training",
+      "playing & hearning"
+    ]
+  },
+  {
+    "character": "growing puppy (4-6 months)",
+    "parent" : "dogs",
+    "subcharacter": [
+      "teething & oral care",
+      "grooming",
+      "activity"
+    ]
+  },
+  {
+    "character": "adolescent puppy (6-9 months)",
+    "parent" : "dogs",
+    "subcharacter": [
+      "nutrition upgrade",
+      "grooming",
+      "training & behaviour",
+      "calm & confidence",
+      "safety & travel"
+    ]
+  },
+  {
+    "character": "pre-adult  (9-12 months)",
+    "parent" : "dogs",
+    "subcharacter": [
+      "nutrition transition",
+      "mental enrichment",
+      "advance grooming",
+      "wellness & Routine"
+    ]
+  },
+    {
+    "character": "dog kits (mixed)",
+    "parent" : "dogs",
+    "subcharacter": [
+      "newborn rescue kit",
+      "teething & grooming Kit",
+      "wellness kit",
+      "training & calm kit"
+    ]
+  },
+    {
+    "character": "essentials (mixed)",
+    "parent" : "dogs",
+    "subcharacter": [
+      "food & nutrition",
+      "grooming & care",
+      " Hygiene & Potty",
+      "joys & enrichment",
+      "accessories & indoor & outdor"
+    ]
+  },
+      {
+    "character": "subscription plain",
+    "parent" : "dogs",
+    "subcharacter": [
+      "monthly puppy care",
+      "food & supplements refill",
+      "custom"
+    ]
+  },
+     {
+    "character": "newbrown kittens (0-2 months)",
+    "parent" : "cats",
+    "subcharacter": [
+      "nutrition",
+      "comfort & safety ",
+      "hygiene"
+    ]
+  },
+       {
+    "character": "early kittens (2-4 months)",
+    "parent" : "cats",
+    "subcharacter": [
+      "feeding",
+      "litter training",
+      "play & stimulation"
+    ]
+  },
+       {
+    "character": "growing kittens (4-6 months)",
+    "parent" : "cats",
+    "subcharacter": [
+      "jeething & dental",
+      "grooming",
+      "activity"
+    ]
+  },
+       {
+    "character": "adolescent kittens (6-9 months)",
+    "parent" : "cats",
+    "subcharacter": [
+      "nutrition upgrade",
+      "behaviour & calm",
+      "territory rtaining",
+      "safety & travel"
+    ]
+  },
+       {
+    "character": "pre adult cats (9-12 months) ",
+    "parent" : "cats",
+    "subcharacter": [
+      "nutrition transition",
+      "mental enrichment",
+      "advanced grooming",
+      "wellness & routine"
+    ]
+  },
+         {
+    "character": "full grown (12+ months) ",
+    "parent" : "cats",
+    "subcharacter": [
+      "all inclusive product",
+      "Range"
+    ]
+  },
+         {
+    "character": "kits (mixed) ",
+    "parent" : "cats",
+    "subcharacter": [
+      "newborn rescue kit",
+      "weaning & hitter kit",
+      "jeething & grooming kit ",
+      "play & calm kit",
+      "wellness kit"
+    ]
+  },
+         {
+    "character": "essentials (mixed) ",
+    "parent" : "cats",
+    "subcharacter": [
+      "food & nutrition",
+      "llitter & hygiene",
+      "grooming & care",
+      "toys & enrichment",
+      "Accessories",
+      "health & wellness",
+      "training",
+      "behaviour"
+    ]
+  },
+         {
+    "character": "subscription/monthly care (custom) ",
+    "parent" : "cats",
+    "subcharacter": [
+      "monthly kitten box",
+      "hitter refill plans",
+      "grooming refill packs"
+    ]
+  },
+         {
+    "character": "wearable & accessories",
+    "parent" : "pat parents",
+    "subcharacter": [
+      "quotes custom t-shirts",
+      "caps",
+      "jotes walk pouches Grossbody"
+    ]
+  },
+         {
+    "character":"home & lifestyle",
+    "parent" : "pat parents",
+    "subcharacter": [
+      "lint rollers",
+      "furniture fur remover brush",
+      "floor cleaning wipes",
+      "sofa & bed covers",
+      "pet hair vaccum attachments"
+    ]
+  },
+         {
+    "character":"walk, travel & outdoors ",
+    "parent" : "pat parents",
+    "subcharacter": [
+      "poop bag holder",
+      "poop bag rolls",
+      "hand sanitisers",
+      "jowels"
+    ]
+  }
+
+]

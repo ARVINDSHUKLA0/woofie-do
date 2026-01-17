@@ -1,149 +1,137 @@
 'use client';
-
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import Image from 'next/image';
 import '../ComponentsStyle/Navbar.css';
+import Link from 'next/link';
 
 const Navbar = () => {
-    const [asidebar, setAsideBar] = useState(false);
     const [menu, setMenu] = useState(false);
-    const pathname = usePathname();
-
-    const toggleMenu = () => setMenu(!menu);
-    const toggleAsidebar = () => setAsideBar(!asidebar);
-
-    const showBorderPages = ["/"];
-    const hasBorder = showBorderPages.includes(pathname);
 
     return (
-        <nav>
-            <section className='container-fluid'>
-                <div className={`d-flex justify-content-between align-items-center py-lg-4 py-md-4 py-sm-3 py-3 ${hasBorder ? 'custom-bottom-border' : ''}`}>
-                    <div>
-                        <Link href="/">
-                            <Image 
-                                src="/assets/img/logo.png" 
-                                width={120} 
-                                height={40}
-                                alt="Company Logo"
-                                priority
-                            />
-                        </Link>
-                    </div>
+        <>
+            <nav className='navbar-fixed position-relative'>
+                <div className='container-fluid'>
+                    <div className='d-flex justify-content-between align-items-center'>
 
-                    {menu && <div onClick={toggleMenu} className='item-warrper-remove'></div>}
-
-                    <div className={`menuitem ${menu ? 'open' : ''}`}>
-                        <div className='d-lg-none d-block'>
-                            <div className='text-end pe-1 pt-2'>
-                                <button 
-                                    onClick={toggleMenu} 
-                                    className='border-0 bg-white'
-                                    aria-label="Close menu"
-                                >
-                                    <i className="fa-solid fa-xmark text-end fs-3 pt-3 pe-3"></i>
-                                </button>
-                            </div>
-                            <div className='ps-3 py-3'>
-                                <Link href="/">
-                                    <Image 
-                                        src="/assets/img/logo.png" 
-                                        width={100} 
-                                        height={30}
-                                        alt="Company Logo"
-                                    />
-                                </Link>
-                            </div>
+                        <div className='nav-logo'>
+                            <Link href="/">
+                                <img
+                                    src="/assets/img/logo.png"
+                                    width={100}
+                                    height={30}
+                                    alt="Company Logo"
+                                />
+                            </Link>
                         </div>
-                        <ul className="d-lg-flex m-0 p-0 gap-5">
-                            <li className={`nav-item ${pathname === '/' ? 'active' : ''}`}>
-                                <Link className='text-decoration-none py-lg-5' href="/">Home</Link>
+
+                        <ul className='d-flex gap-3 m-0 align-items-center'>
+                            <li
+                                className='list-style-none bars-icon'
+                                onClick={() => setMenu(true)}
+                            >
+                                <i className="fa-solid fa-bars"></i>
                             </li>
-                            <li className={`nav-item ${pathname === '/About' ? 'active' : ''}`}>
-                                <Link className='text-decoration-none py-lg-5' href="/About">About</Link>
+                            <li className='list-style-none home-link py-4'>
+                                <Link className='text-decoration fs-14 text-dark fw-bold' href="#">
+                                    Home services
+                                </Link>
+                                <div className={`home-dropdown ${menu ? 'show-mobile' : ''}`}>
+                                    <i
+                                        className="fa-solid fa-xmark close-icon d-md-none text-white"
+                                        onClick={() => setMenu(false)}
+                                    ></i>
+                                    <div className="d-sm-flex d-block justify-content-between">
+                                        <div>
+                                            <ul className='m-0 p-0'>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="#">
+                                                        <img src="/assets/img/online-pet-shop.png" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>online pet shop</span>
+                                                    </Link>
+                                                </li>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="/GroomingPet">
+                                                        <img src="/assets/img/IMG_gromming-01.PNG" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet gromming</span>
+                                                    </Link>
+                                                </li>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="/PetBoarding">
+                                                        <img src="/assets/img/pet-boarding-and-creche.PNG" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet boarding & creche</span>
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul className='m-0 p-0'>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="/PetTransportation">
+                                                        <img src="/assets/img/pet-transportation.PNG" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation' >pet transportation </span>
+                                                    </Link>
+                                                </li>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="/DogTraining">
+                                                        <img src="/assets/img/Behaviour-training-icon.PNG" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>behavioural training at creche</span>
+                                                    </Link>
+                                                </li>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="/PetRelocation">
+                                                        <img src="/assets/img/pet-relocation.PNG" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet relocation</span>
+                                                    </Link>
+                                                </li>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="#">
+                                                        <img src="/assets/img/puppy-party-icon.png" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>puppy party</span>
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul className='m-0 p-0'>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="/PetInsurance">
+                                                        <img src="/assets/img/pet-insurance-icon.PNG" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet insurance</span>
+                                                    </Link>
+                                                </li>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="#">
+                                                        <img src="/assets/img/pet-meting-icon.PNG" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet mating</span>
+                                                    </Link>
+                                                </li>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="/About">
+                                                        <img src="/assets/img/about-icon.png" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>about us</span>
+                                                    </Link>
+                                                </li>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="/Blog">
+                                                        <img src="/assets/img/blog-icon.png" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>blog</span>
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
-                            <li className={`nav-item ${pathname === '/Services' ? 'active' : ''}`}>
-                                <Link className='text-decoration-none py-lg-5' href="/Services">Services</Link>
-                            </li>
-                            <li className={`nav-item ${pathname === '/Blog' ? 'active' : ''}`}>
-                                <Link className='text-decoration-none py-lg-5' href="/Blog">Blog</Link>
-                            </li>
-                            <li className={`nav-item ${pathname === '/Contact' ? 'active' : ''}`}>
-                                <Link className='text-decoration-none' href="/Contact">Contact</Link>
+                            <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
+                                <i className="fa-solid fa-cart-shopping cart-icon"></i>
+                                <Link className='text-decoration fs-14 text-dark fw-bold' href="#">
+                                    Shop
+                                </Link>
                             </li>
                         </ul>
                     </div>
-
-                    <div className='d-lg-none d-block'>
-                        <button 
-                            onClick={toggleMenu} 
-                            className='bg-dark text-white border-0 custom-round-btn'
-                            aria-label="Open menu"
-                        >
-                            <i className="fa-solid fa-bars-staggered"></i>
-                        </button>
-                    </div>
-
-                    {asidebar && <div onClick={toggleAsidebar} className='item-warrper-remove'></div>}
-
-                    <aside className='d-none d-lg-block'>
-                        <button 
-                            onClick={toggleAsidebar} 
-                            className='bg-dark text-white border-0 custom-round-btn'
-                            aria-label="Open sidebar"
-                        >
-                            <i className="fa-solid fa-bars-staggered"></i>
-                        </button>
-                        <div className={`asidebarOpen ${asidebar ? 'open' : ''}`}>
-                            <div className='text-end'>
-                                <button 
-                                    onClick={toggleAsidebar} 
-                                    className='bg-white border-0 pe-4'
-                                    aria-label="Close sidebar"
-                                >
-                                    <i className="fa-solid fa-xmark fs-3"></i>
-                                </button>
-                            </div>
-                            <div className='d-flex justify-content-center align-items-center'>
-                                <div className='pt-5'>
-                                    <Link href="/">
-                                        <Image 
-                                            src="/assets/img/logo.png" 
-                                            width={110} 
-                                            height={35}
-                                            alt="Company Logo"
-                                        />
-                                    </Link>
-                                    <p className='pb-3'>
-                                        Woofie-Do provides expert, gentle <br />
-                                        care for your pet, offering everything <br />
-                                        from routine check-ups to advanced <br />
-                                        treatments to keep your furry family <br />
-                                        member healthy and happy.
-                                    </p>
-                                    <Image 
-                                        className='img-fluid' 
-                                        src="/assets/img/PetVaccinationsImg.jpg" 
-                                        width={300}
-                                        height={200}
-                                        alt="Pet Vaccinations"
-                                    />
-
-                                    <div>
-                                        <p>
-                                            Jaipuriya Plaza, sector-26, noida <br />
-                                            care@woofieDo.com
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
                 </div>
-            </section>
-        </nav>
+            </nav>
+        </>
     );
 };
 

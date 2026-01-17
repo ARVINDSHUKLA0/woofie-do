@@ -1,29 +1,39 @@
-.about-banner-bg {
-  background-color: rgba(128, 128, 128, 0.349);
-  padding: 50px !important;
+.about-imges-height{ 
+  box-shadow: 0px 0px 21px 0px rgba(128, 128, 128, 0.209);
 }
-.custom-box-sodwo {
-  padding: 30px 30px;
-  display: block;
-  align-items: center;
-  height: 250px; 
-  border-radius: 10px;
-  box-shadow: 0px 0px 30px 0px rgba(128, 128, 128, 0.377);
-}
-.custom-box-sodwo:hover{
-  background-color: #F38020;
-  color: white;
-  transition: .5s;
-}
-
-.imges-teams-height{
-  height: 300px; 
-  width: 100%;
-}
-.imges-teams-height img{
+.about-imges-height img{
   height: 100%;
   width: 100%;
-  border-radius: 10px;
   object-fit: cover;
   object-position: center;
 }
+.custom-postion-about{
+  position: absolute;
+  top: 45%;
+  left: 5%;
+}
+.custom-font-size-banner{
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+ @media (min-width: 0px) and (max-width: 525px) {
+  .about-imges-height{
+  height: 80vh;
+  box-shadow: 0px 0px 21px 0px gray;
+}
+.about-imges-height img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+.custom-font-size-banner{
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+.custom-postion-about{
+  position: absolute;
+  top: 50%;
+  text-align: center;
+}
+ }

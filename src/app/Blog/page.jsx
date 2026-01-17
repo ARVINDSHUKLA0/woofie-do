@@ -10,13 +10,44 @@ export default function BlogPage() {
     <>
       <Navbar />
 
-      <section className='container-fluid py-lg-5'>
+      {/* <section className='container-fluid py-lg-5'>
         <div className='custom-bottom-border d-flex align-items-center gap-3 my-lg-5 my-md-4 my-sm-4'>
           <h2 className='font-size-large'>blog grid</h2>
           <h5 className='mt-5 d-md-block d-none'>/ discover the news</h5>
         </div>
+      </section> */}
+
+      <section className='mt-100 blog-main-bg-img'>
+        <div className="background-imges">
+          <img className='img-fluid w-100' src="/assets/img/blog-imges.PNG" alt="" />
+        </div>
       </section>
 
+      <section>
+        <div className='container px-md-4 px-2 mb-md-5 mb-3'>
+          <div className='row m-0'>
+            <h3 className='text-center mb-4 fw-bold pt-3'>Latest stories</h3>
+            {
+              BlogData.map((BlogItem, index) => (
+                <div key={index} className={`col-lg-4 col-md-4 col-sm-4 col-12 `}>
+                  <Link className={`text-decoration textHover `} href={`/Blog/${BlogItem.id}`}>
+                    <div>
+                      <div className='blogImg'>
+                        <img className='img-fluid' src={BlogItem.image}/>
+                      </div>
+                      <h5 className='fs-16 py-2  fw-bold text-dark'>{BlogItem.title}</h5>
+                    </div>
+                  </Link>
+                </div>
+              ))
+            }
+            {/* <div className='text-center mt-3'>
+              <button className={`width-btn border-0 btn-woofie ${styles.blogbtnwidth} `}>Read Blog</button>
+            </div> */}
+          </div>
+        </div>
+      </section>
+      {/* 
       <section>
         <div className="row m-0">
           <div className="col-lg-9 col-sm-6 col-12 offset-lg-3">
@@ -46,7 +77,7 @@ export default function BlogPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </>

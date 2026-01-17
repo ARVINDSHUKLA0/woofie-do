@@ -1,13 +1,35 @@
-footer{
-    background-color: #F2F2F2;
+footer {
+    background-color: black;
 }
-.custom-border-top{
-    border-top: 3px solid black;
-    width: 98%;
+
+ 
+
+
+.f-decoration-none {
+  font-size: 15spx;
+  font-weight: 700;
+  color: #000;
+  display: block;
+  margin-bottom: 20px;
 }
-.f-decoration-none{
-    font-size: 22px;
-    text-decoration: none;
-    color: black;
-    font-weight: 700;
+
+.list-style-none {
+  list-style: none;
 }
+
+.text-decoration-none-one {
+  text-decoration: none;
+  color: #000;
+}
+
+.text-decoration-none-one:hover {
+  text-decoration: underline;
+}
+ .ps-100{
+    padding-left: 100px;
+ }
+ @media (min-width: 0px) and (max-width: 525px) {
+      .ps-100{
+    padding-left: 15px;
+ }
+ }

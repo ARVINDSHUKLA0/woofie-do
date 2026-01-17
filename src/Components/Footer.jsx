@@ -2,107 +2,99 @@
 import React from 'react';
 import '../ComponentsStyle/Footer.css';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <>
-            <footer>
-                <div className='py-100'>
-                    <section className='container-fluid'>
-                        <div className="row m-0">
-                            <div className="col-lg-5 col-sm-12 col-12 p-0">
-                                <Link href="/">
-                                    <Image 
-                                        src="/assets/img/logo.png" 
-                                        width={150} 
-                                        height={50}
-                                        alt="Woofie Do Logo"
-                                        className="img-fluid"
-                                    />
-                                </Link>
-                                <p className='py-lg-3 fw-bold'>Woofie Do provides expert and gentle care for your beloved pet. Our comprehensive range of services, from routine check-ups to advanced treatments, ensures your furry family member always receives the highest quality veterinary attention.</p>
-                            </div>
-
-                            <div className="col-lg-2 col-sm-12 col-12 p-0 offset-lg-1">
-                                <span className='text-decoration-light-weight'>
-                                    <ul className='m-0 p-0'>
-                                        <li className='list-style-none text-capitalize'>
-                                            <span className='f-decoration-none'>Useful Links</span>
-                                            <ul className='p-0'>
-                                                <li className='list-style-none text-capitalize py-1'>
-                                                    <Link href="/" className='text-decoration-none-one'>Home</Link>
-                                                </li>
-                                                <li className='list-style-none text-capitalize py-1'>
-                                                    <Link href="/#about" className='text-decoration-none-one'>About</Link>
-                                                </li>
-                                                <li className='list-style-none text-capitalize py-1'>
-                                                    <Link href="/#services" className='text-decoration-none-one'>Services</Link>
-                                                </li>
-                                                <li className='list-style-none text-capitalize py-1'>
-                                                    <Link href="/#blog" className='text-decoration-none-one'>Blog</Link>
-                                                </li>
-                                                <li className='list-style-none text-capitalize py-1'>
-                                                    <Link href="/#contact" className='text-decoration-none-one'>Contact us</Link>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </span>
-                            </div>
-
-                            <div className="col-lg-2 col-sm-12 col-12 p-0">
-                                <span className='text-decoration-light-weight'>
-                                    <ul className='m-0 p-0'>
-                                        <li className='list-style-none text-capitalize'>
-                                            <span className='f-decoration-none'>Our Services</span>
-                                            <ul className='p-0'>
-                                                <li className='list-style-none text-capitalize py-1'>Pet Vaccination</li>
-                                                <li className='list-style-none text-capitalize py-1'>Pet Grooming</li>
-                                                <li className='list-style-none text-capitalize py-1'>In-House Diagnostics</li>
-                                                <li className='list-style-none text-capitalize py-1'>Pet Food & Diet Consultation</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </span>
-                            </div>
-
-                            <div className="col-lg-2 col-sm-12 col-12 p-0">
-                                <span className='text-decoration-light-weight'>
-                                    <ul className='m-0 p-0'>
-                                        <li className='list-style-none text-capitalize'>
-                                            <span className='f-decoration-none'>Our Services</span>
-                                            <ul className='p-0'>
-                                                <li className='list-style-none text-capitalize py-1'>Pet IPD</li>
-                                                <li className='list-style-none text-capitalize py-1'>Pet Cremation</li>
-                                                <li className='list-style-none text-capitalize py-1'>Pet Registration</li>
-                                                <li className='list-style-none text-capitalize py-1'>Consultation</li>
-                                                <li className='list-style-none text-capitalize py-1'>24x7 Emergency Services</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </span>
-                            </div>
+        <footer>
+            <div className="py-5">
+                <section className="container pt-sm-4 ps-100">
+                    <div className="row justify-content-between ">
+                        <div className="col-lg-3 col-md-6 col-sm-6">
+                            <span className="f-decoration-none text-white  text-capitalize">Woofie-do</span>
+                            <ul className="p-0 m-0">
+                                <li className="list-style-none py-1">
+                                    <Link href="/Blog" className="text-decoration-none-one text-white fs-14 text-capitalize">blog</Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">support</Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="/About" className="text-decoration-none-one text-white fs-14 text-capitalize">about us</Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">buy membership</Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">customer reviews</Link>
+                                </li>
+                            </ul>
                         </div>
-                    </section>
-                </div>
+ 
+                        <div className="col-lg-3 col-md-6 col-sm-6">
+                            <span className="f-decoration-none text-capitalize text-white">home services</span>
+                            <ul className="p-0 m-0">
+                                <li className="list-style-none py-1">
+                                    <Link href="/PetBoarding" className="text-decoration-none-one text-white fs-14 text-capitalize">Pet Boarding & creche</Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="/GroomingPet" className="text-decoration-none-one text-white fs-14 text-capitalize">Pet Grooming</Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="/PetTransportation" className="text-decoration-none-one text-white fs-14 text-capitalize">pet transportation</Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="/DogTraining" className="text-decoration-none-one text-white fs-14 text-capitalize">behaviour training</Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="/PetRelocation" className="text-decoration-none-one text-white fs-14 text-capitalize">
+                                        pet relocation (domestic & international)
+                                    </Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="/PetInsurance" className="text-decoration-none-one text-white fs-14 text-capitalize">
+                                        pet insurance
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+ 
+                        <div className="col-lg-3 col-md-6 col-sm-6">
+                            <span className="f-decoration-none text-white text-capitalize">policy</span>
+                            <ul className="p-0 m-0">
+                                <li className="list-style-none py-1">
+                                    <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">Privacy Policy</Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">Refund Policy</Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">Cancellation Policy</Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">Terms & Conditions</Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="col-lg-3 col-md-6 col-sm-6">
+                            <span className="f-decoration-none text-capitalize text-white">social media </span>
+                            <ul className="p-0 d-flex gap-2 m-0">
+                                <li className="list-style-none py-1">
+                                    <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">
+                                    <i className="fa-brands fa-instagram fs-4"></i>
+                                    </Link>
+                                </li>
+                                <li className="list-style-none py-1">
+                                    <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">
+                                    <i className="fa-brands fa-youtube fs-4"></i>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
 
-                <div className='d-block py-lg-5 custom-border-top p-0 ps-2 py-3 d-md-flex container-fluid justify-content-between align-items-center'>
-                    <div>
-                        <p className='m-0'>call our office</p>
-                        <h5 className='fw-bold'>+91 9599407666</h5>
                     </div>
-                    <div>
-                        <p className='m-0'>send a message</p>
-                        <h5 className='fw-bold'>care@woofiedo.com</h5>
-                    </div>
-                    <div>
-                        <p className='m-0'>Address</p>
-                        <h6 className='fw-bold'>Jaipuriya Plaza, sector-26, noida</h6>
-                    </div>
-                </div>
-            </footer>
-        </>
+                </section>
+            </div>
+        </footer>
     );
 };
 

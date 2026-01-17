@@ -1,0 +1,61 @@
+.main-insurance-height{
+    height: 460px !important;
+    width: 100%;
+}
+
+.main-insurance-height img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Hero */
+.insurance-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.insurance-hero img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8%;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.hero-overlay p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* List */
+.insurance-list {
+  padding-left: 18px;
+}
+
+.insurance-list li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Contact Card */
+.contact-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
