@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../ComponentsStyle/ReviewsRating.css';
-import Image from 'next/image';
+ 
 
 export const ReviewsRating = () => {
 
@@ -57,7 +57,7 @@ export const ReviewsRating = () => {
                                 <div className="review-inner">
                                     <div className="review-left">
                                         <div className="review-user">
-                                            <Image
+                                            <img
                                                 src={item.userImg}
                                                 width={48}
                                                 height={48}
@@ -77,8 +77,8 @@ export const ReviewsRating = () => {
                                     </div>
                                     <div className="review-right">
                                         <div className="review-images ">
-                                            <Image src={item.reviewImg} width={150} height={200} alt="before" />
-                                            <Image src={item.reviewImg1} width={150} height={200} alt="after" />
+                                            <img className='img-fluid imges-raviews' src={item.reviewImg} alt="before" />
+                                            <img className='img-fluid imges-raviews' src={item.reviewImg1} alt="after" />
                                         </div>
                                         <p className="review-caption fw-bold">{item.afterAndBefor}</p>
                                     </div>

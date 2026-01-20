@@ -217,7 +217,7 @@ export default function Home() {
                 <div className='row m-0'>
                   {
                     BlogData.map((BlogItem, index) => (
-                      <div key={index} className={`col-lg-4 col-md-4 col-sm-4 col-12 main-blog `}>
+                      <div key={index} className={`col-lg-4 col-md-4 col-sm-4 col-12 main-blog p-sm-2 p-0`}>
                         <Link className={`text-decoration textHover `} href={`/Blog/${BlogItem.id}`}>
                           <div>
                             <div className='blogImg'>

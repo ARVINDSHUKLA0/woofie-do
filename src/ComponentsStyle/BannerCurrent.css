@@ -16,16 +16,13 @@
     width: 100%;
    }
   .background-imges-banner {
-      background-image: url("/assets/img/banner-woofie-img.png");
-      background-repeat: no-repeat;
-      /* background-size: contain; */
+      /* background-image: url("/assets/img/banner-woofie-img.png"); */
+      background-image: url("/assets/img/banner-check.png");
+      background-repeat: no-repeat; 
       background-size: cover;
-      background-position: center bottom;
-      /* background-position: top; */
-      /* height: 100vh; */
+      background-position: center; 
       height: 100%;
-      width: 100%;
-      /* aspect-ratio: 1536 / 1024; */
+      width: 100%; 
   }
 
 
