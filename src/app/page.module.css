@@ -90,10 +90,10 @@
 .trustBtn :hover {
   background: #e96b10;
 }
-
+/* 
 .PremiumDiscount {
-  width: 75%;
-}
+  width: 94%;
+} */
 
 /* .blogImg {
   position: relative;
@@ -107,23 +107,14 @@
   object-fit: cover;
 } */
 
-.blogImg {
-  position: relative;
-  width: 100%;
-  height: auto;
-  /* 🔥 yahin root fix hai */
-  /* min-height: 300px; */
-  aspect-ratio: 2.98 / 2.99;
 
-  /* background: #f5f5f5; */
-}
-
-.blogImg img {
-  object-fit: contain;
-}
 
 .blogbtnwidth{
   width: 25% !important;
+}
+.imgesYoutubeSide{
+  height: 400px;
+  object-fit: cover;
 }
  
 @media (min-width: 0px) and (max-width: 525px) {
@@ -134,10 +125,24 @@
   .blogbtnwidth {
     width: 100% !important;
   }
+  .imgesYoutubeSide{
+  height: 100%;
+  object-fit: cover;
+}
+}
+@media (min-width: 526px) and (max-width: 768px) {
+    .imgesYoutubeSide{
+  height: 100%;
+  object-fit: cover;
+}
 }
 
 @media (min-width: 991px) and (max-width: 1024px) {
   .blogbtnwidth {
     width: 50% !important;
   }
+  .imgesYoutubeSide{
+  height: 100%;
+  object-fit: cover;
+}
 }

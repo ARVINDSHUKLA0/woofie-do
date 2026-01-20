@@ -11,14 +11,21 @@
       height: 130vh;
       background-position: center bottom;
   } */
+   .banner-imges-main-conatiner{
+    height: 550px;
+    width: 100%;
+   }
   .background-imges-banner {
       background-image: url("/assets/img/banner-woofie-img.png");
       background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center bottom;
-
+      /* background-size: contain; */
+      background-size: cover;
+      /* background-position: center bottom; */
+      background-position: top;
+      /* height: 100vh; */
+      height: 100%;
       width: 100%;
-      aspect-ratio: 1536 / 1024;
+      /* aspect-ratio: 1536 / 1024; */
   }
 
 

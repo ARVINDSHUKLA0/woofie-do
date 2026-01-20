@@ -49,7 +49,7 @@ const BannerCurrent = () => {
             descrption: "cat/dog grooming service",
             BannerImg: "/assets/img/petgrommingicon.PNG",
             href: "/GroomingPet"
-        },  
+        },
         {
             tite: "pet transportation",
             descrption: "local pickup/drop for your pets",
@@ -72,7 +72,7 @@ const BannerCurrent = () => {
         {
             tite: "Pet insurance",
             descrption: "protect your pets with insurance",
-            BannerImg: "/assets/img/pet-insurance.PNG",
+            BannerImg: "/assets/img/pet-insurance-icon.PNG",
             href: "/PetInsurance"
         }
     ]
@@ -82,11 +82,13 @@ const BannerCurrent = () => {
         <>
             <section className='mt-100 position-relative'>
                 <div className='main-banner-warper '>
-                    <div className='background-imges-banner'> </div>
-                    <div className='container-fluid px-md-4'>
+                    <div className='banner-imges-main-conatiner'>
+                        <div className='background-imges-banner'> </div>
+                    </div>
+                    <div className='container-fluid container-xxl'>
                         <div className="banner-box ">
                             <h4 className='text-center'>Your Trusted Pet Care Partner</h4>
-                            <p className='text-center'>Book Pet Care Service At Home with <span  className='main-color fw-bold fs-18'>Woofie-Do</span> </p>
+                            <p className='text-center'>Book Pet Care Service At Home with <span className='main-color fw-bold fs-18'>Woofie-Do</span> </p>
                             <div className="row">
                                 {
                                     BannerArr.map((DataBaner, index) => (
@@ -112,7 +114,7 @@ const BannerCurrent = () => {
                                     ))
                                 }
                             </div>
-                            <div className="row m-0 align-items-center">
+                            <div className="row align-items-center">
                                 <div className="col-lg-4 col-md-4 col-sm-6 col-12 mb-4 d-flex">
                                     <div className="city-wrapper w-100">
                                         <label className="city-label">Your City</label>
@@ -149,7 +151,7 @@ const BannerCurrent = () => {
                                 <div className="col-lg-4 col-md-4 col-sm-6 col-12 mb-4 d-flex flex-column">
                                     <label className="city-label">Service date</label>
 
-                                    <DatePicker 
+                                    <DatePicker
                                         selected={serviceDate}
                                         onChange={(date) => setServiceDate(date)}
                                         placeholderText="Select Service Date Here..."

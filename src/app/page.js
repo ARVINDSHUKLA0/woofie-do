@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // import BlogData from "@/Data/BlogData";
 // import ServiceScrollSlider from "@/Components/ServiceScrollSlider";
 // import ReviewSlider from "@/Components/ReviewSlider";
-import Image from "next/image";
+ 
 import Navbar from '@/Components/Navbar';
 import Footer from '@/Components/Footer';
 import BannerCurrent from '@/Components/BannerCurrent';
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
       </section> */}
       <section className='py-md-5 py-3'>
-        <div className='container-fluid px-sm-4'>
+        <div className='container-fluid container-xxl px-sm-4'>
           <h3 className='text-sm-center mb-4'>Services for Every Pet at woofie-do</h3>
           <div className='row m-0 '>
             <div className='col-lg-7 col-md-6 col-sm-6 col-12'>
@@ -159,12 +159,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='mb-md-5 mb-3'>
-        <div className={`container bg-dark p-3 rounded-1 ${styles.PremiumDiscount}`}>
-          <div className='d-flex justify-content-between align-items-center'>
+      <section className='mb-md-5 mb-3 mx-2'>
+        <div className={`container-fulid bg-dark rounded-1 py-3 ${styles.PremiumDiscount}`}>
+          <div className='d-flex justify-content-between align-items-center  px-2'>
             <div>
-              <h5 className='text-white fw-bold'>Introducing woofie-do <span style={{ color: "#F38020" }}>Premium</span> </h5>
-              <p className='text-white m-0'>Get Woofie-do Premium Membership to get an additional up to 10% Discount</p>
+              <h5 className='text-white fw-bold m-0 mb-2'>Introducing woofie-do <span style={{ color: "#F38020" }}>Premium</span> </h5>
+              <p className='text-white m-0 m-0'>Get Woofie-do Premium Membership to get an additional up to 10% Discount</p>
             </div>
             <div>
               <img src="/assets/img/pettranceporticon.PNG" width={80} height={80} />
@@ -173,7 +173,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='mb-5'>
+      <section className='mb-5 px-4'>
         <div>
           <h3 className='text-center fw-bold'>Reviews from Our Happy Pet Parents</h3>
         </div>
@@ -181,11 +181,12 @@ export default function Home() {
       </section>
 
 
-      <section className='mb-md-5 mb-3 container-fluid px-md-4 px-2'>
+      <section className='mb-md-5 mb-3 container-fluid container-xxl px-md-4 px-2'>
         <di className="row m-0 align-items-center">
           <div className='col-lg-8 col-md-8 col-sm-8 col-12'>
             <div className="ratio ratio-16x9">
               <iframe
+                className='rounded-2'
                 src="https://www.youtube.com/embed/SMpOcYcmIl8"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -195,7 +196,7 @@ export default function Home() {
           </div>
           <div className='col-lg-4 col-lg-4 col-sm-4 col-12'>
             <div>
-              <Image className='img-fluid' src="/assets/img/banner-bottom-five.png" width={500} height={300} />
+              <img className={`img-fluid w-100 ${styles.imgesYoutubeSide}`} src="/assets/img/banner-bottom-five.png" />
               <p className='mt-3 fw-bold fs-18 text-center'>The Ultimate Guide to: Cats vs. Dogs</p>
             </div>
           </div>
@@ -203,11 +204,11 @@ export default function Home() {
       </section>
 
       <section>
-        <div className='container px-md-4 px-2 mb-md-5 mb-3'>
+        <div className='container-fluid container-xxl px-2 mb-md-5 mb-3'>
           <div className='row m-0'>
             <h3 className='text-center mb-4 fw-bold'>Latest stories from <span className='main-color'>Woofie-o</span> </h3>
             <div>
-              <div className='container px-md-4 px-2 mb-3'>
+              <div className='container-fulid container-xxl px-1 mb-3'>
                 <div className='row m-0'> 
                   {
                     BlogData.map((BlogItem, index) => (
@@ -217,7 +218,7 @@ export default function Home() {
                             <div className='blogImg'>
                               <img className='img-fluid' src={BlogItem.image} />
                             </div>
-                            <h5 className='fs-16 py-2  fw-bold text-dark'>{BlogItem.title}</h5>
+                            <h5 className='fs-16 pt-2  fw-bold text-dark ps-2'>{BlogItem.title}</h5>
                           </div>
                         </Link>
                       </div>

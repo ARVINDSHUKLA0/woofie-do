@@ -58,7 +58,7 @@ const Footer = () => {
                             </ul>
                         </div>
  
-                        <div className="col-lg-3 col-md-6 col-sm-6">
+                        {/* <div className="col-lg-3 col-md-6 col-sm-6">
                             <span className="f-decoration-none text-white text-capitalize">policy</span>
                             <ul className="p-0 m-0">
                                 <li className="list-style-none py-1">
@@ -74,7 +74,7 @@ const Footer = () => {
                                     <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">Terms & Conditions</Link>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
                         <div className="col-lg-3 col-md-6 col-sm-6">
                             <span className="f-decoration-none text-capitalize text-white">social media </span>
                             <ul className="p-0 d-flex gap-2 m-0">

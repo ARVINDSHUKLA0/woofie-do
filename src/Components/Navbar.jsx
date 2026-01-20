@@ -23,16 +23,16 @@ const Navbar = () => {
                             </Link>
                         </div>
 
-                        <ul className='d-flex gap-3 m-0 align-items-center'>
+                        <ul className='d-flex gap-4 m-0 align-items-center'>
                             <li
                                 className='list-style-none bars-icon'
                                 onClick={() => setMenu(true)}
                             >
-                                <i className="fa-solid fa-bars"></i>
+                                <i className="fa-solid fa-bars d-lg-none"></i>
                             </li>
                             <li className='list-style-none home-link py-4'>
                                 <Link className='text-decoration fs-14 text-dark fw-bold' href="#">
-                                    Home services
+                                    Services
                                 </Link>
                                 <div className={`home-dropdown ${menu ? 'show-mobile' : ''}`}>
                                     <i
@@ -104,7 +104,7 @@ const Navbar = () => {
                                                         <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet mating</span>
                                                     </Link>
                                                 </li>
-                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                {/* <li className='list-style-none menu-hover-animatin my-1'>
                                                     <Link className='text-decoration' href="/About">
                                                         <img src="/assets/img/about-icon.png" width={30} height={30}></img>
                                                         <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>about us</span>
@@ -115,19 +115,33 @@ const Navbar = () => {
                                                         <img src="/assets/img/blog-icon.png" width={30} height={30}></img>
                                                         <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>blog</span>
                                                     </Link>
-                                                </li>
+                                                </li> */}
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
-                                <i className="fa-solid fa-cart-shopping cart-icon"></i>
-                                <Link className='text-decoration fs-14 text-dark fw-bold' href="#">
-                                    Shop
+                                <Link className='text-decoration text-capitalize fs-14 text-dark fw-bold' href="/About">
+                                    about
+                                </Link>
+                            </li>
+                            <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
+                                <Link className='text-decoration text-capitalize fs-14 text-dark fw-bold' href="/Blog">
+                                    blog
+                                </Link>
+                            </li>
+                            <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
+                                <Link className='text-decoration text-capitalize fs-14 text-dark fw-bold' href="#">
+                                    contact
                                 </Link>
                             </li>
                         </ul>
+                        <div className='d-none d-lg-block'>
+                             <button className='bg-dark text-white border-0 custom-round-btn'>
+                                <i className="fa-solid fa-bars-staggered"/>
+                             </button>
+                        </div>
                     </div>
                 </div>
             </nav>

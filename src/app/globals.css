@@ -330,12 +330,13 @@
    position: relative;
    width: 100%;
    height: auto;
-   min-height: 300px;
+   min-height: 100px !important;
 
    background: #f5f5f5;
  }
 
  .blogImg img {
+   border-radius: 14px;
    object-fit: contain;
  }
 

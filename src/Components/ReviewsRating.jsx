@@ -10,7 +10,7 @@ import Image from 'next/image';
 export const ReviewsRating = () => {
 
     const settings = {
-        dots: false,
+        dots: false,    
         arrows: false,
         infinite: true,
         speed: 500,
@@ -49,7 +49,7 @@ export const ReviewsRating = () => {
 
     return (
         <section className="reviews-rating-section">
-            <div className="container-fliud px-md-4 py-md-3">
+            <div className="container-fliud container-xxl  py-md-3">
                 <Slider {...settings}>
                     {ReviewArr.map((item, index) => (
                         <div key={index}>

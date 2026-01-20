@@ -301,7 +301,7 @@ const BlogData = [
     {
         id: 1,
         title: "Puppy vs Kitten: Understanding Their Daily Rhythms",
-        image: "/assets/img/blogimg-1.png",
+        image: "/assets/img/blog-1.png",
         intro: "Inspired by a quiet home where two tiny lives arrive at the same time… When a puppy and a kitten enter your home together, they may share the same floor, the same warmth, even the same silence at night — but their daily rhythms are beautifully different.Understanding these rhythms helps pet parents respond with patience, structure, and care — not confusion.This isn’t about breeds. It’s about how puppies and kittens naturally move through their day",
         subDataDecHed: [
             { subHading: "🌞 Morning: Who wakes the house?" },
@@ -333,7 +333,7 @@ const BlogData = [
     {
         id: 2,
         title: "Exploring vs Observing",
-        image: "/assets/img/blogimg-2.png",
+        image: "/assets/img/blog-2.png",
         intro: "The First Day at Home The first day doesn’t look loud. There’s no chaos, no rush — just quiet movement and quiet pauses. But everything feels new. When a puppy and a kitten step into a home for the first time, they respond in very different ways. Not because one is braver than the other — but because they understand space differently.",
         subDataDecHed: [
             { subHading: "🐶 Exploring: Learning Through Movement" },
@@ -371,7 +371,7 @@ const BlogData = [
     {
         id: 3,
         title: "Sleep Cycle Comparisons",
-        image: "/assets/img/blogimg-3.png",
+        image: "/assets/img/blog-3.png",
         intro: "Who Sleeps More — and Why It Looks So Different Rest looks different…  depending on who you are. On the first few days at home, sleep becomes a quiet language. Not dramatic. Not obvious. But deeply revealing. When a puppy and a kitten share the same space, their sleep patterns may look opposite — yet both are doing exactly what they need to feel safe.",
         subDataDecHed: [
             { subHading: "🐱 Many Naps, Light Rest" },
@@ -403,7 +403,7 @@ const BlogData = [
     {
         id: 4,
         title: "Eating Speed & Textures",
-        image: "/assets/img/blogimg-4.jpeg",
+        image: "/assets/img/blog-4.png",
         intro: "Why Mealtime Looks Different for Puppies and Kittens Mealtime is more than food. It’s learning.On the first few days at home, how a puppy and a kitten eat can feel surprisingly different. One rushes. One pauses. One finishes fast. One knows exactly when to stop.None of it is random. It’s instinct.",
         subDataDecHed: [
             { subHading: "🐶 Fast Eaters, Growing Bodies" },
@@ -438,7 +438,7 @@ const BlogData = [
      {
         id: 5,
         title: "Bowl Training vs Free Feeding: Why the Same Bowl Means Different Things",
-        image: "/assets/img/blogimg-5.jpeg",
+        image: "/assets/img/blog-5.png",
         intro: "The same bowl… means different things.In a shared home, mealtime can look calm on the surface — but underneath, two very different instincts are at work. One waits. One returns later. One sees a schedule. One sees a choice.Neither is wrong. They’re just wired differently.",
         subDataDecHed: [
             { subHading: "🐶 Bowl Training: The Puppy Rhythm" },
@@ -473,7 +473,7 @@ const BlogData = [
      {
         id: 6,
         title: "Understanding Quiet vs Vocal Communication",
-        image: "/assets/img/blogimg-6.jpeg",
+        image: "/assets/img/blog-6.png",
         intro: "Understanding Quiet vs Vocal Communication Not every feeling sounds the same.When a puppy and a kitten are settling into a home, discomfort doesn’t always look dramatic. Sometimes it’s a sound. Sometimes it’s silence. Both are forms of communication — just spoken differently.",
         subDataDecHed: [
             { subHading: "🐶 Sound as a Signal" },
