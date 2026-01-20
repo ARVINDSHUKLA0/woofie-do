@@ -1,511 +1,200 @@
-
-// const BlogData = [
-//     {
-//         id: 1,
-//         title: "Puppy vs Kitten: Understanding Their Daily Rhythms  ",
-//         image: "/assets/img/blogimg-1.png",
-
-//         // date: 'march 28, 2024',
-//         // SubTitle: 'Why Vaccinations are Non-Negotiable',
-//         // description: "At Woofie Do, we believe in preventative care to help your pet live a long, healthy life. Regular vaccinations and wellness exams keep your furry friend happy and thriving.",
-//         // subDecipation: "Think of pet vaccinations as your pet's invisible shield. They protect against a host of dangerous and often life-threatening infectious diseases like Rabies, Distemper, Parvovirus, and more. Without proper vaccination, your beloved companion is highly susceptible to these illnesses, which can lead to severe complications, extensive (and expensive) treatments, or even loss of life. Our team at Woofie Do tailors a vaccination schedule specifically for your pet's age, lifestyle, and risk factors, ensuring they get the most effective protection.",
-//         keyfeture: [
-//             { BlogSubTitle: "Inspired by a quiet home where two tiny lives arrive at the same time…" },
-//             { BlogSubTitle: "When a puppy and a kitten enter your home together, they may share the same floor, the same warmth, even the same silence at night — but their daily rhythms are beautifully different." },
-//             { BlogSubTitle: "Understanding these rhythms helps pet parents respond with patience, structure, and care — not confusion." },
-//             { BlogSubTitle: " This isn’t about breeds.It’s about how puppies and kittens naturally move through their day. " },
-//             { BlogHedding: "🌞 Morning: Who wakes the house?", blogTitle: " Puppies often start their day early.They wake up alert, hungry, and ready to engage with the world. Morning is their most energetic phase — perfect for feeding, gentle play, and short training moments. " },
-//             { BlogSubTitle: "Kittens, on the other hand, wake slowly.They observe before they act. Mornings are calm — stretching, grooming, and quietly exploring corners while the world settles. " },
-//             { BlogSubTitle: "  Takeaway: Puppies seek interaction. Kittens seek observation." },
-//             { BlogHedding: " 🎾 Afternoon: Energy vs Exploration: " },
-//             { BlogSubTitle: "By midday, puppies need structured activity.Play sessions, social cues, and naps in between help them regulate their excitement and learn routines." },
-//             { BlogSubTitle: " Kittens move in short bursts.They may play intensely for a few minutes, then disappear into rest. Their energy comes in waves — curiosity-led, not schedule-led." },
-//             { BlogSubTitle: " Takeaway:Puppies thrive on routine. Kittens thrive on choice. " },
-//             { BlogHedding: " 🌙 Evening: Settling in " },
-//             { BlogSubTitle: "  As evening approaches, puppies begin to slow down but still look for reassurance — closeness, gentle play, and comfort before sleep. " },
-//             { BlogSubTitle: "  Kittens often become more active at dusk.This is their natural “zoom hour” — playful, alert, and curious before eventually curling up on their own terms. " },
-//             { BlogSubTitle: "  Takeaway: Puppies wind   down with you. Kittens wind down around you. " },
-//             { BlogHedding: " 🌌 Night: Sleep styles " },
-//             { BlogSubTitle: "  Puppies sleep deeply and for longer stretches once settled — especially when their day has been structured well. " },
-//             { BlogSubTitle: " Kittens sleep often, but lightly. They wake, move, observe, and resettle — following instinct rather than the clock." },
-//             { BlogSubTitle: " Takeaway: Different sleep rhythms, same need for safety and warmth." },
-//             { BlogHedding: " 🧡 Growing Up Together" },
-//             { BlogSubTitle: "When puppies and kittens share a home, their rhythms don’t clash — they balance each other. " },
-//             { BlogSubTitle: " One teaches patience. The other teaches gentleness." },
-//             { BlogSubTitle: " And slowly, the home learns a new rhythm of its own. " },
-//             // { BlogSubTitle: "Detect Issues Early", BlogSubDecipation: "Many common pet ailments, from dental disease to heart conditions, can go unnoticed in their early stages. Regular exams help us identify potential problems before they become serious" },
-//             // { BlogSubTitle: "Monitor Growth & Development", BlogSubDecipation: "Especially for puppies and kittens, wellness exams ensure they're growing properly and meeting developmental milestones." },
-//             // { BlogSubTitle: "Maintain Optimal Health", BlogSubDecipation: "We can provide personalized advice on nutrition, weight management, parasite prevention, and behavioral enrichment, helping your pet thrive." },
-//             // { BlogSubTitle: "Update Preventative Care", BlogSubDecipation: "This is the perfect time to ensure vaccinations are up-to-date and discuss ongoing parasite control." },
-//         ]
-
-//     },
-
-//     {
-//         id: 2,
-//         title: "Exploring vs Observing",
-//         image: "/assets/img/blogimg-2.png",
-//         // date: 'march 28, 2024',
-//         // SubTitle: 'Fueling Health: The Right Diet Matters',
-//         // description: "A shiny coat and energetic pet come from more than food and brushing. At Woofie Do, we highlight the power of nutrition and regular grooming in keeping your pet healthy and happy.",
-//         // subDecipation: "Just like humans, pets need the right fuel to thrive. The vast array of pet foods on the market can be overwhelming, making it hard to know what's truly best. A proper diet can:",
-//         // keyfeture: [
-//         //     { BlogHedding: "Boost Energy & Vitality", blogTitle: "Providing essential nutrients for playful days and restful nights." },
-//         //     { BlogSubTitle: "Support Organ Function", BlogSubDecipation: ": Helping everything from a strong heart to healthy kidneys." },
-//         //     { BlogSubTitle: "Improve Skin & Coat Health", BlogSubDecipation: "Leading to that coveted glossy fur and fewer skin issues." },
-//         //     { BlogSubTitle: "Manage Weight & Prevent Disease", BlogSubDecipation: "Reducing the risk of obesity-related problems like diabetes and joint pain." },
-//         //     { BlogSubTitle: "Update Preventative Care", BlogSubDecipation: "This is the perfect time to ensure vaccinations are up-to-date and discuss ongoing parasite control." },
-//         //     { ExpertConsultations: "Our expert veterinarians at Woofie Do offer personalized Pet Food & Diet Consultations. We'll assess your pet's age, breed, activity level, and any specific health conditions to recommend a diet that perfectly meets their needs, ensuring they get the right nutrients to flourish." },
-//         //     { GroomingTitle: "The Power of the Paw-fect Groom", GroomingDec: "Grooming is far more than just aesthetics. Regular Pet Grooming at Woofie Do provides numerous health benefits:" },
-//         //     { BlogSubTitle: "Prevents Skin Issues", BlogSubDecipation: "Regular brushing helps distribute natural oils, reduces shedding, and allows for early detection of lumps, bumps, or parasites" },
-//         //     {BlogSubTitle : "Avoids Matting", BlogSubDecipation : "Especially for long-haired breeds, matting can be painful and lead to skin infections. Professional grooming prevents this" },
-//         //     {BlogSubTitle : "BlogSubTitle",BlogSubDecipation : "Nail trims prevent painful overgrowth, while ear cleaning helps prevent infections." },
-//         //     {BlogSubTitle : "Reduces Allergens", BlogSubDecipation : "Regular baths can help reduce dander and allergens in your home." }
-//         // ]
-//     },
-
-//     {
-//         id: 3,
-//         title: "Sleep Cycle Comparisons",
-//         image: "/assets/img/blogimg-3.png",
-//         // date: 'march 28, 2024',
-//         // SubTitle: '24x7 Emergency Services: Always Here for You',
-//         // description: '"Emergencies are never easy, but Woofie Do is here with expert care, advanced diagnostics, and compassionate support when you need it most',
-//         // keyfeture: [
-//         //     { BlogHedding: "The Power of Rapid In-House Diagnostics", blogTitle: "In an emergency, or even when diagnosing a complex illness, time is often of the essence. Our In-House Diagnostics play a crucial role in providing immediate answers. Our clinic is outfitted with state-of-the-art technology, including:" },
-//         //     { BlogSubTitle: "Advanced Bloodwork & Urinalysis", BlogSubDecipation: "Quickly analyzing internal organ function, detecting infections, and assessing overall health." },
-//         //     { BlogSubTitle: "Digital X-rays", BlogSubDecipation: "Providing immediate, high-resolution images to diagnose fractures, identify foreign objects, or assess organ size and position" },
-//         //     { BlogSubTitle: "Ultrasound", BlogSubDecipation: " Offering real-time imaging of internal organs for more detailed assessment of soft tissues and complex conditions." },
-//         //     { GroomingDec: "Having these capabilities on-site means we can perform tests, get results, and formulate a treatment plan much faster than if samples had to be sent out to external labs. This speed can be life-saving in critical situations and provides immense peace of mind." },
-//         //     { GroomingDec: "At Woofie Do, we combine our readiness for emergencies with our advanced diagnostic capabilities to ensure your pet receives the most timely and effective care possible, no matter the situation. We're committed to being your trusted partner, even when every second counts." },
-//         //     { Petemergency: "Facing a pet emergency or have concerns about your pet's health? Don't hesitate. Call Woofie Do immediately or visit our clinic." },
-
-//         // ]
-//     },
-//     {
-//         id: 4,
-//         title: "Eating Speed & Textures",
-//         image: "/assets/img/blogimg-4.jpeg",
-//         // date: 'march 28, 2024',
-//         // SubTitle: '24x7 Emergency Services: Always Here for You',
-//         // description: '"Emergencies are never easy, but Woofie Do is here with expert care, advanced diagnostics, and compassionate support when you need it most',
-//         // keyfeture: [
-//         //     { BlogHedding: "The Power of Rapid In-House Diagnostics", blogTitle: "In an emergency, or even when diagnosing a complex illness, time is often of the essence. Our In-House Diagnostics play a crucial role in providing immediate answers. Our clinic is outfitted with state-of-the-art technology, including:" },
-//         //     { BlogSubTitle: "Advanced Bloodwork & Urinalysis", BlogSubDecipation: "Quickly analyzing internal organ function, detecting infections, and assessing overall health." },
-//         //     { BlogSubTitle: "Digital X-rays", BlogSubDecipation: "Providing immediate, high-resolution images to diagnose fractures, identify foreign objects, or assess organ size and position" },
-//         //     { BlogSubTitle: "Ultrasound", BlogSubDecipation: " Offering real-time imaging of internal organs for more detailed assessment of soft tissues and complex conditions." },
-//         //     { GroomingDec: "Having these capabilities on-site means we can perform tests, get results, and formulate a treatment plan much faster than if samples had to be sent out to external labs. This speed can be life-saving in critical situations and provides immense peace of mind." },
-//         //     { GroomingDec: "At Woofie Do, we combine our readiness for emergencies with our advanced diagnostic capabilities to ensure your pet receives the most timely and effective care possible, no matter the situation. We're committed to being your trusted partner, even when every second counts." },
-//         //     { Petemergency: "Facing a pet emergency or have concerns about your pet's health? Don't hesitate. Call Woofie Do immediately or visit our clinic." },
-
-//         // ]
-//     },
-//     {
-//         id: 5,
-//         title: "Bowl Training vs Free Feeding Why the Same Bowl Means Different Things",
-//         image: "/assets/img/blogimg-5.jpeg",
-//         // date: 'march 28, 2024',
-//         // SubTitle: '24x7 Emergency Services: Always Here for You',
-//         // description: '"Emergencies are never easy, but Woofie Do is here with expert care, advanced diagnostics, and compassionate support when you need it most',
-//         // keyfeture: [
-//         //     { BlogHedding: "The Power of Rapid In-House Diagnostics", blogTitle: "In an emergency, or even when diagnosing a complex illness, time is often of the essence. Our In-House Diagnostics play a crucial role in providing immediate answers. Our clinic is outfitted with state-of-the-art technology, including:" },
-//         //     { BlogSubTitle: "Advanced Bloodwork & Urinalysis", BlogSubDecipation: "Quickly analyzing internal organ function, detecting infections, and assessing overall health." },
-//         //     { BlogSubTitle: "Digital X-rays", BlogSubDecipation: "Providing immediate, high-resolution images to diagnose fractures, identify foreign objects, or assess organ size and position" },
-//         //     { BlogSubTitle: "Ultrasound", BlogSubDecipation: " Offering real-time imaging of internal organs for more detailed assessment of soft tissues and complex conditions." },
-//         //     { GroomingDec: "Having these capabilities on-site means we can perform tests, get results, and formulate a treatment plan much faster than if samples had to be sent out to external labs. This speed can be life-saving in critical situations and provides immense peace of mind." },
-//         //     { GroomingDec: "At Woofie Do, we combine our readiness for emergencies with our advanced diagnostic capabilities to ensure your pet receives the most timely and effective care possible, no matter the situation. We're committed to being your trusted partner, even when every second counts." },
-//         //     { Petemergency: "Facing a pet emergency or have concerns about your pet's health? Don't hesitate. Call Woofie Do immediately or visit our clinic." },
-
-//         // ]
-//     },
-//     {
-//         id: 6,
-//         title: "Understanding Quiet vs Vocal Communication",
-//         image: "/assets/img/blogimg-6.jpeg",
-//         // date: 'march 28, 2024',
-//         // SubTitle: '24x7 Emergency Services: Always Here for You',
-//         // description: '"Emergencies are never easy, but Woofie Do is here with expert care, advanced diagnostics, and compassionate support when you need it most',
-//         // keyfeture: [
-//         //     { BlogHedding: "The Power of Rapid In-House Diagnostics", blogTitle: "In an emergency, or even when diagnosing a complex illness, time is often of the essence. Our In-House Diagnostics play a crucial role in providing immediate answers. Our clinic is outfitted with state-of-the-art technology, including:" },
-//         //     { BlogSubTitle: "Advanced Bloodwork & Urinalysis", BlogSubDecipation: "Quickly analyzing internal organ function, detecting infections, and assessing overall health." },
-//         //     { BlogSubTitle: "Digital X-rays", BlogSubDecipation: "Providing immediate, high-resolution images to diagnose fractures, identify foreign objects, or assess organ size and position" },
-//         //     { BlogSubTitle: "Ultrasound", BlogSubDecipation: " Offering real-time imaging of internal organs for more detailed assessment of soft tissues and complex conditions." },
-//         //     { GroomingDec: "Having these capabilities on-site means we can perform tests, get results, and formulate a treatment plan much faster than if samples had to be sent out to external labs. This speed can be life-saving in critical situations and provides immense peace of mind." },
-//         //     { GroomingDec: "At Woofie Do, we combine our readiness for emergencies with our advanced diagnostic capabilities to ensure your pet receives the most timely and effective care possible, no matter the situation. We're committed to being your trusted partner, even when every second counts." },
-//         //     { Petemergency: "Facing a pet emergency or have concerns about your pet's health? Don't hesitate. Call Woofie Do immediately or visit our clinic." },
-
-//         // ]
-//     }
-
-// ]
-
-// export default BlogData
-
-
-
-// const BlogData = [
-//   {
-//     id: 1,
-//     title: "Puppy vs Kitten: Understanding Their Daily Rhythms",
-//     image: "/assets/img/blogimg-1.png",
-
-//     intro: [
-//       "Inspired by a quiet home where two tiny lives arrive at the same time.",
-//       "When a puppy and a kitten enter your home together, they share space but not rhythm.",
-//       "Understanding these rhythms helps pet parents respond with patience and care.",
-//       "This isn’t about breeds. It’s about natural daily behaviour."
-//     ],
-
-//     sections: [
-//       {
-//         heading: "🌞 Morning: Who wakes the house?",
-//         content: [
-//           "Puppies wake up early, alert and hungry. Morning is their most energetic phase.",
-//           "Kittens wake slowly, stretching and observing before acting."
-//         ],
-//         takeaway: "Puppies seek interaction. Kittens seek observation."
-//       },
-//       {
-//         heading: "🎾 Afternoon: Energy vs Exploration",
-//         content: [
-//           "Puppies need structured play, learning and naps.",
-//           "Kittens play in short bursts and rest on their own schedule."
-//         ],
-//         takeaway: "Puppies thrive on routine. Kittens thrive on choice."
-//       },
-//       {
-//         heading: "🌙 Evening: Settling in",
-//         content: [
-//           "Puppies look for reassurance and closeness before sleep.",
-//           "Kittens often become more active at dusk before calming down."
-//         ],
-//         takeaway: "Puppies wind down with you. Kittens wind down around you."
-//       },
-//       {
-//         heading: "🌌 Night: Sleep styles",
-//         content: [
-//           "Puppies sleep deeply for long stretches.",
-//           "Kittens sleep lightly and wake often."
-//         ],
-//         takeaway: "Different sleep rhythms, same need for safety."
-//       },
-//       {
-//         heading: "🧡 Growing Up Together",
-//         content: [
-//           "Their rhythms don’t clash — they balance each other.",
-//           "One teaches patience. The other teaches gentleness."
-//         ]
-//       }
-//     ]
-//   },
-
-//   {
-//     id: 2,
-//     title: "Exploring vs Observing",
-//     image: "/assets/img/blogimg-2.png",
-//     intro: [
-//       "The first day at home is quiet but full of learning.",
-//       "Puppies and kittens understand space differently."
-//     ]
-//   },
-
-//   {
-//     id: 3,
-//     title: "Sleep Cycle Comparisons",
-//     image: "/assets/img/blogimg-3.png",
-//     intro: [
-//       "Sleep becomes a quiet language in a new home.",
-//       "Both puppy and kitten rest differently — and that’s normal."
-//     ]
-//   },
-
-//   {
-//     id: 4,
-//     title: "Eating Speed & Textures",
-//     image: "/assets/img/blogimg-4.jpeg",
-//     intro: [
-//       "Mealtime is more than food — it’s instinct and learning."
-//     ]
-//   },
-
-//   {
-//     id: 5,
-//     title: "Bowl Training vs Free Feeding: Why the Same Bowl Means Different Things",
-//     image: "/assets/img/blogimg-5.jpeg",
-//     intro: [
-//       "The same bowl can represent routine for one and choice for another."
-//     ]
-//   },
-
-//   {
-//     id: 6,
-//     title: "Understanding Quiet vs Vocal Communication",
-//     image: "/assets/img/blogimg-6.jpeg",
-//     intro: [
-//       "Not every feeling sounds the same. Silence is also communication."
-//     ]
-//   }
-// ];
-
-// export default BlogData;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const BlogData = [
     {
         id: 1,
-        title: "Puppy vs Kitten: Understanding Their Daily Rhythms",
+        title: "Cat vs Dog: Understanding Their Daily Rhythms",
         image: "/assets/img/blog-1.png",
-        intro: "Inspired by a quiet home where two tiny lives arrive at the same time… When a puppy and a kitten enter your home together, they may share the same floor, the same warmth, even the same silence at night — but their daily rhythms are beautifully different.Understanding these rhythms helps pet parents respond with patience, structure, and care — not confusion.This isn’t about breeds. It’s about how puppies and kittens naturally move through their day",
         subDataDecHed: [
-            { subHading: "🌞 Morning: Who wakes the house?" },
-            { subDec: "Puppies often start their day early. They wake up alert, hungry, and ready to engage with the world. Morning is their most energetic phase — perfect for feeding, gentle play, and short training moments." },
-            { subDec: "Kittens, on the other hand, wake slowly. They observe before they act. Mornings are calm — stretching, grooming, and quietly exploring corners while the world settles. " },
-            { takewayHeading: "Takeaway:" },
-            { takewayDec: " Puppies seek interaction. Kittens seek observation." },
-            { subHading: "🎾 Afternoon: Energy vs Exploration" },
-            { subDec: "By midday, puppies need structured activity. Play sessions, social cues, and naps in between help them regulate their excitement and learn routines." },
-            { subDec: "Kittens move in short bursts. They may play intensely for a few minutes, then disappear into rest. Their energy comes in waves — curiosity-led, not schedule-led." },
-            { takewayHeading: "Takeaway:" },
-            { takewayDec: " Puppies thrive on routine. Kittens thrive on choice." },
-            { subHading: "🌙 Evening: Settling in" },
-            { subDec: "As evening approaches, puppies begin to slow down but still look for reassurance — closeness, gentle play, and comfort before sleep." },
-            { subDec: "Kittens often become more active at dusk. This is their natural “zoom hour” — playful, alert, and curious before eventually curling up on their own terms." },
-            { takewayHeading: "Takeaway:" },
-            { takewayDec: " Puppies thrive on routine. Kittens thrive on choice." },
-            { subHading: " Night: Sleep styles" },
-            { subDec: "Puppies sleep deeply and for longer stretches once settled — especially when their day has been structured well." },
-            { subDec: "Kittens sleep often, but lightly. They wake, move, observe, and resettle — following instinct rather than the clock." },
-            { takewayHeading: "Takeaway:" },
-            { takewayDec: " Different sleep rhythms, same need for safety and warmth" },
-            { subHading: "🧡 Growing Up Together" },
-            { subDec: "When puppies and kittens share a home, their rhythms don’t clash — they balance each other." },
-            { subDec: "One teaches patience. The other teaches gentleness." },
-            { subDec: "And slowly, the home learns a new rhythm of its own." },
+            { subHading: "Understanding the Daily Rhythms of Dogs and Cats" },
+            { subDec: "Dogs and cats experience the day in very different ways. Their routines, energy levels, and rest patterns are shaped by instinct and natural behavior rather than training or lifestyle. Understanding these daily rhythms helps pet parents respond with care, patience, and realistic expectations." },
+            { subDec: "This is not about breeds or age. It is about how dogs and cats naturally move through their day." },
+            { subDec: "Dogs enter the day with energy, while cats ease into it with awareness." },
+            { subHading: "Afternoon: Activity and Rest Patterns" },
+            { subDec: "As the day continues, dogs respond best to structure. Balanced periods of activity and rest help them stay regulated and calm. Predictable routines provide dogs with a sense of security and stability." },
+            { subDec: "Cats follow a different rhythm. Their energy appears in short bursts, guided by curiosity rather than schedule. A cat may play, explore, and then rest repeatedly throughout the afternoon." },
+            { subDec: "Dogs feel grounded in routine. Cats feel comfortable with freedom." },
+            { subHading: "Evening: Shifts in Energy" },
+            { subDec: "In the evening, dogs naturally begin to slow down. They often seek gentle interaction and familiarity as they transition toward rest." },
+            { subDec: "Cats may become more alert during this time. Evening hours often trigger increased playfulness and movement, driven by instinct rather than habit, before they settle on their own terms." },
+            { subDec: "Dogs gradually unwind, while cats experience a brief rise in activity." },
+            { subHading: "Night: Rest and Sleep" },
+            { subDec: "Dogs tend to sleep deeply once settled, especially when their day has followed a clear and consistent routine." },
+            { subDec: "Cats sleep frequently but lightly. They wake, move, observe, and return to rest multiple times through the night, following instinct rather than the clock." },
+            { subDec: "Although their sleep styles differ, both animals rely on comfort and a sense of safety to rest well." },
+            { subHading: "Understanding Their Natural Flow" },
+            { subDec: "Dogs and cats do not follow the same daily rhythm, and they are not meant to. Dogs are routine-driven and socially responsive, while cats are instinct-led and self-regulating." },
+            { subDec: "Recognizing these natural patterns allows pet parents to support each animal’s needs without forcing one rhythm to match the other. When expectations align with instinct, care becomes simpler, calmer, and more intuitive." },
         ]
     },
     {
         id: 2,
         title: "Exploring vs Observing",
         image: "/assets/img/blog-2.png",
-        intro: "The First Day at Home The first day doesn’t look loud. There’s no chaos, no rush — just quiet movement and quiet pauses. But everything feels new. When a puppy and a kitten step into a home for the first time, they respond in very different ways. Not because one is braver than the other — but because they understand space differently.",
         subDataDecHed: [
-            { subHading: "🐶 Exploring: Learning Through Movement" },
-            { subDec: "Most puppies move first." },
-            { subDec: "They walk room to room. They sniff corners, furniture, doors, sounds. Every step is a question — What is this? Is this safe?" },
-            { subDec: "For puppies, movement creates familiarity. By walking through a space, they map it. By touching, sniffing, and hearing it, they begin to feel secure." },
-            { subDec: "Exploration isn’t restlessness — it’s reassurance." },
-            { subHading: "Observing: Learning Through Stillness" },
-            { subDec: "Kittens often choose a spot and stay there.They sit. They watch. They listen before they move." },
-            { subDec: "Kittens move in short bursts. They may play intensely for a few minutes, then disappear into rest. Their energy comes in waves — curiosity-led, not schedule-led." },
-            { subDec: " For kittens, stillness creates understanding. They learn a space by observing patterns — footsteps, sounds, light, routine. Once the environment feels predictable, they slowly begin to explore." },
-            { subDec: "Observation isn’t hesitation — it’s intelligence." },
-            { subHading: "🏡 Same Home. Different Approaches." },
-            { subDec: "On the first day, both animals are doing the same thing: trying to feel safe." },
-            {
-                dataList: [
-                    "Puppies explore to feel secure.",
-                    "Kittens settle to feel secure."
-                ]
-            },
-            { subDec: "Neither approach is better. Both need time. Both need reassurance." },
-            { subHading: "🧡 What Pet Parents Can Do" },
-            {
-                dataList: [
-                    "Provide clear, safe zones where movement can happen without overwhelm",
-                    "Allow quiet corners where stillness feels protected",
-                    "Avoid forcing interaction — confidence grows at its own pace"
-                ],
-            },
-            { subDec: "The right setup doesn’t rush comfort. It allows it to arrive naturally." },
-            { subHading: "Day One Isn’t About Rules" },
-            { subDec: "It’s about reassurance.When exploration slows down… and observation feels safe… that’s when a home truly begins to feel like one." },
+            { subHading: "Exploring vs Observing: How Dogs and Cats Experience the World" },
+            { subDec: "Dogs and cats interact with their surroundings in very different ways. Where one moves forward through action, the other pauses to understand before engaging. These differences are not about training or personality. They are instinctive ways of experiencing the world" },
+            { subDec: "Understanding this contrast helps pet parents interpret behavior correctly and respond with patience rather than assumption." },
+            { subHading: "How Dogs Explore" },
+            { subDec: "Dogs experience the world through active exploration. Movement is how they learn. Sniffing, walking, touching, and engaging are natural ways for dogs to understand their environment." },
+            { subDec: "When faced with something new, dogs often approach it directly. They investigate by moving closer, interacting, and seeking feedback from their surroundings. Exploration helps them build confidence and familiarity." },
+            { subDec: "For dogs, understanding comes through doing." },
+            { subHading: "How Cats Observe" },
+            { subDec: "Cats experience the world through observation first. They prefer distance before engagement. Watching, listening, and assessing are essential steps before they decide to act." },
+            { subDec: "When something new appears, a cat is more likely to pause, study it, and process what it means. Only once they feel secure will they move closer or interact. Observation helps cats feel in control of their environment." },
+            { subDec: "For cats, understanding comes through watching." },
+            { subHading: "Movement vs Awareness" },
+            { subDec: "Dogs rely on motion to feel secure. Walking into new spaces, investigating scents, and interacting with objects helps them feel grounded and informed." },
+            { subDec: "Cats rely on awareness. They scan their surroundings, notice subtle changes, and choose their actions carefully. Their stillness is not hesitation; it is processing." },
+            { subDec: "Dogs learn by moving through the world. Cats learn by reading it." },
+            { subHading: "Response to New Experiences" },
+            { subDec: "When introduced to new environments or changes, dogs often seek reassurance through engagement. They look outward for cues, guidance, and interaction." },
+            { subDec: "Cats prefer time. They may retreat, observe from a distance, and gradually approach when ready. This is not avoidance, but a method of self-regulation." },
+            { subDec: "Dogs respond through action. Cats respond through assessment." },
+            { subHading: "Supporting Both Styles" },
+            { subDec: "Understanding these differences helps pet parents create better experiences. Dogs benefit from safe opportunities to explore, move, and engage. Cats benefit from spaces that allow observation, control, and choice." },
+            { subDec: "Neither approach is better. They are simply different paths to understanding the same world." },
+            { subHading: "A Matter of Instinct" },
+            { subDec: "Exploring and observing are not learned habits; they are instinctive behaviors shaped by nature. When these instincts are respected, animals feel more secure, confident, and at ease." },
+            { subDec: "By recognizing how dogs and cats experience their surroundings, care becomes more intuitive and expectations become more realistic." },
+            { subDec: "Different approaches. Same goal — understanding the world." },
         ]
     },
     {
         id: 3,
         title: "Sleep Cycle Comparisons",
         image: "/assets/img/blog-3.png",
-        intro: "Who Sleeps More — and Why It Looks So Different Rest looks different…  depending on who you are. On the first few days at home, sleep becomes a quiet language. Not dramatic. Not obvious. But deeply revealing. When a puppy and a kitten share the same space, their sleep patterns may look opposite — yet both are doing exactly what they need to feel safe.",
         subDataDecHed: [
-            { subHading: "🐱 Many Naps, Light Rest" },
-            { subDec: "The Kitten Rhythm Kittens nap often.Short rests, many times a day.Their sleep is light, alert, and easily interrupted. Even while resting, they’re listening — tuning into sounds, movement, and routine. This isn’t poor sleep. It’s energy conservation." },
-            { subDec: "Cats are wired to save energy instinctively. They rest in pieces so they’re always ready." },
-            { subHading: "🐶 Fewer Naps, Deeper Sleep" },
-            { subDec: "The Puppy Rhythm Puppies sleep deeply — especially after activity.  But they wake often." },
-            { subDec: "They stir to check the room, the sounds, the people. Then they fall back asleep. Puppies are still learning how to switch off. Their bodies tire faster than their minds." },
-            { subDec: " This isn’t restlessness. It’s reassurance-seeking" },
-            { subHading: "🏡 Same Room. Different Rhythms." },
-            {
-                dataList: [
-                    "One rests in short cycles.",
-                    "One rests in long stretches."
-                ]
-            },
-            { subDec: "Both are normal. Both are healthy.Sleep isn’t about copying patterns — it’s about supporting them." },
-            { subHading: "🧡 How Pet Parents Can Support Sleep" },
-            {
-                dataList: [
-                    "Provide comfortable, warm bedding",
-                    "Allow undisturbed rest zones",
-                    "Avoid waking or moving pets to “match” routines"
-                ],
-            },
-            { subDec: "Good sleep isn’t taught. It’s supported. And when comfort is consistent, rest follows — naturally." },
+            { subHading: "Sleep Cycles in Dogs and Cats: How Rest Looks Different" },
+            { subDec: "Sleep plays an essential role in the physical and emotional well-being of both dogs and cats. While they may spend a similar amount of time resting, the way they sleep, wake, and return to rest is very different. These patterns are guided by instinct rather than routine or environment." },
+            { subDec: "Understanding these sleep cycles helps pet parents set realistic expectations and support healthier rest." },
+            { subHading: "How Dogs Sleep" },
+            { subDec: "Dogs tend to follow longer, deeper sleep cycles. Once settled, they are more likely to rest for extended periods without frequent interruption. A structured day with regular activity and interaction often supports better, more restful sleep." },
+            { subDec: "Dogs rely on consistency. Clear signals that it is time to rest help them transition smoothly into sleep. When their physical and mental needs are met during the day, dogs are able to relax fully at night." },
+            { subDec: "For dogs, sleep is restorative and continuous." },
+            { subHading: "How Cats Sleep" },
+            { subDec: "Cats sleep differently. Their rest comes in multiple short cycles rather than long stretches. They may sleep, wake briefly to observe their surroundings, move positions, and then return to sleep." },
+            { subDec: "This light, intermittent sleep is instinctive. Cats remain alert even while resting, ready to respond to changes in their environment. Their sleep pattern is flexible and self-regulated rather than schedule-driven." },
+            { subDec: "For cats, sleep is frequent and adaptive." },
+            { subHading: "Deep Rest vs Light Rest" },
+            { subDec: "Dogs typically experience deeper rest once they feel secure and settled. Their bodies relax fully, allowing for longer periods of uninterrupted sleep." },
+            { subDec: "Cats, however, balance rest with awareness. Even during sleep, they remain partially alert. This does not mean they are restless; it means their rest is designed around readiness." },
+            { subDec: "Dogs rest by fully switching off. Cats rest by staying aware." },
+            { subHading: "Waking and Resettling" },
+            { subDec: "When dogs wake, they usually stay awake for a longer period before returning to sleep. Their cycles are more defined, with clearer transitions between activity and rest." },
+            { subDec: "Cats may wake multiple times during a rest period. These awakenings are brief and purposeful, often followed by immediate resettling. Their rhythm is guided by instinct rather than the clock." },
+            { subDec: "Dogs move through sleep in clear phases. Cats move through sleep in repeating moments." },
+            { subHading: "Supporting Healthy Sleep" },
+            { subDec: "Dogs benefit from predictable routines, adequate physical activity, and calm transitions into rest. These cues help them feel safe enough to sleep deeply." },
+            { subDec: "Cats benefit from choice. Quiet spaces, elevated resting areas, and the freedom to move and resettle allow them to follow their natural sleep rhythm without stress." },
+            { subDec: "Both animals need comfort, safety, and respect for their natural patterns to rest well." },
+            { subHading: "Understanding Natural Sleep Rhythms" },
+            { subDec: "Sleep cycles in dogs and cats are not meant to match. Dogs are wired for longer, deeper rest, while cats are designed for frequent, light sleep with awareness." },
+            { subDec: "When these differences are understood, rest becomes easier to support and less confusing to interpret. Care feels more intuitive when it works with instinct rather than against it." },
+            { subDec: "Different sleep cycles. Same need for rest and security." },
+
         ]
     },
     {
         id: 4,
         title: "Eating Speed & Textures",
         image: "/assets/img/blog-4.png",
-        intro: "Why Mealtime Looks Different for Puppies and Kittens Mealtime is more than food. It’s learning.On the first few days at home, how a puppy and a kitten eat can feel surprisingly different. One rushes. One pauses. One finishes fast. One knows exactly when to stop.None of it is random. It’s instinct.",
         subDataDecHed: [
-            { subHading: "🐶 Fast Eaters, Growing Bodies" },
-            { subDec: "The Puppy Pattern Puppies often eat quickly. Eager. Excited. Sometimes faster than they should." },
-            { subDec: "This isn’t greed — it’s growth. Puppies are wired to fuel rapidly developing bodies. Their digestion benefits from structure: consistent timing, portion control, and bowls that slow them down just enough to help them listen to their bodies." },
-            { subDec: "For puppies, eating is an activity. A moment of engagement, not reflection." },
-            { subHading: "🐱 Slow Eaters, Selective Palates" },
-            { subDec: "The Kitten Pattern Kittens eat slowly. Small bites. Gentle pauses. And they stop when they’re done." },
-            { subDec: "Cats are naturally selective. Texture, smell, and comfort matter as much as nutrition. Kittens thrive when mealtimes feel safe and optional, not rushed or competitive." },
-            { subDec: " For kittens, eating is intentional. A choice, not a race." },
-            { subHading: " Same Home. Different Needs." },
-            {
-                dataList: [
-                    "Puppies need structure at meals",
-                    "Kittens need choice and comfort"
-                ]
-            },
-            { subDec: "Different bowls. Different pacing. Same responsibility.Feeding right isn’t about control — it’s about support." },
-            { subHading: "🧡 How Pet Parents Can Help" },
-            {
-                dataList: [
-                    "Use age-appropriate food textures",
-                    "Choose bowls that match eating speed",
-                    "Avoid comparing portions or timing"
-                ],
-            },
-            { subDec: "Good habits form quietly. And the right nutrition helps growth settle into rhythm." },
-            { subHading: "Feeding Right Sets the Rhythm for Growth" },
-            { subDec: "When speed slows… and choice feels respected… mealtime becomes a moment of learning — not pressure." },
+            { subHading: "Eating Speed and Texture Preferences in Dogs and Cats" },
+            { subDec: "The way dogs and cats eat reveals a great deal about their natural instincts. Eating speed and texture preferences are not habits formed over time—they are deeply rooted in biology and sensory awareness. Understanding these differences helps caregivers choose feeding approaches that feel natural rather than forced." },
+            { subDec: "This is not about training behavior. It is about how dogs and cats are designed to eat." },
+            { subHading: "How Dogs Eat" },
+            { subDec: "Dogs generally eat with speed and focus. Their natural instinct encourages quick consumption, which is why many dogs approach food with enthusiasm and minimal hesitation." },
+            { subDec: "Texture plays a functional role for dogs. They adapt easily to different textures and are often comfortable with uniform, structured food. Their priority is intake rather than examination." },
+            { subDec: "For dogs, eating is direct and purposeful." },
+            { subHading: "How Cats Eat" },
+            { subDec: "Cats eat slowly and deliberately. They approach food with caution, using sight, smell, and texture to decide whether to eat. Their pace reflects sensitivity rather than hesitation." },
+            { subDec: "Texture matters greatly to cats. They prefer specific consistencies and may reject food based on mouthfeel alone. Eating is as much a sensory experience as it is nourishment." },
+            { subDec: "For cats, eating is selective and thoughtful." },
+            { subHading: "Speed vs Sensory Processing" },
+            { subDec: "Dogs rely less on detailed sensory evaluation while eating. Their faster pace supports efficient energy intake and alig" },
+            { subDec: "Cats process food through multiple senses. Their slower pace allows them to assess texture, moisture, and comfort with each bite." },
+            { subDec: "Dogs eat to fuel. Cats eat to assess." },
+            { subHading: "Responses to Change" },
+            { subDec: "Cats are more sensitive to changes in texture. Even subtle differences can affect acceptance, and they may take time to adjust." },
+            { subDec: "This sensitivity is not pickiness—it is instinctive discernment." },
+            { subHading: "Supporting Natural Eating Patterns" },
+            { subDec: "Dogs benefit from portion control and feeding setups that slow eating when necessary. This supports digestion and comfort." },
+            { subDec: "Cats benefit from texture consistency and freedom to eat at their own pace. Offering familiar textures helps reduce stress around feeding." },
+            { subDec: "Both animals thrive when eating patterns align with instinct." },
+            { subHading: "Understanding Eating Behavior" },
+            { subDec: "Eating speed and texture preference reflect how dogs and cats experience the world. Dogs move forward through action and efficiency, while cats move through awareness and sensory processing." },
+            { subDec: "When these natural tendencies are respected, feeding becomes calmer, healthier, and more intuitive." },
+            { subDec: "Different speeds. Different textures. Same need for nourishment and care." },
         ]
     },
-     {
+    {
         id: 5,
         title: "Bowl Training vs Free Feeding: Why the Same Bowl Means Different Things",
         image: "/assets/img/blog-5.png",
-        intro: "The same bowl… means different things.In a shared home, mealtime can look calm on the surface — but underneath, two very different instincts are at work. One waits. One returns later. One sees a schedule. One sees a choice.Neither is wrong. They’re just wired differently.",
         subDataDecHed: [
-            { subHading: "🐶 Bowl Training: The Puppy Rhythm" },
-            { subDec: " Routine Builds Security Puppies often wait for food. They look at humans. They learn that mealtime is an event." },
-            { subDec: " For dogs, scheduled feeding creates clarity. It helps them understand timing, expectation, and structure. Bowl training isn’t about control — it’s about predictability." },
-            { subDec: "When food arrives at set times, puppies relax. They know what comes next." },
-            { subHading: "🐱 Free Feeding: The Kitten Rhythm" },
-            { subDec: "Control Builds Comfort Kittens return to food when they want. They eat a little. Then walk away." },
-            { subDec: "Cats are natural grazers. They prefer autonomy — deciding when and how much to eat. Free feeding supports their instinct to regulate intake without pressure." },
-            { subDec: " For kittens, food isn’t an event. It’s availability." },
-            { subHading: " 🏡 Same Home. Different Instincts." },
-            {
-                dataList: [
-                    "Dogs thrive on routine",
-                    "Cats thrive on control"
-                ]
-            },
-            { subDec: " Scheduled feeding.Free feeding.Both normal. Both species-specific.Problems only arise when we try to make one behave like the other." },
-            { subHading: "🧡 How Pet Parents Can Support Both" },
-            {
-                dataList: [
-                    "Use designated bowls and locations",
-                    "Respect different feeding rhythms",
-                    "Avoid comparison between pets"
-                ],
-            },
-            { subDec: "Good habits don’t come from copying routines. They come from respecting instincts." },
-            { subHading: " Good Habits Start…" },
-            { subDec: "When We Stop Comparing." },
+            { subHading: "Bowl Training vs Free Feeding: How Dogs and Cats Approach Food" },
+            { subDec: "Feeding is more than a daily task. For dogs and cats, how food is offered plays a role in comfort, digestion, behavior, and emotional security. Bowl training and free feeding are not just feeding methods—they reflect how each animal naturally relates to food." },
+            { subDec: "Understanding these differences helps caregivers choose approaches that align with instinct rather than forcing habits." },
+            { subHading: "How Dogs Relate to Bowl Training" },
+            { subDec: "Dogs respond well to structured feeding. Bowl training provides clear cues—when to eat, where to eat, and when the meal is complete. This structure supports routine and predictability, which dogs naturally seek." },
+            { subDec: "Eating from a bowl at set times helps dogs regulate appetite and energy. It also strengthens focus and reinforces trust through consistency." },
+            { subDec: "For dogs, the bowl represents stability." },
+            { subHading: "How Cats Relate to Free Feeding" },
+            { subDec: "Cats approach food differently. Their natural eating pattern involves small, frequent meals rather than large portions at fixed times. Free feeding or flexible access allows them to eat based on instinct and appetite." },
+            { subDec: "Cats prefer control over when and how much they eat. This autonomy supports comfort and reduces stress around feeding." },
+            { subDec: "For cats, food is about choice." },
+            { subHading: "Structure vs Flexibility" },
+            { subDec: "Bowl training works well for dogs because it mirrors their need for routine and guidance. Clear feeding times help them feel settled and secure." },
+            { subDec: "Cats function best with flexibility. Fixed feeding expectations can feel restrictive, while open or semi-free feeding aligns with their self-regulated nature." },
+            { subDec: "Dogs thrive on structure. Cats thrive on independence." },
+            { subHading: "Eating Behavior and Comfort" },
+            { subDec: "Dogs often eat with enthusiasm and focus. Defined meals help prevent overeating and support healthy digestion." },
+            { subDec: "Cats eat slowly and selectively. They may return to their food multiple times, eating in short intervals. This pattern is not distraction—it is instinctive." },
+            { subDec: "Different eating styles reflect different needs." },
+            { subHading: "Supporting Healthy Feeding Habits" },
+            { subDec: "Dogs benefit from consistent bowl placement, timing, and calm feeding routines. These cues help them associate food with safety and predictability." },
+            { subDec: "Cats benefit from quiet feeding spaces and the freedom to approach food without pressure. Allowing choice supports natural eating behavior." },
+            { subDec: "In both cases, comfort and trust are essential to healthy feeding." },
+            { subHading: "Understanding Feeding Instincts" },
+            { subDec: "Bowl training and free feeding are not opposing methods—they are responses to natural behavior. Dogs are guided by routine and external cues, while cats are guided by instinct and internal regulation." },
+            { subDec: "When feeding methods respect these instincts, mealtimes become calmer and more intuitive." },
+            { subDec: "Different approaches. Same goal—nourishment without stress." }
         ]
     },
-     {
+    {
         id: 6,
         title: "Understanding Quiet vs Vocal Communication",
         image: "/assets/img/blog-6.png",
-        intro: "Understanding Quiet vs Vocal Communication Not every feeling sounds the same.When a puppy and a kitten are settling into a home, discomfort doesn’t always look dramatic. Sometimes it’s a sound. Sometimes it’s silence. Both are forms of communication — just spoken differently.",
         subDataDecHed: [
-            { subHading: "🐶 Sound as a Signal" },
-            { subDec: " The Puppy Pattern" },
-            { subDec: " Puppies often express discomfort outwardly. A soft whine. A small cry. A sound meant to be heard.This isn’t misbehaviour. It’s clarity." },
-            { subDec: "Dogs are social communicators. Sound helps them seek reassurance, attention, or support. For puppies, vocalising is a way of saying “I need something.”" },
-            { subHading: " 🐱 Silence as a Signal" },
-            { subDec: "The Kitten Pattern" },
-            { subDec: " Kittens usually stay quiet. They shift away. They pause.They choose distance instead of noise." },
-            { subDec: " Cats communicate through behaviour. Discomfort shows up as subtle changes — less interaction, altered posture, choosing space over sound. Silence isn’t ease. It’s expression." },
-            { subHading: "🏡 Same Feeling. Different Languages." },
-            {
-                dataList: [
-                    "One uses sound",
-                    "One uses space"
-                ]
-            },
-            { subDec: " Both are communicating. Both deserve response. The mistake isn’t missing the sound —s it’s missing the signal." },
-            { subHading: "🧡 How Pet Parents Can Support Both" },
-            {
-                dataList: [
-                    "Watch behaviour, not just noise",
-                    "Offer calm, predictable environments",
-                    "Avoid forcing comfort — allow it"
-                ],
-            },
-            { subDec: "Listening doesn’t always mean hearing. Sometimes it means noticing what isn’t said." },
-            { subHading: "Calm Isn’t Taught" },
-            { subDec: "It’s allowed.When sound feels safe… and space feels respected… settling happens naturally." },
+            { subHading: "Understanding Quiet vs Vocal Communication in Cats and Dogs" },
+            { subDec: " Communication is central to how dogs and cats express needs, emotions, and boundaries. While both are highly expressive animals, they communicate in very different ways. These differences are shaped by instinct and social structure, not by training or temperament." },
+            { subDec: "Understanding how dogs and cats communicate helps caregivers respond more accurately and build stronger, more respectful relationships." },
+            { subHading: "How Dogs Communicate" },
+            { subDec: "Dogs are naturally vocal communicators. Barking, whining, and other sounds are key ways they express excitement, discomfort, alertness, or the need for attention." },
+            { subDec: "Vocal communication in dogs is outward and responsive. They use sound to connect, signal, and seek feedback from their surroundings. For dogs, being heard is part of feeling understood." },
+            { subDec: " For dogs, communication is expressive and audible." },
+            { subHading: "How Cats Communicate" },
+            { subDec: "Cats communicate more quietly. While they are capable of vocal sounds, much of their communication happens through subtle signals—body posture, ear movement, tail position, and eye contact." },
+            { subDec: "Silence does not mean absence of communication. Cats rely on nuance and restraint, expressing themselves in ways that are easy to miss if one is only listening for sound." },
+            { subDec: "For cats, communication is subtle and observant." },
+            { subHading: "Sound vs Signal" },
+            { subDec: "Dogs use sound to engage. Their vocalizations often invite interaction or response." },
+            { subDec: "Cats use signals to convey meaning. Their communication is often one-directional, meant to inform rather than initiate." },
+            { subDec: "Dogs speak outward. Cats communicate inward." },
+            { subHading: "Response to Emotion" },
+            { subDec: "Dogs are likely to vocalize when emotions rise. Excitement, stress, or anticipation often translate into sound." },
+            { subDec: "Cats tend to withdraw or become still when processing emotion. Their communication becomes quieter, not louder." },
+            { subDec: "Both responses are valid expressions of feeling, shaped by instinct." },
+            { subHading: "Supporting Natural Communication" },
+            { subDec: "Dogs benefit from acknowledgment. Responding calmly to vocal cues helps them feel understood and reassured." },
+            { subDec: "Cats benefit from observation. Noticing subtle changes in behavior or posture allows communication to remain respectful and stress-free." },
+            { subDec: "Understanding how each animal communicates prevents misinterpretation and builds trust." },
+            { subHading: "Listening Beyond Sound" },
+            { subDec: "Quiet communication is not lesser communication. Vocal expression is not excessive communication. They are simply different languages." },
+            { subDec: "When caregivers learn to listen to sound and silence equally, communication becomes clearer and more intuitive." },
+            { subDec: "Different voices. Different signals. Same need to be understood." },
         ]
     },
-    ];
+];
 
 export default BlogData;
 

@@ -30,6 +30,11 @@ const Navbar = () => {
                             >
                                 <i className="fa-solid fa-bars d-lg-none"></i>
                             </li>
+                            <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
+                                <Link className='text-decoration text-capitalize fs-14 text-dark fw-bold' href="/About">
+                                    about
+                                </Link>
+                            </li>
                             <li className='list-style-none home-link py-4'>
                                 <Link className='text-decoration fs-14 text-dark fw-bold' href="#">
                                     Services
@@ -121,11 +126,7 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </li>
-                            <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
-                                <Link className='text-decoration text-capitalize fs-14 text-dark fw-bold' href="/About">
-                                    about
-                                </Link>
-                            </li>
+
                             <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
                                 <Link className='text-decoration text-capitalize fs-14 text-dark fw-bold' href="/Blog">
                                     blog
@@ -138,9 +139,9 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <div className='d-none d-lg-block'>
-                             <button className='bg-dark text-white border-0 custom-round-btn'>
-                                <i className="fa-solid fa-bars-staggered"/>
-                             </button>
+                            <button className='bg-dark text-white border-0 custom-round-btn'>
+                                <i className="fa-solid fa-bars-staggered" />
+                            </button>
                         </div>
                     </div>
                 </div>

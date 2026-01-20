@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // import BlogData from "@/Data/BlogData";
 // import ServiceScrollSlider from "@/Components/ServiceScrollSlider";
 // import ReviewSlider from "@/Components/ReviewSlider";
- 
+
 import Navbar from '@/Components/Navbar';
 import Footer from '@/Components/Footer';
 import BannerCurrent from '@/Components/BannerCurrent';
@@ -17,6 +17,11 @@ import BlogData from '@/Data/BlogData';
 export default function Home() {
 
 
+  const truncateText = (text, wordLimit) => {
+    const words = text.split(" ");
+    if (words.length <= wordLimit) return text;
+    return words.slice(0, wordLimit).join(" ") + "  Read more...";
+  };
 
 
   // const Imgesfunc = (image) => {
@@ -83,7 +88,7 @@ export default function Home() {
       </section> */}
       <section className='py-md-5 py-3'>
         <div className='container-fluid container-xxl px-sm-4'>
-          <h3 className='text-sm-center mb-4'>Services for Every Pet at woofie-do</h3>
+          <h3 className='text-sm-center ps-2 mb-sm-4 mb-2'>Services for Every Pet at woofie-do</h3>
           <div className='row m-0 '>
             <div className='col-lg-7 col-md-6 col-sm-6 col-12'>
               <ReviewSlider />
@@ -209,16 +214,20 @@ export default function Home() {
             <h3 className='text-center mb-4 fw-bold'>Latest stories from <span className='main-color'>Woofie-o</span> </h3>
             <div>
               <div className='container-fulid container-xxl px-1 mb-3'>
-                <div className='row m-0'> 
+                <div className='row m-0'>
                   {
                     BlogData.map((BlogItem, index) => (
-                      <div key={index} className={`col-lg-4 col-md-4 col-sm-4 col-12 `}>
+                      <div key={index} className={`col-lg-4 col-md-4 col-sm-4 col-12 main-blog `}>
                         <Link className={`text-decoration textHover `} href={`/Blog/${BlogItem.id}`}>
                           <div>
                             <div className='blogImg'>
                               <img className='img-fluid' src={BlogItem.image} />
                             </div>
-                            <h5 className='fs-16 pt-2  fw-bold text-dark ps-2'>{BlogItem.title}</h5>
+                            {/* <h5 className='fs-16 pt-2  fw-bold text-dark ps-2'>{BlogItem.title}</h5> */}
+                            <h5 className='fs-16 pt-1 pb-2 fw-bold text-dark text-hover-decrotion ps-2'>
+                              {truncateText(BlogItem.title, 2)}
+                            </h5>
+
                           </div>
                         </Link>
                       </div>

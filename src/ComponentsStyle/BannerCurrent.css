@@ -20,8 +20,8 @@
       background-repeat: no-repeat;
       /* background-size: contain; */
       background-size: cover;
-      /* background-position: center bottom; */
-      background-position: top;
+      background-position: center bottom;
+      /* background-position: top; */
       /* height: 100vh; */
       height: 100%;
       width: 100%;

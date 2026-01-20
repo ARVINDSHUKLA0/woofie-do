@@ -56,7 +56,7 @@ const ServiceSlider = () => {
         <div className="container-fluid service-slider-wrapper service-main-row">
             <Slider {...settings}>
                 {services.map((item, index) => (
-                    <div key={index} className="px-2">
+                    <div key={index} className="px-sm-2 p-0">
                         <div className="service-card">
 
                             <div className="service-image">

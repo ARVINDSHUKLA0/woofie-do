@@ -369,6 +369,12 @@
    height: calc(100vh - 100px);
  }
 
+ .main-blog :hover .text-hover-decrotion {
+   text-decoration-line: underline;
+   color: #F38020 !important;
+   transition: .4s !important;
+ }
+
  .content-scroll {
    height: 100%;
    overflow-y: auto;
@@ -436,37 +442,37 @@
  } */
 
  /* ===== FIX SCROLL ISSUE FOR SM & MD ===== */
-@media (max-width: 991px) {
+ @media (max-width: 991px) {
 
-  .blog-layout {
-    height: auto !important;
-  }
+   .blog-layout {
+     height: auto !important;
+   }
 
-  .image-column {
-    height: auto !important;
-  }
+   .image-column {
+     height: auto !important;
+   }
 
-  .image-column-inner {
-    position: relative !important;
-    top: 0 !important;
-    height: auto !important;
-  }
+   .image-column-inner {
+     position: relative !important;
+     top: 0 !important;
+     height: auto !important;
+   }
 
-  .blog-sticky-img {
-    height: auto !important;
-    max-height: 400px;
-  }
+   .blog-sticky-img {
+     height: auto !important;
+     max-height: 400px;
+   }
 
-  .content-column {
-    height: auto !important;
-  }
+   .content-column {
+     height: auto !important;
+   }
 
-  .content-scroll {
-    height: auto !important;
-    overflow: visible !important;
-    padding-right: 0;
-  }
-}
+   .content-scroll {
+     height: auto !important;
+     overflow: visible !important;
+     padding-right: 0;
+   }
+ }
 
 
  /* this is blog end */
