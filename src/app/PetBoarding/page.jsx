@@ -18,15 +18,15 @@ const Page = () => {
 
     const [services, setServices] = useState({
         boarding: false,
-        hosting: true,
-        sitting: true,
+        // hosting: true,
+        // sitting: true,
     });
 
     const toggleService = (key) => {
         setServices({ ...services, [key]: !services[key] });
     };
     useEffect(() => {
-        emailjs.init("1mMWOQDnI_7Po7ECK");
+        emailjs.init("CDbRZrcgQmiWf9ex9");
     }, []);
 
     const buildDetails = (data) => {
@@ -72,8 +72,8 @@ const Page = () => {
 
         emailjs
             .send(
-                "service_c79177m",
-                "template_bj4xo6k",
+                "service_yae6dcr",      // SERVICE ID
+                "template_s4hyifc",     // ONE COMMON TEMPLATE
                 {
                     name: "Pet Boarding User",
                     service: "Pet Boarding",
@@ -156,32 +156,6 @@ const Page = () => {
                                                     <p className="fs-14 m-0 p-0">At Pet Boarding Facility</p>
                                                 </div>
                                             </div>
-
-                                            <div
-                                                className={`serviceCard ${services.hosting ? "active" : ""}`}
-                                                onClick={() => toggleService("hosting")}
-                                            >
-                                                <span className="checkbox">
-                                                    {services.hosting && "✓"}
-                                                </span>
-                                                <div>
-                                                    <h6 className="fs-16 fw-bold m-0 p-0">Pet Hosting</h6>
-                                                    <p className="fs-14 m-0 p-0">At Pet Hero's Property</p>
-                                                </div>
-                                            </div>
-
-                                            <div
-                                                className={`serviceCard ${services.sitting ? "active" : ""}`}
-                                                onClick={() => toggleService("sitting")}
-                                            >
-                                                <span className="checkbox">
-                                                    {services.sitting && "✓"}
-                                                </span>
-                                                <div>
-                                                    <h6 className="fs-16 fw-bold m-0 p-0">Pet Sitting</h6>
-                                                    <p className="fs-14 m-0 p-0">At Your Property</p>
-                                                </div>
-                                            </div>
                                         </div>
 
                                         {activeTab === "overnight" && (
@@ -210,7 +184,7 @@ const Page = () => {
                                                         />
                                                     </div>
                                                     <div className="col-lg-6 col-md-6 col-sm-6 col-12 mb-2">
-                                                           <label className="font-size-small text-capitalize"> check out date ?</label>
+                                                        <label className="font-size-small text-capitalize"> check out date ?</label>
                                                         <input
                                                             name="end_date"
                                                             type="date"
@@ -274,7 +248,7 @@ const Page = () => {
 
                                                 <div className="row">
                                                     <div className="col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
-                                                           <label className="font-size-small text-capitalize"> your location ?</label>
+                                                        <label className="font-size-small text-capitalize"> your location ?</label>
                                                         <input
                                                             name="location"
                                                             className="form-control"
@@ -308,7 +282,7 @@ const Page = () => {
 
                                                 <div className="row">
                                                     <div className="col-lg-3 col-md-3 col-sm-3 col-12 mb-3">
-                                                         <label className="font-size-small text-capitalize"> check in date ?</label>
+                                                        <label className="font-size-small text-capitalize"> check in date ?</label>
                                                         <input
                                                             name="start_date"
                                                             type="date"
@@ -324,7 +298,7 @@ const Page = () => {
                                                         />
                                                     </div>
                                                     <div className="col-lg-3 col-md-3 col-sm-3 col-12 mb-3">
-                                                              <label className="font-size-small text-capitalize"> check in time ?</label>
+                                                        <label className="font-size-small text-capitalize"> check in time ?</label>
                                                         <select name="checkin" className="form-control">
                                                             <option value="">Check-in Time</option>
                                                             <option value="6am-11am">6am-11am</option>
@@ -332,7 +306,7 @@ const Page = () => {
                                                         </select>
                                                     </div>
                                                     <div className="col-lg-3 col-md-3 col-sm-3 col-12 mb-3">
-                                                         <label className="font-size-small text-capitalize"> check out time ?</label>
+                                                        <label className="font-size-small text-capitalize"> check out time ?</label>
                                                         <select name="checkout" className="form-control">
                                                             <option value="">Check-out Time</option>
                                                             <option value="3pm-6pm">3pm-6pm</option>

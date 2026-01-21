@@ -16,7 +16,7 @@ const Page = () => {
 
     // ✅ INIT EMAILJS (ONLY ONCE)
     useEffect(() => {
-        emailjs.init("1mMWOQDnI_7Po7ECK"); // ✅ PUBLIC KEY
+        emailjs.init("CDbRZrcgQmiWf9ex9"); // ✅ PUBLIC KEY
     }, []);
 
     const handleServiceClick = (service) => {
@@ -77,8 +77,8 @@ const Page = () => {
         // SEND EMAIL
         emailjs
             .send(
-                "service_c79177m",      // SERVICE ID
-                "template_bj4xo6k",     // ONE COMMON TEMPLATE
+                "service_yae6dcr",      // SERVICE ID
+                "template_s4hyifc",     // ONE COMMON TEMPLATE
                 {
                     name: dataObj.user_email,
                     service: "Pet Grooming", // yahan page wise change hoga
@@ -152,14 +152,15 @@ const Page = () => {
                     <div className="LeftSildeBg"></div>
 
                     <div className="RightSideBg pe-lg-5">
-                        <div className="d-flex align-items-center pt-4">
+                        <div className="d-flex align-items-center pt-4 mb-2">
                             <button type="button" className="border-rounded-50 border-0 main-bg">
                                 <i className="fa-solid fa-dog text-white"></i>
                             </button>
-                            <span className="ps-2 text-white">Trusted Dog Walker</span>
+                            {/* <span className="ps-2 text-white">Trusted Dog Walker</span> */}
+                              <h2 className="text-white ps-3">Book Now An Appointment</h2>
                         </div>
 
-                        <h2 className="text-white ps-3">Book Now An Appointment</h2>
+                      
 
                         <div className="customBgImgWarpper ms-3">
                             <p className="font-size-small">

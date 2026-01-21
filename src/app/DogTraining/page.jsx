@@ -16,7 +16,7 @@ const Page = () => {
 
     // ✅ EMAILJS INIT
     useEffect(() => {
-        emailjs.init("1mMWOQDnI_7Po7ECK"); // public key
+        emailjs.init("CDbRZrcgQmiWf9ex9"); // public key
     }, []);
 
     const toggleService = (service) => {
@@ -61,8 +61,8 @@ const Page = () => {
         // ✅ EMAIL SEND (SAME TEMPLATE)
         emailjs
             .send(
-                "service_c79177m",
-                "template_bj4xo6k",
+                "service_yae6dcr",      // SERVICE ID
+                "template_s4hyifc",     // ONE COMMON TEMPLATE
                 {
                     name: "Dog Training User",
                     service: "Dog Training",

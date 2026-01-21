@@ -1,4 +1,4 @@
- 
+
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -14,7 +14,7 @@ const Page = () => {
 
   // ✅ EmailJS init
   useEffect(() => {
-    emailjs.init("1mMWOQDnI_7Po7ECK"); // PUBLIC KEY
+    emailjs.init("CDbRZrcgQmiWf9ex9"); // PUBLIC KEY
   }, []);
 
   // ✅ build details dynamically
@@ -52,8 +52,8 @@ const Page = () => {
 
     emailjs
       .send(
-        "service_c79177m",       // SERVICE ID
-        "template_bj4xo6k",      // SAME TEMPLATE (ONE TEMPLATE ONLY)
+        "service_yae6dcr",      // SERVICE ID
+        "template_s4hyifc",     // ONE COMMON TEMPLATE
         {
           name: "Pet Relocation User",
           service: "Pet Relocation",
@@ -138,7 +138,7 @@ const Page = () => {
                 </div>
 
                 <button type="submit" className="submit-btn">
-                  Calculate Now
+                    Submit
                 </button>
               </div>
             </div>

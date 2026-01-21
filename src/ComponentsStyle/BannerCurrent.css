@@ -17,10 +17,10 @@
    }
   .background-imges-banner {
       /* background-image: url("/assets/img/banner-woofie-img.png"); */
-      background-image: url("/assets/img/banner-check.png");
+      background-image: url("/assets/img/cover.png");
       background-repeat: no-repeat; 
       background-size: cover;
-      background-position: center; 
+      background-position: top; 
       height: 100%;
       width: 100%; 
   }
