@@ -59,6 +59,12 @@ textarea:focus-visible{
     color: black; 
 }
   
+.input-conact{
+    border: 1px solid gray;
+}
+.input-conact:focus-visible{
+    outline: none !important; 
+}
 @media (min-width: 0px) and (max-width: 525px) {
     .background-imges{
         height: 147px;

@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false);
+    const [open, setOpen] = useState(false);
 
     return (
         <>
@@ -48,10 +49,10 @@ const Navbar = () => {
                                         <div>
                                             <ul className='m-0 p-0'>
                                                 <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="#">
+                                                    {/* <Link className='text-decoration' href="#">
                                                         <img src="/assets/img/online-pet-shop.png" width={30} height={30}></img>
                                                         <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>online pet shop</span>
-                                                    </Link>
+                                                    </Link> */}
                                                 </li>
                                                 <li className='list-style-none menu-hover-animatin my-1'>
                                                     <Link className='text-decoration' href="/GroomingPet">
@@ -63,6 +64,12 @@ const Navbar = () => {
                                                     <Link className='text-decoration' href="/PetBoarding">
                                                         <img src="/assets/img/pet-boarding-and-creche.PNG" width={30} height={30}></img>
                                                         <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet boarding & creche</span>
+                                                    </Link>
+                                                </li>
+                                                <li className='list-style-none menu-hover-animatin my-1'>
+                                                    <Link className='text-decoration' href="/PetInsurance">
+                                                        <img src="/assets/img/pet-insurance-icon.PNG" width={30} height={30}></img>
+                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet insurance</span>
                                                     </Link>
                                                 </li>
                                             </ul>
@@ -87,22 +94,18 @@ const Navbar = () => {
                                                         <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet relocation</span>
                                                     </Link>
                                                 </li>
+
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul className='m-0 p-0'>
                                                 <li className='list-style-none menu-hover-animatin my-1'>
                                                     <Link className='text-decoration' href="#">
                                                         <img src="/assets/img/puppy-party-icon.png" width={30} height={30}></img>
                                                         <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>puppy party</span>
                                                     </Link>
                                                 </li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <ul className='m-0 p-0'>
-                                                <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="/PetInsurance">
-                                                        <img src="/assets/img/pet-insurance-icon.PNG" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet insurance</span>
-                                                    </Link>
-                                                </li>
+
                                                 <li className='list-style-none menu-hover-animatin my-1'>
                                                     <Link className='text-decoration' href="#">
                                                         <img src="/assets/img/pet-meting-icon.PNG" width={30} height={30}></img>
@@ -133,15 +136,52 @@ const Navbar = () => {
                                 </Link>
                             </li>
                             <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
-                                <Link className='text-decoration text-capitalize fs-14 text-dark fw-bold' href="#">
+                                <Link className='text-decoration text-capitalize fs-14 text-dark fw-bold' href="/Contact">
                                     contact
                                 </Link>
                             </li>
                         </ul>
-                        <div className='d-none d-lg-block'>
+                        {/* <div className='d-none d-lg-block'>
                             <button className='bg-dark text-white border-0 custom-round-btn'>
                                 <i className="fa-solid fa-bars-staggered" />
                             </button>
+                        </div> */}
+                        <div className="d-none d-lg-block">
+                            <button
+                                className="bg-dark text-white border-0 custom-round-btn"
+                                onClick={() => setOpen(true)}
+                            >
+                                <i className="fa-solid fa-bars-staggered" />
+                            </button>
+                        </div>
+                        {open && (
+                            <div className="overlay" onClick={() => setOpen(false)} />
+                        )}
+                        <div className={`right-panel px-3 ${open ? "open" : ""}`}>
+                            <p className='text-end fs-4 py-2'>  <button className="close-btn text-dark" onClick={() => setOpen(false)}>
+                                <i className="fa-solid fa-xmark"></i>
+                            </button></p>
+
+                            <div className="p-3">
+                                <div>
+                                    <img src='/assets/img/logo.png' width={100}
+                                        height={30} />
+                                </div>
+                                <div>
+                                    <p className='py-2 pe-md-5 pe-0'>Woofie-Do provides expert, gentle
+                                        care for your pet, offering everything
+                                        from routine check-ups to advanced
+                                        treatments to keep your furry family
+                                        member healthy and happy.</p>
+                                    <div>
+                                        <img className='img-fluid' src="/assets/img/banner1.PNG" alt="" />
+                                    </div>
+                                    <div>
+                                        <p className='m-0'>Jaipuriya Plaza, sector-26, noida</p>
+                                        <p className='fw-bold'>care@woofieDo.com</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

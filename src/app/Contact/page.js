@@ -1,7 +1,7 @@
 "use client";
 
-import React from 'react'; 
-import '../Contact/Contact.css' 
+import React, { useEffect } from 'react';
+import '../Contact/Contact.css'
 import Link from 'next/link';
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from 'react-toastify';
@@ -10,27 +10,49 @@ import Navbar from '@/Components/Navbar';
 import Footer from '@/Components/Footer';
 
 const Page = () => {
+  useEffect(() => {
+    emailjs.init("1mMWOQDnI_7Po7ECK"); // PUBLIC KEY
+  }, []);
+
   const EnquirySend = (e) => {
     e.preventDefault();
 
+    const formData = new FormData(e.target);
+    const dataObj = Object.fromEntries(formData.entries());
+
+    const details = `
+        Name: ${dataObj.name}
+        Email: ${dataObj.email}
+        Phone: ${dataObj.phone}
+        Address: ${dataObj.address}
+        Message: ${dataObj.message}
+    `.trim();
+
     emailjs
-      .sendForm("service_4b4byfv", "template_mnohi9v", e.target, "lqLmmKH0FVHz2HUyz")
-      .then(
-        () => {
-          toast.success("Enquiry sent successfully!");
-          e.target.reset();
-        },
-        (error) => {
-          toast.error("Failed to send enquiry: " + error.text);
+      .send(
+        "service_c79177m",      // SAME SERVICE
+        "template_bj4xo6k",     // SAME TEMPLATE
+        {
+          name: dataObj.email,
+          service: "Contact Enquiry",
+          details: details,
         }
-      );
+      )
+      .then(() => {
+        toast.success("Enquiry sent successfully!");
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        toast.error("Email failed");
+      });
   };
 
   return (
     <>
       <Navbar />
 
-      <section className='conatct-banner-bg text-end'>
+      <section className='conatct-banner-bg text-end mt-5'>
         <div>
           <span className='text-capitalize'>
             <Link href="/" className='text-decoration-none-one'>
@@ -51,21 +73,21 @@ const Page = () => {
           <form className='w-100' onSubmit={EnquirySend}>
             <div className='d-sm-flex d-block justify-content-between my-4'>
               <input
-                className='w-100 py-2 rounded-5 font-size-small mb-3'
+                className='w-100 py-2 rounded-5 font-size-small mb-3 input-conact'
                 type="text"
                 name="name"
                 placeholder="Name*"
                 required
               />
               <input
-                className='w-100 py-2 rounded-5 font-size-small ms-sm-1 mb-3'
+                className='w-100 py-2 rounded-5 font-size-small ms-sm-1 mb-3 input-conact '
                 type="email"
                 name="email"
                 placeholder="Email*"
                 required
               />
               <input
-                className='w-100 py-2 rounded-5 font-size-small ms-sm-2 mb-3'
+                className='w-100 py-2 rounded-5 font-size-small ms-sm-2 mb-3 input-conact'
                 type="tel"
                 name="phone"
                 placeholder="Phone Number*"
@@ -74,7 +96,7 @@ const Page = () => {
             </div>
 
             <input
-              className='w-100 py-2 rounded-5 font-size-small mb-3'
+              className='w-100 py-2 rounded-5 font-size-small mb-3 input-conact'
               type="text"
               name="address"
               placeholder="Address*"
@@ -128,3 +150,5 @@ const Page = () => {
 };
 
 export default Page;
+
+ 
