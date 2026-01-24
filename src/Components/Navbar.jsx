@@ -238,7 +238,7 @@ const Navbar = () => {
                                         <img className='img-fluid' src="/assets/img/banner1.PNG" alt="Banner" />
                                     </div>
                                     <div>
-                                        <p className='m-0'>Jaipuriya Plaza, sector-26, noida</p>
+                                        <p className='m-0'>C 25, D-Block, Sector 26, Noida, Uttar Pradesh 201301</p>
                                         <p className='fw-bold'>care@woofieDo.com</p>
                                     </div>
                                 </div>

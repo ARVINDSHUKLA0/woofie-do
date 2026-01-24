@@ -126,8 +126,9 @@ const Page = () => {
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20103.25243905627!2d77.36506861405148!3d28.612882770615602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef8e9e95e497%3A0x59e8df2ffed4a0e1!2sThink%20Cmyk%20Studios!5e1!3m2!1sen!2sin!4v1740561737620!5m2!1sen!2sin"
+            src="https://www.google.com/maps?q=C%20Block%20D%2C%20D-25%2C%20Sector%2026%2C%20Noida%2C%20Uttar%20Pradesh%20201301&output=embed"
           ></iframe>
+
         </div>
       </section>
 
