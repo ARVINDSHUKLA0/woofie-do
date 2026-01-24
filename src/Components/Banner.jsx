@@ -1,83 +1,83 @@
-'use client';  
-
-import React from 'react';
-import Image from 'next/image';  
-import '../ComponentsStyle/Banner.css';
+import React from 'react'
+import '../ComponentsStyle/Banner.css'
 
 const Banner = () => {
+
+
+  const BannerArr = [
+    {
+      tite: " Safe & loving boarding and creche",
+      BannerImg: "/assets/img/petBoradingicon.PNG",
+      href: "/GroomingPet"
+    },
+    {
+      tite: "Gentle, expert grooming",
+      BannerImg: "/assets/img/petgrommingicon.PNG",
+      href: "/GroomingPet"
+    },
+    {
+      tite: "Stress-free pet transportation",
+      BannerImg: "/assets/img/pettranceporticon.PNG",
+      href: "/GroomingPet"
+    },
+    {
+      tite: "Positive behaviour training",
+      BannerImg: "/assets/img/Behaviour-training-icon.PNG",
+      href: "/GroomingPet"
+    },
+    {
+      tite: " End-to-end pet relocation",
+      BannerImg: "/assets/img/pet-relocation.PNG",
+      href: "/GroomingPet"
+
+    },
+    {
+      tite: " Smart pet insurance solutions",
+      BannerImg: "/assets/img/pet-insurance-icon.PNG",
+      href: "/GroomingPet"
+    }
+  ]
   return (
-    <section className='overflow-hidden'>
-      <div className='container px-2 position-relative'>
-        <div className="row my-100">
-          <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-            <div>
-              <h2 className='banner-font-size mb-3'>
-                Gentle Hands, Healthy Paws Exceptional <span className='banner-custom-color'> Pet Care.</span>
-              </h2>
-              <p className='mt-sm-5 my-4'>
-                Woofie Do offers expert, gentle care for your beloved pet. Our comprehensive services, 
-                from routine check-ups to advanced treatments, mean your furry family member always 
-                receives the best possible veterinary attention.
-              </p>
+    <>
+      <section className='mt-100 pt-4'>
+        <div className='conatiner-fluid'>
+          <div className="row m-0">
+            <div className="col-lg-7 col-md-8 col-sm-6 col-12">
+              <div>
+                <h2 className='custom-fnt-size'>Where Premium Pet Care Meets Pure Love</h2>
+              </div>
+              <div className='mani-box-service'>
+                 <h4>Your Trusted Pet Care Partner</h4>
+                 <div className="row">
+                    <div className="col-lg-4 col-md-4 col-sm-6 col-12 mb-1">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, eaque.
+                    </div>
+                    <div className="col-lg-4 col-md-4 col-sm-6 col-12 mb-1">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, eaque.
+                    </div>
+                    <div className="col-lg-4 col-md-4 col-sm-6 col-12 mb-1">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, eaque.
+                    </div>
+                    <div className="col-lg-4 col-md-4 col-sm-6 col-12 mb-1">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, eaque.
+                    </div>
+                    <div className="col-lg-4 col-md-4 col-sm-6 col-12 mb-1">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, eaque.
+                    </div>
+                    <div className="col-lg-4 col-md-4 col-sm-6 col-12 mb-1">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, eaque.
+                    </div>
+                 </div>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-            <div className='custom-imges-height d-flex position-relative'> 
-              <div className='banner-inner-warper mt-100'>
-                <div className='bg-custom-one border-banner-one custom-height mb-sm-3 mb-2 position-relative'>
-                  <div className='imges-banner-warpper item-banner-one'>
-                    <Image 
-                      className='img-fluid border-banner-one'
-                      src="/assets/img/dog-1.jpg"
-                      alt="Happy dog receiving care"
-                      width={300}
-                      height={300}
-                      priority
-                    />
-                  </div>
-                </div>
-                <div className='bg-custom-two border-banner-two custom-height mb-sm-3 position-relative'>
-                  <div className='imges-banner-warpper item-banner-one'>
-                    <Image 
-                      className='img-fluid border-banner-two'
-                      src="/assets/img/dog-2.jpg"
-                      alt="Dog playing with vet"
-                      width={300}
-                      height={300}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className='banner-inner-warper ps-lg-5 ps-md-3 ps-3'>
-                <div className='bg-custom-three border-banner-one custom-height mb-sm-3 mb-2 position-relative'>
-                  <div className='imges-banner-warpper item-banner-one'>
-                    <Image 
-                      className='img-fluid border-banner-one'
-                      src="/assets/img/dog-3.jpg"
-                      alt="Dog being examined by vet"
-                      width={300}
-                      height={300}
-                    />
-                  </div>
-                </div>
-                <div className='bg-custom-four border-banner-two custom-height mb-sm-3 position-relative'>
-                  <div className='imges-banner-warpper item-banner-one'>
-                    <Image 
-                      className='img-fluid border-banner-two'
-                      src="/assets/img/dog-4.jpg"
-                      alt="Small dog receiving attention"
-                      width={300}
-                      height={300}
-                    />
-                  </div>
-                </div>
-              </div>
+            <div className="col-lg-5 col-md-4 col-sm-6 col-12 text-center">
+              <img className='img-fluid' src="/assets/img/hd.webp" alt="" />
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
+    </>
+  )
+}
 
-export default Banner;
+export default Banner

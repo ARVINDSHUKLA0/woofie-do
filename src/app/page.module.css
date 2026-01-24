@@ -1,37 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* this is new  */
 
 .trustCard {
@@ -90,6 +56,7 @@
 .trustBtn :hover {
   background: #e96b10;
 }
+
 /* 
 .PremiumDiscount {
   width: 94%;
@@ -107,16 +74,49 @@
   object-fit: cover;
 } */
 
+.imgesWidth {
+  width: 50%;
+}
 
-
-.blogbtnwidth{
+.blogbtnwidth {
   width: 25% !important;
 }
-.imgesYoutubeSide{
+
+.imgesYoutubeSide {
   height: 400px;
   object-fit: cover;
 }
- 
+
+.CustomParWIdth {
+  width: 80%;
+}
+
+/* .ServicesImg{
+  height: 450px;
+} */
+.CustomBorderSection {
+  padding: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+.OurValuimg{
+  width: 50%;
+}
+.OurValuimg img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.ServicesImg img {
+  height: 100%;
+  width: 100%;
+  object-position: top;
+  object-fit: cover;
+}
+
 @media (min-width: 0px) and (max-width: 525px) {
   .PremiumDiscount {
     width: 100%;
@@ -125,15 +125,39 @@
   .blogbtnwidth {
     width: 100% !important;
   }
-  .imgesYoutubeSide{
-  height: 100%;
-  object-fit: cover;
+
+  .imgesYoutubeSide {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .imgesWidth {
+    width: 100%;
+  }
+
+  .CustomParWIdth {
+    width: 100%;
+  }
+  .OurValuimg{
+  width: 100%;
 }
 }
+
 @media (min-width: 526px) and (max-width: 768px) {
-    .imgesYoutubeSide{
-  height: 100%;
-  object-fit: cover;
+  .imgesYoutubeSide {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .imgesWidth {
+    width: 100%;
+  }
+
+  .CustomParWIdth {
+    width: 100%;
+  }
+  .OurValuimg{
+  width: 100%;
 }
 }
 
@@ -141,8 +165,18 @@
   .blogbtnwidth {
     width: 50% !important;
   }
-  .imgesYoutubeSide{
-  height: 100%;
-  object-fit: cover;
-}
+
+  .imgesYoutubeSide {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .imgesWidth {
+    width: 100%;
+  }
+
+  .CustomParWIdth {
+    width: 100%;
+  }
+  
 }

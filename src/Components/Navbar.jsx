@@ -1,180 +1,241 @@
+// 'use client';
+// import React, { useState } from 'react';
+// import '../ComponentsStyle/Navbar.css';
+// import Link from 'next/link';
+
+// const Navbar = () => {
+//     const [menu, setMenu] = useState(false);
+//     const [open, setOpen] = useState(false);
+
+//     return (
+//         <>
+//             <nav className='navbar-fixed position-relative'>
+//                 <div className='container-fluid'>
+//                     <div className='d-flex justify-content-between align-items-center'>
+
+//                         <div className='nav-logo'>
+//                             <Link href="/">
+//                                 <img
+//                                     src="/assets/img/logo.png"
+//                                     width={110}
+//                                     height={40}
+//                                     alt="Company Logo"
+//                                 />
+//                             </Link>
+//                         </div>
+
+//                         <ul className={`d-lg-flex d-block gap-4 m-0 p-0 align-items-center home-dropdown ${menu ? 'show-mobile' : ''}`}>
+//                             <li
+//                                 className='list-style-none bars-icon'
+//                                 onClick={() => setMenu(true)}
+//                             >
+//                                 <i className="fa-solid fa-bars d-lg-none"></i>
+//                             </li>
+//                             <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
+//                                 <Link className='text-decoration text-capitalize fs-18 text-dark fw-bold' href="/About">
+//                                     about
+//                                 </Link>
+//                             </li>
+//                             <li className='list-style-none home-link py-4'>
+//                                 <Link className='text-decoration fs-18 text-dark fw-bold' href="/Services">
+//                                     Services
+//                                 </Link>
+//                             </li>
+
+//                             <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
+//                                 <Link className='text-decoration text-capitalize fs-18 text-dark fw-bold' href="/Blog">
+//                                     blog
+//                                 </Link>
+//                             </li>
+//                             <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
+//                                 <Link className='text-decoration text-capitalize fs-18 text-dark fw-bold' href="/Contact">
+//                                     contact
+//                                 </Link>
+//                             </li>
+//                         </ul>
+//                         <div className="d-none d-lg-block">
+//                             <button
+//                                 className="bg-dark text-white border-0 custom-round-btn"
+//                                 onClick={() => setOpen(true)}
+//                             >
+//                                 <i className="fa-solid fa-bars-staggered" />
+//                             </button>
+//                         </div>
+//                         {open && (
+//                             <div className="overlay" onClick={() => setOpen(false)} />
+//                         )}
+//                         <div className={`right-panel px-3 ${open ? "open" : ""}`}>
+//                             <p className='text-end fs-4 py-2'>  <button className="close-btn text-dark" onClick={() => setOpen(false)}>
+//                                 <i className="fa-solid fa-xmark"></i>
+//                             </button></p>
+
+//                             <div className="p-3">
+//                                 <div>
+//                                     <img src='/assets/img/logo.png' width={100}
+//                                         height={30} />
+//                                 </div>
+//                                 <div>
+//                                     <p className='py-2 pe-md-5 pe-0'>Woofie-Do provides expert, gentle
+//                                         care for your pet, offering everything
+//                                         from routine check-ups to advanced
+//                                         treatments to keep your furry family
+//                                         member healthy and happy.</p>
+//                                     <div>
+//                                         <img className='img-fluid' src="/assets/img/banner1.PNG" alt="" />
+//                                     </div>
+//                                     <div>
+//                                         <p className='m-0'>Jaipuriya Plaza, sector-26, noida</p>
+//                                         <p className='fw-bold'>care@woofieDo.com</p>
+//                                     </div>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </nav>
+//         </>
+//     );
+// };
+
+// export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 'use client';
 import React, { useState } from 'react';
 import '../ComponentsStyle/Navbar.css';
 import Link from 'next/link';
 
 const Navbar = () => {
-    const [menu, setMenu] = useState(false);
-    const [open, setOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isRightPanelOpen, setIsRightPanelOpen] = useState(false);
 
     return (
         <>
-            <nav className='navbar-fixed position-relative'>
+            <nav className='navbar-fixed position-relative py-3'>
                 <div className='container-fluid'>
                     <div className='d-flex justify-content-between align-items-center'>
-
+ 
                         <div className='nav-logo'>
                             <Link href="/">
                                 <img
                                     src="/assets/img/logo.png"
-                                    width={100}
-                                    height={30}
+                                    width={110}
+                                    height={40}
                                     alt="Company Logo"
                                 />
                             </Link>
                         </div>
-
-                        <ul className='d-flex gap-4 m-0 align-items-center'>
-                            <li
-                                className='list-style-none bars-icon'
-                                onClick={() => setMenu(true)}
-                            >
-                                <i className="fa-solid fa-bars d-lg-none"></i>
+ 
+                        <ul className={`nav-menu d-lg-flex d-block m-0 gap-4 m-0 p-0 align-items-center ps-2 p-sm-0 ${isMobileMenuOpen ? 'show-mobile' : ''}`}>
+                            <li className='list-style-none mobile-menu-toggle d-lg-none  text-end p-3 m-0 mt-2'>
+                                <i 
+                                    className="fa-solid fa-xmark close-icon" 
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                ></i>
                             </li>
-                            <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
-                                <Link className='text-decoration text-capitalize fs-14 text-dark fw-bold' href="/About">
+                             
+                            <li className='list-style-none  py-lg-0'>
+                                <Link 
+                                    className='text-decoration text-capitalize fs-18 text-dark fw-bold' 
+                                    href="/About"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
                                     about
                                 </Link>
                             </li>
-                            <li className='list-style-none home-link py-4'>
-                                <Link className='text-decoration fs-14 text-dark fw-bold' href="#">
+                            <li className='list-style-none py-lg-0'>
+                                <Link 
+                                    className='text-decoration fs-18 text-dark fw-bold' 
+                                    href="/Services"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
                                     Services
                                 </Link>
-                                <div className={`home-dropdown ${menu ? 'show-mobile' : ''}`}>
-                                    <i
-                                        className="fa-solid fa-xmark close-icon d-md-none text-white"
-                                        onClick={() => setMenu(false)}
-                                    ></i>
-                                    <div className="d-sm-flex d-block justify-content-between">
-                                        <div>
-                                            <ul className='m-0 p-0'>
-                                                <li className='list-style-none menu-hover-animatin my-1'>
-                                                    {/* <Link className='text-decoration' href="#">
-                                                        <img src="/assets/img/online-pet-shop.png" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>online pet shop</span>
-                                                    </Link> */}
-                                                </li>
-                                                <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="/GroomingPet">
-                                                        <img src="/assets/img/IMG_gromming-01.PNG" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet gromming</span>
-                                                    </Link>
-                                                </li>
-                                                <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="/PetBoarding">
-                                                        <img src="/assets/img/pet-boarding-and-creche.PNG" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet boarding & creche</span>
-                                                    </Link>
-                                                </li>
-                                                <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="/PetInsurance">
-                                                        <img src="/assets/img/pet-insurance-icon.PNG" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet insurance</span>
-                                                    </Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <ul className='m-0 p-0'>
-                                                <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="/PetTransportation">
-                                                        <img src="/assets/img/pet-transportation.PNG" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation' >pet transportation </span>
-                                                    </Link>
-                                                </li>
-                                                <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="/DogTraining">
-                                                        <img src="/assets/img/Behaviour-training-icon.PNG" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>behavioural training at creche</span>
-                                                    </Link>
-                                                </li>
-                                                <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="/PetRelocation">
-                                                        <img src="/assets/img/pet-relocation.PNG" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet relocation</span>
-                                                    </Link>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <ul className='m-0 p-0'>
-                                                <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="#">
-                                                        <img src="/assets/img/puppy-party-icon.png" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>puppy party</span>
-                                                    </Link>
-                                                </li>
-
-                                                <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="#">
-                                                        <img src="/assets/img/pet-meting-icon.PNG" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>pet mating</span>
-                                                    </Link>
-                                                </li>
-                                                {/* <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="/About">
-                                                        <img src="/assets/img/about-icon.png" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>about us</span>
-                                                    </Link>
-                                                </li>
-                                                <li className='list-style-none menu-hover-animatin my-1'>
-                                                    <Link className='text-decoration' href="/Blog">
-                                                        <img src="/assets/img/blog-icon.png" width={30} height={30}></img>
-                                                        <span className='text-white fs-14 text-capitalize ps-2 menu-list-animation'>blog</span>
-                                                    </Link>
-                                                </li> */}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
                             </li>
-
-                            <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
-                                <Link className='text-decoration text-capitalize fs-14 text-dark fw-bold' href="/Blog">
+                            <li className='list-style-none py-lg-0'>
+                                <Link 
+                                    className='text-decoration text-capitalize fs-18 text-dark fw-bold' 
+                                    href="/Blog"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
                                     blog
                                 </Link>
                             </li>
-                            <li className='list-style-none py-4 shop-link d-flex align-items-center gap-1'>
-                                <Link className='text-decoration text-capitalize fs-14 text-dark fw-bold' href="/Contact">
+                            <li className='list-style-none  py-lg-0'>
+                                <Link 
+                                    className='text-decoration text-capitalize fs-18 text-dark fw-bold' 
+                                    href="/Contact"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
                                     contact
                                 </Link>
                             </li>
                         </ul>
-                        {/* <div className='d-none d-lg-block'>
-                            <button className='bg-dark text-white border-0 custom-round-btn'>
-                                <i className="fa-solid fa-bars-staggered" />
+ 
+                        <div className='d-lg-none'>
+                            <button
+                                className="bg-dark text-white border-0 custom-round-btn"
+                                onClick={() => setIsMobileMenuOpen(true)}
+                            >
+                                <i className="fa-solid fa-bars"></i>
                             </button>
-                        </div> */}
+                        </div> 
                         <div className="d-none d-lg-block">
                             <button
                                 className="bg-dark text-white border-0 custom-round-btn"
-                                onClick={() => setOpen(true)}
+                                onClick={() => setIsRightPanelOpen(true)}
                             >
                                 <i className="fa-solid fa-bars-staggered" />
                             </button>
-                        </div>
-                        {open && (
-                            <div className="overlay" onClick={() => setOpen(false)} />
-                        )}
-                        <div className={`right-panel px-3 ${open ? "open" : ""}`}>
-                            <p className='text-end fs-4 py-2'>  <button className="close-btn text-dark" onClick={() => setOpen(false)}>
-                                <i className="fa-solid fa-xmark"></i>
-                            </button></p>
+                        </div> 
+                        {isRightPanelOpen && (
+                            <div className="overlay" onClick={() => setIsRightPanelOpen(false)} />
+                        )} 
+                        <div className={`right-panel px-3 ${isRightPanelOpen ? "open" : ""}`}>
+                            <div className='text-end fs-4 py-2'>
+                                <button className="close-btn text-dark" onClick={() => setIsRightPanelOpen(false)}>
+                                    <i className="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
 
                             <div className="p-3">
                                 <div>
-                                    <img src='/assets/img/logo.png' width={100}
-                                        height={30} />
+                                    <img src='/assets/img/logo.png' width={100} height={30} alt="Logo" />
                                 </div>
                                 <div>
-                                    <p className='py-2 pe-md-5 pe-0'>Woofie-Do provides expert, gentle
-                                        care for your pet, offering everything
-                                        from routine check-ups to advanced
-                                        treatments to keep your furry family
-                                        member healthy and happy.</p>
+                                    <p className='py-2 pe-md-5 pe-0'>
+                                        Woofie-Do provides expert, gentle care for your pet, 
+                                        offering everything from routine check-ups to advanced 
+                                        treatments to keep your furry family member healthy and happy.
+                                    </p>
                                     <div>
-                                        <img className='img-fluid' src="/assets/img/banner1.PNG" alt="" />
+                                        <img className='img-fluid' src="/assets/img/banner1.PNG" alt="Banner" />
                                     </div>
                                     <div>
                                         <p className='m-0'>Jaipuriya Plaza, sector-26, noida</p>

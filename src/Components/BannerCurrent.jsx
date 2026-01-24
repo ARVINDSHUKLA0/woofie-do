@@ -37,74 +37,71 @@ const BannerCurrent = () => {
 
     const pathname = usePathname()
 
+    
+
     const BannerArr = [
         {
-            tite: "Pet Boarding & Creche",
-            descrption: "safe boarding & fun creche services",
+            tite: " Safe & loving boarding and creche",
             BannerImg: "/assets/img/petBoradingicon.PNG",
-            href: "/PetBoarding"
+            href: "/GroomingPet"
         },
         {
-            tite: "grooming",
-            descrption: "cat/dog grooming service",
+            tite: "Gentle, expert grooming",
             BannerImg: "/assets/img/petgrommingicon.PNG",
             href: "/GroomingPet"
         },
         {
-            tite: "pet transportation",
-            descrption: "local pickup/drop for your pets",
+            tite: "Stress-free pet transportation",
             BannerImg: "/assets/img/pettranceporticon.PNG",
-            href: "/PetTransportation"
+            href: "/GroomingPet"
         },
         {
-            tite: "behaviour training",
-            descrption: "creche-based training for pets",
+            tite: "Positive behaviour training",
             BannerImg: "/assets/img/Behaviour-training-icon.PNG",
-            href: "/DogTraining"
+            href: "/GroomingPet"
         },
         {
-            tite: "pet relocation",
-            descrption: "domestic & international pet relocation",
+            tite: " End-to-end pet relocation",
             BannerImg: "/assets/img/pet-relocation.PNG",
-            href: "/PetRelocation"
+            href: "/GroomingPet"
 
         },
         {
-            tite: "Pet insurance",
-            descrption: "protect your pets with insurance",
+            tite: " Smart pet insurance solutions",
             BannerImg: "/assets/img/pet-insurance-icon.PNG",
-            href: "/PetInsurance"
+            href: "/GroomingPet"
         }
     ]
 
 
     return (
         <>
-            <section className='mt-100 position-relative'>
-                <div className='main-banner-warper '>
+            <section className='mt-100 d-lg-flex d-flex flex-column-reverse flex-lg-row  align-items-center gap-2'>
+                <div className='main-banner-warper'>
                     <div className='banner-imges-main-conatiner'>
-                        <div className='background-imges-banner'> </div>
+                        <div className='mt-3'>
+                            <h2 className='ps-md-4 pb-3 mt-md-5 mt-0 ps-3 custom-font-size'>Where Premium Pet Care Meets Pure Love</h2>
+                        </div>
                     </div>
-                    <div className='container-fluid container-xxl'>
+                    <div className='px-2'>
                         <div className="banner-box ">
-                            <h4 className='text-center'>Your Trusted Pet Care Partner</h4>
-                            <p className='text-center'>Book Pet Care Service At Home with <span className='main-color fw-bold fs-18'>Woofie-Do</span> </p>
-                            <div className="row">
+                            <h4 className='mb-5  ps-1'>Your Trusted Pet Care Partner</h4>
+                            <div className="row align-items-top m-0 ">
                                 {
                                     BannerArr.map((DataBaner, index) => (
-                                        <div key={index} className="col-lg-4 col-md-4 col-sm-6 col-12 mb-4 d-flex">
-                                            <div className={`banner-cetgory w-100 ${activeIndex === index ? 'active' : ''}`}
+                                        <div key={index} className="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-4 d-flex">
+                                            <div className={`banner-cetgory  w-100 ${activeIndex === index ? 'active' : ''}`}
                                                 onClick={() => setActiveIndex(index)}>
                                                 <Link
                                                     href={DataBaner.href}
-                                                    className="d-flex align-items-center gap-2 text-decoration-none w-100"
+                                                    className="d-flex align-items-center gap-2 custom-banner-decoration-none w-100"
                                                 >
                                                     <div>
-                                                        <Image src={DataBaner.BannerImg} width={40} height={50} alt="icon" />
+                                                        <Image src={DataBaner.BannerImg} width={70} height={70} alt="icon" />
                                                     </div>
                                                     <div>
-                                                        <p className='m-0 fs-16 fw-bold text-capitalize'>{DataBaner.tite}</p>
-                                                        <p className='m-0 fs-14 bnner-dec d-none d-sm-block text-capitalize'>{DataBaner.descrption}</p>
+                                                        <span className='fs-14 text-capitalize '>{DataBaner.tite}</span>
+                                                        {/* <p className='m-0 fs-14 bnner-dec d-none d-sm-block text-capitalize'>{DataBaner.descrption}</p> */}
                                                     </div>
                                                 </Link>
                                             </div>
@@ -115,67 +112,36 @@ const BannerCurrent = () => {
                                 }
                             </div>
                             <div className="row align-items-center">
-                                <div className="col-lg-4 col-md-4 col-sm-6 col-12 mb-4 d-flex">
-                                    <div className="city-wrapper w-100">
-                                        <label className="city-label">Your City</label>
-
-                                        <input
-                                            type="text"
-                                            placeholder="Search Your City Here..."
-                                            value={query}
-                                            onChange={(e) => {
-                                                setQuery(e.target.value);
-                                                setOpen(true);
-                                            }}
-                                            onFocus={() => setOpen(true)}
-                                            className="city-input"
-                                        />
-
-                                        {open && filtered.length > 0 && (
-                                            <ul className="city-dropdown m-0 p-0">
-                                                {filtered.map((city, i) => (
-                                                    <li className='list-style-none'
-                                                        key={i}
-                                                        onClick={() => {
-                                                            setQuery(city);
-                                                            setOpen(false);
-                                                        }}
-                                                    >
-                                                        {city}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-4 col-sm-6 col-12 mb-4 d-flex flex-column">
-                                    <label className="city-label">Service date</label>
-
-                                    <DatePicker
-                                        selected={serviceDate}
-                                        onChange={(date) => setServiceDate(date)}
-                                        placeholderText="Select Service Date Here..."
-                                        dateFormat="dd MMMM yyyy"
-                                        showMonthDropdown
-                                        showYearDropdown
-                                        dropdownMode="select"
-                                        popperPlacement="bottom-start"
-                                        popperClassName="service-datepicker-popper"
-                                        portalId="root-portal"
-                                        className="w-100 city-input"
-                                    />
-
-                                </div>
                                 <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 d-flex  ">
-                                    <button className='w-100 mt-md-4  book-dog-btn'>book dog walking </button>
+                                    <button className='w-100 mt-md-4  book-dog-btn'>book now </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div className='custom-width-banner mt-md-0 mt-2'>
+                    <img className='img-fluid custom-banner-height' src="/assets/img/hd.webp" alt="" />
+                </div>
+                
             </section>
+            <div className="dot-animation-layer">
+  {Array.from({ length: 16 }).map((_, i) => (
+    <span key={i} className={`dot dot-${i + 1}`}>•</span>
+  ))}
+</div>
+
         </>
     )
 }
 
 export default BannerCurrent
+
+
+
+
+
+
+
+
+
+ 

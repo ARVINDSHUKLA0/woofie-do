@@ -10,27 +10,21 @@ import Footer from "@/Components/Footer";
 
 const Page = () => {
     const form = useRef(null);
-    const [activeService, setActiveService] = useState("house sitting");
+    const [activeService, setActiveService] = useState("");
     const [activeTime, setActiveTime] = useState("");
 
-
-    // ✅ INIT EMAILJS (ONLY ONCE)
     useEffect(() => {
-        emailjs.init("CDbRZrcgQmiWf9ex9"); // ✅ PUBLIC KEY
+        emailjs.init("CDbRZrcgQmiWf9ex9");
     }, []);
-
-    const handleServiceClick = (service) => {
-        setActiveService(service);
-    };
-    const handleTimeClick = (time) => {
-        setActiveTime(time);
-    };
 
     const buildDetails = (data) => {
         let details = "";
 
         if (data.petTypesCombined)
             details += `Pets: ${data.petTypesCombined}\n`;
+
+        if (data.service)
+            details += `Service: ${data.service}\n`;
 
         if (data.address)
             details += `Address: ${data.address}\n`;
@@ -50,8 +44,6 @@ const Page = () => {
         return details.trim();
     };
 
-
-
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -60,77 +52,58 @@ const Page = () => {
 
         const formData = new FormData(formEl);
 
-        // PET TYPES
         const petTypes = formData.getAll("petType");
         if (petTypes.length === 0) {
             toast.error("Please select at least Dog or Cat.");
             return;
         }
 
-        // FORM DATA OBJECT
+        if (!formData.get("service")) {
+            toast.error("Please select a service.");
+            return;
+        }
+
         const dataObj = Object.fromEntries(formData.entries());
         dataObj.petTypesCombined = petTypes.join(", ");
 
-        // BUILD DETAILS
         const details = buildDetails(dataObj);
 
-        // SEND EMAIL
         emailjs
             .send(
-                "service_yae6dcr",      // SERVICE ID
-                "template_s4hyifc",     // ONE COMMON TEMPLATE
+                "service_yae6dcr",
+                "template_s4hyifc",
                 {
                     name: dataObj.user_email,
-                    service: "Pet Grooming", // yahan page wise change hoga
+                    service: dataObj.service,
                     details: details,
                 }
             )
             .then(() => {
                 toast.success("Appointment sent successfully!");
                 formEl.reset();
+                setActiveService("");
+                setActiveTime("");
             })
-            .catch((error) => {
-                console.error("EmailJS error:", error);
+            .catch(() => {
                 toast.error("Email failed");
             });
     };
+    const handleServiceClick = (service) => {
+        setActiveService(service);
+    };
 
+    const handleTimeClick = (time) => {
+        setActiveTime(time);
+    };
 
-
-
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-
-    //     const formEl = form.current;
-    //     if (!formEl) return;
-
-    //     const formData = new FormData(formEl);
-    //     const petTypes = formData.getAll("petType");
-
-    //     if (petTypes.length === 0) {
-    //         toast.error("Please select at least Dog or Cat.");
-    //         return;
-    //     }
-
-    //     // ✅ SET HIDDEN INPUT VALUE (NO ERROR NOW)
-    //     formEl.petTypesCombined.value = petTypes.join(", ");
-
-    //     emailjs
-    //         .sendForm(
-    //             "service_c79177m",      // ✅ SERVICE ID
-    //             "template_bj4xo6k",     // ✅ TEMPLATE ID (APPOINTMENT TEMPLATE)
-    //             formEl
-    //         )
-    //         .then(() => {
-    //             toast.success("Appointment sent successfully!");
-    //             formEl.reset();
-    //             setActiveService("house sitting");
-    //         })
-    //         .catch((error) => {
-    //             console.error("EmailJS error:", error);
-    //             toast.error("Email failed. Check template variables.");
-    //         });
-    // };
+    const services = [
+        { id: 1, name: "Safe & loving boarding and creche", icon: "/assets/img/petBoradingicon.PNG" },
+        { id: 2, name: "Gentle, expert grooming", icon: "/assets/img/IMG_gromming-01.PNG" },
+        { id: 3, name: "Stress-free pet transportation", icon: "/assets/img/pet-transportation.PNG" },
+        { id: 4, name: "Positive behaviour training", icon: "/assets/img/Behaviour-training-icon.PNG" },
+        { id: 5, name: "End-to-end pet relocation", icon: "/assets/img/pet-relocation.PNG" },
+        { id: 6, name: "Smart pet insurance solutions", icon: "/assets/img/pet-insurance-icon.PNG" },
+    ];
 
     return (
         <>
@@ -142,9 +115,6 @@ const Page = () => {
                     onSubmit={sendEmail}
                     className="d-md-flex d-block justify-content-between align-items-center"
                 >
-                    {/* ✅ REQUIRED HIDDEN INPUT */}
-                    {/* <input type="hidden" name="petTypesCombined" /> */}
-                    {/* <input type="hidden" name="service" value="Pet Grooming" /> */}
                     <input type="hidden" name="petTypesCombined" />
 
 
@@ -156,11 +126,10 @@ const Page = () => {
                             <button type="button" className="border-rounded-50 border-0 main-bg">
                                 <i className="fa-solid fa-dog text-white"></i>
                             </button>
-                            {/* <span className="ps-2 text-white">Trusted Dog Walker</span> */}
-                              <h2 className="text-white ps-3">Book Now An Appointment</h2>
+                            <h2 className="text-white ps-3">Book Now An Appointment</h2>
                         </div>
 
-                      
+
 
                         <div className="customBgImgWarpper ms-3">
                             <p className="font-size-small">
@@ -177,36 +146,40 @@ const Page = () => {
                             <p className="font-size-small mt-3">
                                 What service do you need?
                             </p>
+                            <div className="row m-0 p-0">
+                                {services.map((service, index) => (
+                                    <div className="col-lg-6 col-md-6 col-sm-6 col-12 mb-2 p-0 px-sm-2 p-0">
+                                        <label
+                                            key={service.id}
+                                            className={`customBorderInput d-flex w-100 ${activeService === service.name ? "active" : ""
+                                                }`}
+                                            onClick={() => handleServiceClick(service.name)}
+                                        >
+                                            <input
+                                                type="radio"
+                                                name="service"
+                                                value={service.name}
+                                                hidden
+                                                checked={activeService === service.name}
+                                                readOnly
+                                            />
 
-                            <div className="d-sm-flex d-block gap-3">
-                                {[
-                                    "goorming",
-                                ].map((service, index) => (
-                                    <label
-                                        key={service}
-                                        className={`customBorderInput w-100 mb-2 ${activeService === service ? "active" : ""
-                                            }`}
-                                        onClick={() => handleServiceClick(service)}
-                                    >
-                                        <input
-                                            type="radio"
-                                            name="service"
-                                            value={service}
-                                            hidden
-                                            defaultChecked={index === 0}
-                                        />
-                                        <img
-                                            src={`/assets/img/input-svg-${index + 1}.svg`}
-                                            width={30}
-                                            height={30}
-                                            alt=""
-                                        />
-                                        <p className="font-size-small text-capitalize">
-                                            {service}
-                                        </p>
-                                    </label>
+
+                                            <img
+                                                src={service.icon}
+                                                width={30}
+                                                height={30}
+                                                alt={service.name}
+                                            />
+
+                                            <p className="font-size-small text-capitalize m-0 py-2 ps-2">
+                                                {service.name}
+                                            </p>
+                                        </label>
+                                    </div>
                                 ))}
                             </div>
+
 
                             <label className="font-size-small">What's your Location?</label>
                             <input
@@ -246,7 +219,7 @@ const Page = () => {
                                     <label
                                         key={time}
                                         onClick={() => handleTimeClick(time)}
-                                        className={`w-100 py-2 rounded-5 text-center me-2 my-2 customBorderInput ${activeTime === time ? "active" : ""
+                                        className={`w-100 p rounded-5 text-center  customBorderInputTime my-2 py-2 ${activeTime === time ? "active" : ""
                                             }`}
                                     >
                                         <input
@@ -254,7 +227,10 @@ const Page = () => {
                                             name="time"
                                             value={time}
                                             hidden
+                                            checked={activeTime === time}
+                                            readOnly
                                         />
+
                                         {time}
                                     </label>
                                 ))}
@@ -278,3 +254,10 @@ const Page = () => {
 };
 
 export default Page;
+
+
+
+
+
+
+

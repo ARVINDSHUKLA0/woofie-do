@@ -369,12 +369,19 @@
    height: calc(100vh - 100px);
  }
 
+ .mb-100{
+  margin-bottom: 70px !important;
+ }
+ .custom-width{
+  width: 85%;
+  margin: auto;
+ }
  .main-blog :hover .text-hover-decrotion {
    text-decoration-line: underline;
    color: #F38020 !important;
    transition: .4s !important;
  }
-
+ 
  .content-scroll {
    height: 100%;
    overflow-y: auto;

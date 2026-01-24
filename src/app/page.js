@@ -1,16 +1,10 @@
 'use client';
 import styles from './page.module.css';
-// import Link from "next/link"; 
 import 'react-toastify/dist/ReactToastify.css';
-// import BlogData from "@/Data/BlogData";
-// import ServiceScrollSlider from "@/Components/ServiceScrollSlider";
-// import ReviewSlider from "@/Components/ReviewSlider";
-
 import Navbar from '@/Components/Navbar';
 import Footer from '@/Components/Footer';
 import BannerCurrent from '@/Components/BannerCurrent';
 import Link from 'next/link';
-import ReviewSlider from '@/Components/ReviewSlider';
 import { ReviewsRating } from '@/Components/ReviewsRating';
 import BlogData from '@/Data/BlogData';
 
@@ -24,156 +18,146 @@ export default function Home() {
   };
 
 
-  // const Imgesfunc = (image) => {
-  //   setImgesHover(image)
-  // }
-  // const handleServiceClick = (value) => {
-  //   setActiveService(value);
-  // };
-
-
-  // const MainArr = [
-  //   {
-  //     name: "Comprehensive Care Under One Roof:", brandDescription: "Description: From essential vaccinations and routine wellness checks to advanced surgical procedures and specialized diagnostics, we offer a complete spectrum of veterinary services. This means less running around for you and seamless, integrated care for your pet throughout every stage of their life.", year: "2024", SerivesHedding: "digital infinity awards", titel: 'best animation',
-  //   },
-  //   {
-  //     name: "Compassionate & Gentle Approach", brandDescription: "Description: We understand that vet visits can be stressful. Our team is trained in gentle handling techniques and prioritizes creating a calm, comforting environment for your pet. We focus on building trust, ensuring each visit is as positive and stress-free as possible.", year: "2023", SerivesHedding: "best website of the year", titel: 'interactive design',
-  //   },
-  //   {
-  //     name: "Expert & Experienced Team", brandDescription: "Description: Your pet will be in the hands of highly skilled and dedicated veterinary professionals. Our experienced veterinarians and support staff are committed to staying updated with the latest medical advancements, providing your companion with the highest standard of care based on sound scientific practices.", year: "2022", SerivesHedding: "festival of digital culture", titel: 'photo contest',
-  //   },
-  //   {
-  //     name: "Advanced Diagnostics & Technology", brandDescription: "Description: We utilize cutting-edge in-house diagnostic tools, including advanced imaging and laboratory services, for rapid and accurate health assessments. This allows us to quickly identify issues and develop precise treatment plans, often on the same day, getting your pet on the path to recovery faster.", year: "2021", SerivesHedding: "crown digital agency site", titel: 'css design awards',
-  //   },
-  //   {
-  //     name: "Unmatched Convenience & Accessibility", brandDescription: "Description: We make pet care easier for you. With services like 24/7 emergency care, convenient pet transportation, and flexible consultation options, we're always here when you need us most. Our goal is to remove barriers to quality care, ensuring your pet gets attention promptly.", year: "2020", SerivesHedding: "the journey of one project", titel: 'portfolio design',
-  //   },
-  //   {
-  //     name: "Focus on Preventative & Holistic Wellness", brandDescription: "Description: Our philosophy extends beyond treating illness; we're passionate about preventing it. Through personalized vaccination schedules, expert nutritional advice, and proactive health screenings, we empower you to ensure your pet enjoys a long, healthy, and vibrant life.", year: "2020", SerivesHedding: "the journey of one project", titel: 'portfolio design',
-  //   },
-  //   {
-  //     name: " Trust & Peace of Mind", brandDescription: "Description: We believe in fostering strong, transparent relationships with pet owners. We'll always communicate clearly, explain your pet's condition and treatment options thoroughly, and answer all your questions. When you choose Woofie Do, you gain a trusted partner truly invested in your pet's well-being. ", year: "2020", SerivesHedding: "the journey of one project", titel: 'portfolio design',
-  //   },
-  // ]
 
   return (
     <>
       <Navbar />
-      {/* <Banner /> */}
       <BannerCurrent />
-      {/* <section className='container my-4'>
-        <div className="row m-0 text-center">
-          <div className="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-            <div className={`${styles.socialconatiner} ${styles.socialContent}`}> 
-              <Image className='img-fluid mb-2' src="/assets/img/svg-1.png" width={50} height={50} alt="" />
-              <h2 className='text-capitalize mb-2'>CARE</h2>
-              <p className='px-lg-4'>Compassionate, gentle care for your pet's comfort and well-being.</p>
-            </div>
+
+
+
+      <section className='mt-2 mb-4'>
+        <h3 className='fw-bold text-capitaliz text-center fs-1 mb-4 pt-3' >Our Values</h3>
+        <div className='row m-0'>
+          <div className={`col-lg-6 col-md-12 col-sm-12 col-12 ${styles.OurValuimg}`}>
+            <img className='img-fluid' src='/assets/img/our value.webp'></img>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-            <div className={`${styles.socialconatiner} ${styles.socialContent}`}>
-              <Image className='img-fluid mb-2' src="/assets/img/svg-2.png" width={50} height={50} alt="" />
-              <h2 className='text-capitalize mb-2'>SERVICE</h2>
-              <p className='px-lg-4'>Comprehensive veterinary services for all your pet's health needs.</p>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-4 col-sm-4 col-12 mb-3">
-            <div className={`${styles.socialconatiner} ${styles.socialContent}`}>
-              <Image className='img-fluid mb-2 bg-transparent' src="/assets/img/svg-3.png" width={50} height={50} alt="" />
-              <h2 className='text-capitalize mb-2'>PROTECTION</h2>
-              <p className='px-lg-4'>Safeguarding your pet's health with preventative measures and ongoing wellness.</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      <section className='py-md-5 py-3'>
-        <div className='container-fluid container-xxl px-sm-4'>
-          <h3 className='text-sm-center ps-2 mb-sm-4 mb-2'>Services for Every Pet at woofie-do</h3>
-          <div className='row m-0 '>
-            <div className='col-lg-7 col-md-6 col-sm-6 col-12'>
-              <ReviewSlider />
-            </div>
-            <div className="col-lg-5 col-md-6 col-sm-6 col-12">
-              <div className={`${styles.trustCard}`}>
-                <div className={`d-flex justify-content-center align-items-center py-md-3 py-2 ${styles.reviewsBottomBorder}`}>
-                  <img
-                    src="/assets/img/homepage__services-section__shield-icon.svg"
-                    alt="trust"
-                    className={`${styles.trustIcon}`}
-                  />
-                  <h5>98.7% of reviews are 5 star</h5>
+
+          <div className='col-lg-6 col-md-12 col-sm-12 col-12 mt-3'>
+            <p className={`mb-lg-5 px-md-0 px-2  ${styles.CustomParWIdth}`}>Welcome to Woofiedo, a place where pets are not just cared for — they’re celebrated. We blend
+              professional expertise with a warm, playful heart to give your furry companions the safest, happiest, and
+              most comfortable experiences possible.
+              From luxury boarding and cheerful day care to expert grooming, training, and global relocation, Woofiedo
+              is your trusted partner in every stage of your pet’s life.
+              Because when your pet is happy, you are too</p>
+            <div className='row'>
+              <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
+                <div className={`d-flex mb-2  gap-2 ${styles.CustomBorderSection}`}>
+                  <div>
+                    <img className='img-fluid' src='/assets/img/love-first.PNG' height={130} width={90}></img>
+                  </div>
+                  <p>Love First: Every decision starts with compassion</p>
                 </div>
 
-                <ul className={`${styles.trustList} px-2`}>
-                  <li>
-                    <span>✔</span>
-                    All service providers at ThePetNest undergo a basic background check.
-                  </li>
-                  <li>
-                    <span>✔</span>
-                    All service providers offer a comprehensive profile including personal
-                    details.
-                  </li>
-                  <li>
-                    <span>✔</span>
-                    All service providers are vetted and approved by our team of pet care
-                    specialists.
-                  </li>
-                </ul>
-                <div className='m-2'>
-                  <button className={`${styles.trustBtn} `}>
-                    Book a Pet Care Service
-                  </button>
+                <div className={`d-flex  gap-2 ${styles.CustomBorderSection}`}>
+                  <div>
+                    <img className='img-fluid' src='/assets/img/Comfort-pet-icon.PNG' height={130} width={130}></img>
+                  </div>
+                   <p>Pet-Centric Care: Comfort, safety, and happiness always come first</p>
+                </div>
+              </div>
+              <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
+                <div className={`d-flex mb-2  gap-2 ${styles.CustomBorderSection}`}>
+                  <div>
+                    <img className='img-fluid' src='/assets/img/Clean-icon.PNG' height={130} width={130}></img>
+                  </div>
+                    <p>Clean & Secure: High standards  of hygiene and supervision</p>
+                </div>
+
+                <div className={`d-flex  gap-2 ${styles.CustomBorderSection}`}>
+                  <div>
+                    <img className='img-fluid' src='/assets/img/Trusted-icon.PNG' height={130} width={130}></img>
+                  </div>
+                  <p>Trusted & Transparent: Clear  communication, no compromises</p>
                 </div>
               </div>
             </div>
-
           </div>
+
         </div>
       </section>
 
-      <section className='pb-md-5 pb-3'>
-        <div className='container'>
-          <div className='px-2 mb-md-5 mb-3'>
-            <h3 className='fw-bold text-center px-2'>How to book a service with woofie-do</h3>
-            <p className='fs-14 text-center px-2'>Charges may vary based on Pet and City.</p>
+      <section>
+        <h3 className='fw-bold text-capitaliz text-center fs-1 mb-5' >Our Services</h3>
+        <div className='custom-width px-md-5'>
+          <div className='row'>
+            <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
+              <div className={`${styles.ServicesImg}`}>
+                <img className='img-fluid rounded-4' src='/assets/img/pet boarding and creche.png'></img>
+              </div>
+              <h2 className='my-4 fs-3'>Pet Boarding & Creche</h2>
+              <p className='fs-16 pb-4'>Whether you’re heading to work or away on vacation, Woofiedo ensures your pet is cared for in a safe,
+                comfortable, and joyful environment.
+                Our boarding and creche facilities are designed to reduce stress and encourage happiness through routine,
+                play, and affection. Every pet is supervised by trained caregivers who understand their emotional and
+                physical needs.
+                What your pet enjoys: - Cozy, hygienic boarding spaces - Structured daily schedules - Supervised playtime
+                and relaxation - Safe socialization based on temperament - Regular feeding and well-being checks
+                Perfect for short stays, long holidays, or daily daycare.</p>
+            </div>
+            <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
+              <div className={`${styles.ServicesImg}`}>
+                <img className='img-fluid rounded-4' src='/assets/img/pet grooming.png'></img>
+              </div>
+              <h2 className='my-4'>Grooming</h2>
+              <p className='fs-16'>At Woofiedo, grooming is more than appearance — it’s about health, comfort, and confidence. Our groomers handle every pet with patience and care, ensuring a calm and positive experience. We use  only high-quality, pet-safe products and customize grooming based on breed, coat type, and
+                temperament.Grooming services include: - Bathing and blow-drying - Hair trimming and styling - Nail clipping and paw
+                care - Ear and eye cleaning - Breed-specific grooming options
+                Your pet leaves feeling fresh, happy, and pampered.
+              </p>
+            </div>
+            <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
+              <div className={`${styles.ServicesImg}`}>
+                <img className='img-fluid rounded-4' src='/assets/img/pet transport.png'></img>
+              </div>
+              <h2 className='my-4'>Pet Transportation</h2>
+              <p className='fs-16'>Need help moving your pet across town or across the state? Woofiedo provides reliable, stress-free
+                transportation with your pet’s comfort as our top priority.
+                Our vehicles are designed for pet safety and cleanliness, and our handlers are trained to ensure calm,
+                smooth journeys.
+                Transportation features: - Secure, well-ventilated vehicles - Experienced pet handlers - Local and longdistance travel - Door-to-door pick-up and drop-off
+                Wherever your pet needs to go, we’ll get them there safely.
+              </p>
+            </div>
+            <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
+              <div className={`${styles.ServicesImg}`}>
+                <img className='img-fluid rounded-4' src='/assets/img/pet behaviour training.png'></img>
+              </div>
+              <h2 className='my-4'>Behaviour Training</h2>
+              <p className='fs-16 '>Every pet is unique — and so is their learning journey. Woofiedo’s behaviour training focuses on positive
+                reinforcement to help pets grow confident, well-mannered, and happy.
+                Our trainers work closely with both pets and parents to ensure lasting results and stronger relationships.
+                Training programs include: - Puppy training and early socialization - Basic obedience training - Behaviour
+                correction - One-on-one personalized sessions
+                Training that’s effective, gentle, and rewarding.</p>
+            </div>
+            <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
+              <div className={`${styles.ServicesImg}`}>
+                <img className='img-fluid rounded-4' src='/assets/img/pet relocationn.png'></img>
+              </div>
+              <h2 className='my-4'>Pet Relocation</h2>
+              <p className='fs-16'>Relocating with a pet can be overwhelming — but it doesn’t have to be. Woofiedo manages every step of
+                the relocation process, so you can focus on your move while we take care of your pet.
+                From paperwork to safe arrival, we ensure a smooth and stress-free experience.
+                Relocation services include: - Documentation and compliance support - Veterinary coordination - Travel
+                planning and crate preparation - Domestic and international relocation
+                Your pet’s journey is in trusted hands</p>
+            </div>
+            <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
+              <div className={`${styles.ServicesImg}`}>
+                <img className='img-fluid rounded-4' src='/assets/img/pet insurance.png'></img>
+              </div>
+              <h2 className='my-4'>Pet Insurance</h2>
+              <p className='fs-16'>Unexpected medical needs shouldn’t stand in the way of quality care. Woofiedo helps you choose reliable
+                pet insurance plans that protect your pet’s health and your finances.
+                We guide you through policy options and support you throughout the claims process.
+                Insurance benefits include: - Coverage for medical emergencies - Flexible and affordable plans - Expert
+                policy guidance - Claims and documentation assistance
+                Because your pet deserves care without compromise</p>
+            </div>
           </div>
-          <div className='row m-0'>
-            <div className='col-lg-4 col-md-4 col-sm-4 col-12 text-center'>
-              <div>
-                <i className="fa-solid fa-magnifying-glass fs-3 mb-2"></i>
-                <h5 className='fw-bold'>Select a Service</h5>
-                <p className='fs-14 px-3'>Visit Woofie-do website or app and browse through the various services offered such as cat and dog grooming, cat and dog boarding, dog walking, veterinary care, dog training, dog insurance, pet re-home or adoption. Choose the service that best fits the needs of your pet.</p>
-              </div>
-            </div>
-            <div className='col-lg-4 col-md-4 col-sm-4 col-12 text-center'>
-              <div>
-                <i className="fa-solid fa-message fs-3 mb-2"></i>
-                <h5 className='fw-bold'>Book an appointment</h5>
-                <p className='fs-14 px-3'>Once you've selected a service, choose a convenient date and time for the appointment. Fill in any required information about your pet that can help in providing the best care possible. Confirm the booking by making an online payment or selecting to pay in person if available.</p>
-              </div>
-            </div>
-            <div className='col-lg-4 col-md-4 col-sm-4 col-12 text-center'>
-              <div>
-                <i className="fa-solid fa-cart-shopping fs-3 mb-2"></i>
-                <h5 className='fw-bold'>Enjoy & Relax</h5>
-                <p className='fs-14 px-3'>After booking the appointment, you just need to prepare your pet for the service. On the appointed day, wait for the mobile service to arrive at your home. Then, simply relax knowing your pet is in good hands and enjoy the peace of mind that comes with professional care.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className='mb-md-5 mb-3 mx-2'>
-        <div className={`container-fulid bg-dark rounded-1 py-3 ${styles.PremiumDiscount}`}>
-          <div className='d-flex justify-content-between align-items-center  px-2'>
-            <div>
-              <h5 className='text-white fw-bold m-0 mb-2'>Introducing woofie-do <span style={{ color: "#F38020" }}>Premium</span> </h5>
-              <p className='text-white m-0 m-0'>Get Woofie-do Premium Membership to get an additional up to 10% Discount</p>
-            </div>
-            <div>
-              <img src="/assets/img/pettranceporticon.PNG" width={80} height={80} />
-            </div>
+          <div className='text-center mt-2 mb-3'>
+            <button className='book-dog-btn px-5'>book now</button>
           </div>
         </div>
       </section>
@@ -255,117 +239,12 @@ export default function Home() {
               <button className={`width-btn py-sm-3  border-0 btn-woofie text-capitalize ${styles.blogbtnwidth} `}>book a pet care service</button>
             </div>
             <div className='mt-4'>
-              <img className='w-25 m-auto ' src='/assets/img/crock-dog-phone-call.png'></img>
+              <img className='w-25 m-auto ' src='/assets/img/contact.webp'></img>
             </div>
           </div>
         </div>
       </section>
 
-
-
-
-      {/* <ServiceScrollSlider /> */}
-
-
-
-      {/* <section className='container-fluid'>
-        <div className='custom-bottom-border d-flex align-items-center gap-3  my-lg-5  my-md-4 my-sm-4'>
-          <h2 className='font-size-large'> Why Choose Woofie Do?</h2>
-        </div>
-      </section> */}
-
-      {/* <section>
-        <div className="container-fluid">
-          <div className="row m-0 py-5 ">
-            <div className="col-lg-6 col-md-12 col-sm-12 col-12 ">'
-              <div className={styles.conatinerImg}>
-                <div>
-                  <div >
-                    <Image className={`img-fluid ${styles.customImgWidth}`} src="/assets/img/PetGrooming.jpg" width={300} height={300} alt="" />
-                  </div>
-                  <div className='text-start text-sm-end'>
-                    <Image className={`img-fluid me-lg-4 sm-mt-3 ${styles.customImgWidth}`} src="/assets/img/PetVaccinationsImg.jpg" height={300} width={300} alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-12 col-sm-12 col-12">
-              <h2 className='fw-bold mt-3'>
-                When it comes to your pet's health and happiness, you want the very best. At Woofie Do, we're dedicated to providing exceptional care that you and your furry family member deserve.
-              </h2>
-              <div className=' mt-100'>
-                <ul className="p-0">
-                  {MainArr.map((service, index) => (
-                    <li key={index} className="list-unstyled">
-                      <div
-                        className={`d-flex justify-content-between align-items-center ${styles.tableList}`}
-                        onClick={() => handleToggle(index)}
-                        style={{ cursor: "pointer" }}
-                      >
-                        <span className="text-capitalize fw-bold">{service.name}</span>
-                        <i
-                          className={`fa-solid fa-arrow-right ${activeIndex === index ? `${styles.rotate}` : ""}`}
-                        ></i>
-                      </div>
-
-                      {activeIndex === index && (
-                        <>
-                          {service.brandDescription && (
-                            <div className="d-flex gap-3">
-                              <i className="fa-solid fa-circle li-icon-dots mt-2"></i>
-                              <p>
-                                <span style={{ fontWeight: "bold", fontSize: "17px", paddingRight: "10px" }}>
-                                  {service.brandDescription.split(" ").slice(0, 1).join(" ")}
-                                </span>
-                                {service.brandDescription.split(" ").slice(1).join(" ")}
-                              </p>
-                            </div>
-                          )}
-                        </>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* <section className='container-fluid py-lg-5'>
-        <div className='custom-bottom-border  d-flex align-items-center gap-3   my-md-4 my-sm-4'>
-          <h2 className='font-size-large'>latest news</h2>
-          <h5 className='mt-5 d-md-block d-none'>/ discover the news</h5>
-        </div>
-      </section> */}
-      {/* 
-      <section className={`mb-50 ${styles.customMargin}`}>
-        <div className="row m-0">
-          <div className="col-lg-9 col-md-9 col-sm-12 col-12  offset-lg-3">
-            <div className="row m-0 ">
-              {BlogData.map((blogValue) => (
-                <div key={blogValue.id} className="col-lg-4 col-sm-6 col-12  mb-50">
-                  <div className='d-flex align-items-center'>
-                    <div className='cutom-border'></div>
-                    <p className='m-0 ps-2'>{blogValue.date}</p>
-                    <i className="fas fa-circle li-icon-dots ps-2"></i>
-                  </div>
-                  <p className='m-0'>{blogValue.creativity}</p>
-                  <h5 className='fw-bold my-lg-4'>{blogValue.title}</h5>
-                  <Image className='img-fluid' width={300} height={300} src={blogValue.image} alt={blogValue.title} />
-                  <p className='m-0 py-lg-4 py-3'>{blogValue.description}</p>
-                  <Link href={`/Blog/${blogValue.id}`}>
-                  <button className='custom-border'>read more</button>
-                  </Link>
-                </div>
-
-              ))}
-            </div>
-          </div>
-        </div>
-
-      </section> */}
       <Footer />
     </>
   );
