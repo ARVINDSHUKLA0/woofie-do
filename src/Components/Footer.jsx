@@ -15,18 +15,18 @@ const Footer = () => {
                                 <li className="list-style-none py-1">
                                     <Link href="/Blog" className="text-decoration-none-one text-white fs-14 text-capitalize">blog</Link>
                                 </li>
-                                <li className="list-style-none py-1">
+                                {/* <li className="list-style-none py-1">
                                     <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">support</Link>
-                                </li>
+                                </li> */}
                                 <li className="list-style-none py-1">
                                     <Link href="/About" className="text-decoration-none-one text-white fs-14 text-capitalize">about us</Link>
                                 </li>
-                                <li className="list-style-none py-1">
+                                {/* <li className="list-style-none py-1">
                                     <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">buy membership</Link>
-                                </li>
-                                <li className="list-style-none py-1">
+                                </li> */}
+                                {/* <li className="list-style-none py-1">
                                     <Link href="#" className="text-decoration-none-one text-white fs-14 text-capitalize">customer reviews</Link>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
  
@@ -34,19 +34,19 @@ const Footer = () => {
                             <span className="f-decoration-none text-capitalize text-white">home services</span>
                             <ul className="p-0 m-0">
                                 <li className="list-style-none py-1">
-                                    <Link href="/PetBoarding" className="text-decoration-none-one text-white fs-14 text-capitalize">Pet Boarding & creche</Link>
+                                    <Link href="/GroomingPet" className="text-decoration-none-one text-white fs-14 text-capitalize">Pet Boarding & creche</Link>
                                 </li>
                                 <li className="list-style-none py-1">
                                     <Link href="/GroomingPet" className="text-decoration-none-one text-white fs-14 text-capitalize">Pet Grooming</Link>
                                 </li>
                                 <li className="list-style-none py-1">
-                                    <Link href="/PetTransportation" className="text-decoration-none-one text-white fs-14 text-capitalize">pet transportation</Link>
+                                    <Link href="/GroomingPet" className="text-decoration-none-one text-white fs-14 text-capitalize">pet transportation</Link>
                                 </li>
                                 <li className="list-style-none py-1">
-                                    <Link href="/DogTraining" className="text-decoration-none-one text-white fs-14 text-capitalize">behaviour training</Link>
+                                    <Link href="/GroomingPet" className="text-decoration-none-one text-white fs-14 text-capitalize">behaviour training</Link>
                                 </li>
                                 <li className="list-style-none py-1">
-                                    <Link href="/PetRelocation" className="text-decoration-none-one text-white fs-14 text-capitalize">
+                                    <Link href="/GroomingPet" className="text-decoration-none-one text-white fs-14 text-capitalize">
                                         pet relocation (domestic & international)
                                     </Link>
                                 </li>
