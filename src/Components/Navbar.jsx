@@ -187,6 +187,15 @@ const Navbar = () => {
                                     blog
                                 </Link>
                             </li>
+                            <li className='list-style-none py-lg-0'>
+                                <Link 
+                                    className='text-decoration text-capitalize fs-18 text-dark fw-bold' 
+                                    href="/PuppyParty"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    PuppyParty
+                                </Link>
+                            </li>
                             <li className='list-style-none  py-lg-0'>
                                 <Link 
                                     className='text-decoration text-capitalize fs-18 text-dark fw-bold' 
