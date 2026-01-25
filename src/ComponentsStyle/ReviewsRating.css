@@ -1,7 +1,4 @@
-.reviewImg {
-    border-radius: 50%;
-}
-
+ 
 .review-card {
     background: #F38020;
     margin: 10px;
@@ -15,10 +12,7 @@
     gap: 20px;
 }
 
-.review-left {
-    width: 50%;
-}
-
+ 
 .review-user {
     display: flex;
     gap: 10px;
@@ -79,8 +73,7 @@
         text-align: center;
     }
     .review-images {
-    display: flex;
-    /* gap: 10px;  */
+    display: flex; 
 }
 }
 @media (min-width: 0px) and (max-width: 525px) {

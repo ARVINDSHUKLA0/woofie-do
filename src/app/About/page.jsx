@@ -10,7 +10,7 @@ const page = () => {
       <Navbar />
       <section className='position-relative'>
         <div className='about-imges-height'>
-          <img className='img-fluid w-100' src="/assets/img/about-bg-img.PNG" alt="" />
+          <img className='img-fluid w-100' src="/assets/img/about-bg-img.webp" alt="" />
         </div>
 
         <div className='custom-postion-about'>

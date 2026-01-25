@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import './globals.css';
-import BreadcrumbSchema from '@/Components/BreadcrumbSchema';
+import './globals.css'; 
 import { ListProvider } from 'Context/ListContext';
  
 
@@ -13,8 +12,7 @@ Kewords: "Pet Care, pet care services, pet care center, Noida Pet Care Center, p
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <BreadcrumbSchema />
+      <head> 
       </head>
       <body>
         <ListProvider>

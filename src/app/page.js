@@ -44,29 +44,29 @@ export default function Home() {
               <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
                 <div className={`d-flex mb-2  gap-2 ${styles.CustomBorderSection}`}>
                   <div>
-                    <img className='img-fluid' src='/assets/img/love-first.PNG' height={130} width={90}></img>
+                    <img className='img-fluid' src='/assets/img/love-first.webp' height={130} width={90}></img>
                   </div>
                   <p>Love First: Every decision starts with compassion</p>
                 </div>
 
                 <div className={`d-flex  gap-2 ${styles.CustomBorderSection}`}>
                   <div>
-                    <img className='img-fluid' src='/assets/img/Comfort-pet-icon.PNG' height={130} width={130}></img>
+                    <img className='img-fluid' src='/assets/img/Comfort-pet-icon.webp' height={130} width={130}></img>
                   </div>
-                   <p>Pet-Centric Care: Comfort, safety, and happiness always come first</p>
+                  <p>Pet-Centric Care: Comfort, safety, and happiness always come first</p>
                 </div>
               </div>
               <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
                 <div className={`d-flex mb-2  gap-2 ${styles.CustomBorderSection}`}>
                   <div>
-                    <img className='img-fluid' src='/assets/img/Clean-icon.PNG' height={130} width={130}></img>
+                    <img className='img-fluid' src='/assets/img/Clean-icon.webp' height={130} width={130}></img>
                   </div>
-                    <p>Clean & Secure: High standards  of hygiene and supervision</p>
+                  <p>Clean & Secure: High standards  of hygiene and supervision</p>
                 </div>
 
                 <div className={`d-flex  gap-2 ${styles.CustomBorderSection}`}>
                   <div>
-                    <img className='img-fluid' src='/assets/img/Trusted-icon.PNG' height={130} width={130}></img>
+                    <img className='img-fluid' src='/assets/img/Trusted-icon.webp' height={130} width={130}></img>
                   </div>
                   <p>Trusted & Transparent: Clear  communication, no compromises</p>
                 </div>
@@ -83,7 +83,7 @@ export default function Home() {
           <div className='row'>
             <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
               <div className={`${styles.ServicesImg}`}>
-                <img className='img-fluid rounded-4' src='/assets/img/pet boarding and creche.png'></img>
+                <img className='img-fluid rounded-4' src='/assets/img/pet boarding and creche.webp'></img>
               </div>
               <h2 className='my-4 fs-3'>Pet Boarding & Creche</h2>
               <p className='fs-16 pb-4'>Whether you’re heading to work or away on vacation, Woofiedo ensures your pet is cared for in a safe,
@@ -97,7 +97,7 @@ export default function Home() {
             </div>
             <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
               <div className={`${styles.ServicesImg}`}>
-                <img className='img-fluid rounded-4' src='/assets/img/pet grooming.png'></img>
+                <img className='img-fluid rounded-4' src='/assets/img/pet grooming.webp'></img>
               </div>
               <h2 className='my-4'>Grooming</h2>
               <p className='fs-16'>At Woofiedo, grooming is more than appearance — it’s about health, comfort, and confidence. Our groomers handle every pet with patience and care, ensuring a calm and positive experience. We use  only high-quality, pet-safe products and customize grooming based on breed, coat type, and
@@ -108,7 +108,7 @@ export default function Home() {
             </div>
             <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
               <div className={`${styles.ServicesImg}`}>
-                <img className='img-fluid rounded-4' src='/assets/img/pet transport.png'></img>
+                <img className='img-fluid rounded-4' src='/assets/img/pet transport.webp'></img>
               </div>
               <h2 className='my-4'>Pet Transportation</h2>
               <p className='fs-16'>Need help moving your pet across town or across the state? Woofiedo provides reliable, stress-free
@@ -121,7 +121,7 @@ export default function Home() {
             </div>
             <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
               <div className={`${styles.ServicesImg}`}>
-                <img className='img-fluid rounded-4' src='/assets/img/pet behaviour training.png'></img>
+                <img className='img-fluid rounded-4' src='/assets/img/pet behaviour training.webp'></img>
               </div>
               <h2 className='my-4'>Behaviour Training</h2>
               <p className='fs-16 '>Every pet is unique — and so is their learning journey. Woofiedo’s behaviour training focuses on positive
@@ -133,7 +133,7 @@ export default function Home() {
             </div>
             <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
               <div className={`${styles.ServicesImg}`}>
-                <img className='img-fluid rounded-4' src='/assets/img/pet relocationn.png'></img>
+                <img className='img-fluid rounded-4' src='/assets/img/pet relocationn.webp'></img>
               </div>
               <h2 className='my-4'>Pet Relocation</h2>
               <p className='fs-16'>Relocating with a pet can be overwhelming — but it doesn’t have to be. Woofiedo manages every step of
@@ -145,7 +145,7 @@ export default function Home() {
             </div>
             <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
               <div className={`${styles.ServicesImg}`}>
-                <img className='img-fluid rounded-4' src='/assets/img/pet insurance.png'></img>
+                <img className='img-fluid rounded-4' src='/assets/img/pet insurance.webp'></img>
               </div>
               <h2 className='my-4'>Pet Insurance</h2>
               <p className='fs-16'>Unexpected medical needs shouldn’t stand in the way of quality care. Woofiedo helps you choose reliable
@@ -154,6 +154,36 @@ export default function Home() {
                 Insurance benefits include: - Coverage for medical emergencies - Flexible and affordable plans - Expert
                 policy guidance - Claims and documentation assistance
                 Because your pet deserves care without compromise</p>
+            </div>
+            <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
+              <div className={`${styles.ServicesImg}`}>
+                <img className='img-fluid rounded-4' src='/assets/img/CUDDLE THERAPY.webp'></img>
+              </div>
+              <h2 className='my-4'>Cuddle Therapy <span className='fw-bold fs-16'>(For People)</span>  </h2>
+              <p className='fs-16'>Our Cuddle Therapy is a wellness experience for people, offering calm, joyful interaction with
+                trained puppies. Guided by professional handlers, sessions focus on stress relief, emotional
+                comfort, and mindful connection. Safe, hygienic, and supervised at all times—because
+                gentle animal companionship can be deeply healing</p>
+            </div>
+            <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
+              <div className={`${styles.ServicesImg}`}>
+                <img className='img-fluid rounded-4' src='/assets/img/puppy partyy.webp'></img>
+              </div>
+              <h2 className='my-4'>Puppy Party <span className='fw-bold fs-16'>(For People)</span> </h2>
+              <p className='fs-16'>Puppy Parties are happiness-filled experiences where people spend quality time with
+                trained, friendly puppies. Perfect for birthdays, corporate events, or mental-wellness
+                gatherings. All sessions are supervised by professional trainers to ensure safety, comfort,
+                and ethical care—for both guests and puppies.</p>
+            </div>
+            <div className='col-lg-4 col-md-6 col-sm-6 col-12 mb-3'>
+              <div className={`${styles.ServicesImg}`}>
+                <img className='img-fluid rounded-4' src='/assets/img/pet adoption.webp'></img>
+              </div>
+              <h2 className='my-4'>Pet Adoption <span className='fs-16 fw-bold'>(Dogs & Cats)</span> </h2>
+              <p className='fs-16'>We support ethical dog and cat adoption by connecting responsible adopters with healthy,
+                well-cared-for pets. From compatibility matching to post-adoption guidance, our process
+                ensures a smooth transition into loving homes. Because adoption is a lifelong commitment,
+                not just a moment.</p>
             </div>
           </div>
           <div className='text-center mt-2 mb-3'>
@@ -176,7 +206,7 @@ export default function Home() {
             <div className="ratio ratio-16x9">
               <iframe
                 className='rounded-2'
-                src="https://www.youtube.com/embed/SMpOcYcmIl8"
+                src="/assets/video/woofie-home-viedo.MP4"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -185,7 +215,7 @@ export default function Home() {
           </div>
           <div className='col-lg-4 col-lg-4 col-sm-4 col-12'>
             <div>
-              <img className={`img-fluid w-100 ${styles.imgesYoutubeSide}`} src="/assets/img/banner-bottom-five.png" />
+              <img className={`img-fluid w-100 ${styles.imgesYoutubeSide}`} src="/assets/img/banner-bottom-five.webp" />
               <p className='mt-3 fw-bold fs-18 text-center'>The Ultimate Guide to: Cats vs. Dogs</p>
             </div>
           </div>
@@ -202,12 +232,11 @@ export default function Home() {
                   {
                     BlogData.map((BlogItem, index) => (
                       <div key={index} className={`col-lg-4 col-md-4 col-sm-4 col-12 main-blog p-sm-2 p-0`}>
-                        <Link className={`text-decoration textHover `} href={`/Blog/${BlogItem.id}`}>
+                        <Link className={`text-decoration textHover `} href={`/blog/${BlogItem.id}`}>
                           <div>
                             <div className='blogImg'>
                               <img className='img-fluid' src={BlogItem.image} />
                             </div>
-                            {/* <h5 className='fs-16 pt-2  fw-bold text-dark ps-2'>{BlogItem.title}</h5> */}
                             <h5 className='fs-16 pt-1 pb-2 fw-bold text-dark text-hover-decrotion ps-2'>
                               {truncateText(BlogItem.title, 2)}
                             </h5>
@@ -217,15 +246,9 @@ export default function Home() {
                       </div>
                     ))
                   }
-                  {/* <div className='text-center mt-3'>
-              <button className={`width-btn border-0 btn-woofie ${styles.blogbtnwidth} `}>Read Blog</button>
-            </div> */}
                 </div>
               </div>
             </div>
-            {/* <div className='text-center mt-3'>
-              <button className={`width-btn border-0 btn-woofie ${styles.blogbtnwidth} `}>Read Blog</button>
-            </div> */}
           </div>
         </div>
       </section>

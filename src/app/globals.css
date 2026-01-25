@@ -282,9 +282,7 @@
 
 
 
-
-
- /* this is blog Details start section */
+ 
 
  .blog-details-conatiner {
    height: 350px;
@@ -311,8 +309,7 @@
    border-radius: 5px;
  }
 
-
- /* this is blog Details end section */
+ 
 
 
 
@@ -419,36 +416,7 @@
 
  }
 
-
- /* @media (min-width: 0px) and (max-width: 525px) {
-   .blog-layout {
-     height: auto;
-     padding: 30px;
-   }
-
-   .custom-sm-margin {
-     margin-top: 50px;
-     padding: 0px !important;
-   }
-
-   .image-column-inner {
-     position: relative !important;
-     top: 0px;
-     height: 100%;
-   }
-
-   .content-scroll {
-     height: 100% !important;
-     overflow-y: auto; 
-   }
-
-   .image-column {
-     position: relative;
-     height: auto !important;
-   }
- } */
-
- /* ===== FIX SCROLL ISSUE FOR SM & MD ===== */
+ 
  @media (max-width: 991px) {
 
    .blog-layout {

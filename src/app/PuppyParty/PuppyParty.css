@@ -1,15 +1,13 @@
 .puppy-party-section {
   background: #f8f9fa;
 }
-
-/* VIDEO */
+ 
 .video-wrapper {
   background: #000;
   border-radius: 16px;
   overflow: hidden;
 }
-
-/* CONTACT CARD */
+ 
 .contact-card {
   background: #ffffff;
   border-radius: 16px;
@@ -35,8 +33,7 @@
 .contact-row .value {
   color: #000;
 }
-
-/* BUTTON */
+ 
 .contact-btn {
   margin-top: 20px;
   display: block;

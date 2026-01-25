@@ -2,7 +2,7 @@ const BlogData = [
     {
         id: 1,
         title: "Cat vs Dog: Understanding Their Daily Rhythms",
-        image: "/assets/img/blog-1.png",
+        image: "/assets/img/blog-1.webp",
         subDataDecHed: [
             { subHading: "Understanding the Daily Rhythms of Dogs and Cats" },
             { subDec: "Dogs and cats experience the day in very different ways. Their routines, energy levels, and rest patterns are shaped by instinct and natural behavior rather than training or lifestyle. Understanding these daily rhythms helps pet parents respond with care, patience, and realistic expectations." },
@@ -28,7 +28,7 @@ const BlogData = [
     {
         id: 2,
         title: "Exploring vs Observing",
-        image: "/assets/img/blog-2.png",
+        image: "/assets/img/blog-2.webp",
         subDataDecHed: [
             { subHading: "Exploring vs Observing: How Dogs and Cats Experience the World" },
             { subDec: "Dogs and cats interact with their surroundings in very different ways. Where one moves forward through action, the other pauses to understand before engaging. These differences are not about training or personality. They are instinctive ways of experiencing the world" },
@@ -61,7 +61,7 @@ const BlogData = [
     {
         id: 3,
         title: "Sleep Cycle Comparisons",
-        image: "/assets/img/blog-3.png",
+        image: "/assets/img/blog-3.webp",
         subDataDecHed: [
             { subHading: "Sleep Cycles in Dogs and Cats: How Rest Looks Different" },
             { subDec: "Sleep plays an essential role in the physical and emotional well-being of both dogs and cats. While they may spend a similar amount of time resting, the way they sleep, wake, and return to rest is very different. These patterns are guided by instinct rather than routine or environment." },
@@ -96,7 +96,7 @@ const BlogData = [
     {
         id: 4,
         title: "Eating Speed & Textures",
-        image: "/assets/img/blog-4.png",
+        image: "/assets/img/blog-4.webp",
         subDataDecHed: [
             { subHading: "Eating Speed and Texture Preferences in Dogs and Cats" },
             { subDec: "The way dogs and cats eat reveals a great deal about their natural instincts. Eating speed and texture preferences are not habits formed over time—they are deeply rooted in biology and sensory awareness. Understanding these differences helps caregivers choose feeding approaches that feel natural rather than forced." },
@@ -129,7 +129,7 @@ const BlogData = [
     {
         id: 5,
         title: "Bowl Training vs Free Feeding: Why the Same Bowl Means Different Things",
-        image: "/assets/img/blog-5.png",
+        image: "/assets/img/blog-5.webp",
         subDataDecHed: [
             { subHading: "Bowl Training vs Free Feeding: How Dogs and Cats Approach Food" },
             { subDec: "Feeding is more than a daily task. For dogs and cats, how food is offered plays a role in comfort, digestion, behavior, and emotional security. Bowl training and free feeding are not just feeding methods—they reflect how each animal naturally relates to food." },
@@ -163,7 +163,7 @@ const BlogData = [
     {
         id: 6,
         title: "Understanding Quiet vs Vocal Communication",
-        image: "/assets/img/blog-6.png",
+        image: "/assets/img/blog-6.webp",
         subDataDecHed: [
             { subHading: "Understanding Quiet vs Vocal Communication in Cats and Dogs" },
             { subDec: " Communication is central to how dogs and cats express needs, emotions, and boundaries. While both are highly expressive animals, they communicate in very different ways. These differences are shaped by instinct and social structure, not by training or temperament." },

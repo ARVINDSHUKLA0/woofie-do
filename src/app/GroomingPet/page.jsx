@@ -97,12 +97,15 @@ const Page = () => {
     };
 
     const services = [
-        { id: 1, name: "Safe & loving boarding and creche", icon: "/assets/img/petBoradingicon.PNG" },
-        { id: 2, name: "Gentle, expert grooming", icon: "/assets/img/IMG_gromming-01.PNG" },
-        { id: 3, name: "Stress-free pet transportation", icon: "/assets/img/pet-transportation.PNG" },
-        { id: 4, name: "Positive behaviour training", icon: "/assets/img/Behaviour-training-icon.PNG" },
-        { id: 5, name: "End-to-end pet relocation", icon: "/assets/img/pet-relocation.PNG" },
-        { id: 6, name: "Smart pet insurance solutions", icon: "/assets/img/pet-insurance-icon.PNG" },
+        { id: 1, name: "Safe & loving boarding and creche", icon: "/assets/img/petBoradingicon.webp" },
+        { id: 2, name: "Gentle, expert grooming", icon: "/assets/img/IMG_gromming-01.webp" },
+        { id: 3, name: "Stress-free pet transportation", icon: "/assets/img/pet-transportation.webp" },
+        { id: 4, name: "Positive behaviour training", icon: "/assets/img/Behaviour-training-icon.webp" },
+        { id: 5, name: "End-to-end pet relocation", icon: "/assets/img/pet-relocation.webp" },
+        { id: 6, name: "Smart pet insurance solutions", icon: "/assets/img/pet-insurance-icon.webp" },
+        { id: 7, name: "Cuddle Therapy", icon: "/assets/img/pet-insurance-icon.webp" },
+        { id: 8, name: "Puppy Party", icon: "/assets/img/pet-insurance-icon.webp" },
+        { id: 9, name: "Pet Adoption", icon: "/assets/img/pet-insurance-icon.webp" },
     ];
 
     return (

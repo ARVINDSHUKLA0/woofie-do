@@ -11,7 +11,7 @@ import Footer from '@/Components/Footer';
 
 const Page = () => {
   useEffect(() => {
-    emailjs.init("CDbRZrcgQmiWf9ex9"); // PUBLIC KEY
+    emailjs.init("CDbRZrcgQmiWf9ex9"); 
   }, []);
 
   const EnquirySend = (e) => {
@@ -30,8 +30,8 @@ const Page = () => {
 
     emailjs
       .send(
-        "service_yae6dcr",      // SERVICE ID
-        "template_s4hyifc",     // ONE COMMON TEMPLATE
+        "service_yae6dcr",      
+        "template_s4hyifc",     
         {
           name: dataObj.email,
           service: "Contact Enquiry",

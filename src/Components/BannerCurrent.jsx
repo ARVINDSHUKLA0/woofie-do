@@ -42,33 +42,33 @@ const BannerCurrent = () => {
     const BannerArr = [
         {
             tite: " Safe & loving boarding and creche",
-            BannerImg: "/assets/img/petBoradingicon.PNG",
+            BannerImg: "/assets/img/petBoradingicon.webp",
             href: "/GroomingPet"
         },
         {
             tite: "Gentle, expert grooming",
-            BannerImg: "/assets/img/petgrommingicon.PNG",
+            BannerImg: "/assets/img/petgrommingicon.webp",
             href: "/GroomingPet"
         },
         {
             tite: "Stress-free pet transportation",
-            BannerImg: "/assets/img/pettranceporticon.PNG",
+            BannerImg: "/assets/img/pettranceporticon.webp",
             href: "/GroomingPet"
         },
         {
             tite: "Positive behaviour training",
-            BannerImg: "/assets/img/Behaviour-training-icon.PNG",
+            BannerImg: "/assets/img/Behaviour-training-icon.webp",
             href: "/GroomingPet"
         },
         {
             tite: " End-to-end pet relocation",
-            BannerImg: "/assets/img/pet-relocation.PNG",
+            BannerImg: "/assets/img/pet-relocation.webp",
             href: "/GroomingPet"
 
         },
         {
             tite: " Smart pet insurance solutions",
-            BannerImg: "/assets/img/pet-insurance-icon.PNG",
+            BannerImg: "/assets/img/pet-insurance-icon.webp",
             href: "/GroomingPet"
         }
     ]
@@ -101,7 +101,6 @@ const BannerCurrent = () => {
                                                     </div>
                                                     <div>
                                                         <span className='fs-14 text-capitalize '>{DataBaner.tite}</span>
-                                                        {/* <p className='m-0 fs-14 bnner-dec d-none d-sm-block text-capitalize'>{DataBaner.descrption}</p> */}
                                                     </div>
                                                 </Link>
                                             </div>

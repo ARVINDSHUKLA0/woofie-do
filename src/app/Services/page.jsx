@@ -23,12 +23,12 @@ const page = () => {
           <div className="row m-0">
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
               <div className='custom-height-imges-serives'>
-                <img className='img-fluid rounded-4' src="/assets/img/pet boarding and creche.png" alt="" />
+                <img className='img-fluid rounded-4' src="/assets/img/pet boarding and creche.webp" alt="" />
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 text-sm-end mb-3">
               <div>
-                  <h2 className='m-0 pb-3 fw-bold'>Pet Boarding & Creche</h2>
+                <h2 className='m-0 pb-3 fw-bold'>Pet Boarding & Creche</h2>
                 <p>Whether you’re heading to work or away on vacation, Woofiedo ensures your pet is cared for in a safe, comfortable, and joyful environment. Our boarding and creche facilities are designed to reduce stress and encourage happiness through routine, play, and affection. Every pet is supervised by trained caregivers who understand their emotional and physical needs. What your pet enjoys: - Cozy, hygienic boarding spaces - Structured daily schedules - Supervised playtime and relaxation - Safe socialization based on temperament - Regular feeding and well-being checks Perfect for short stays, long holidays, or daily daycare.</p>
               </div>
             </div>
@@ -43,14 +43,14 @@ const page = () => {
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-4">
               <div className='custom-height-imges-serives'>
-                <img className='img-fluid rounded-4' src="/assets/img/pet grooming.png" alt="" />
+                <img className='img-fluid rounded-4' src="/assets/img/pet grooming.webp" alt="" />
               </div>
             </div>
           </div>
           <div className="row m-0 my-sm-5">
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className='custom-height-imges-serives'>
-                <img className='img-fluid rounded-4' src="/assets/img/pet transport.png" alt="" />
+                <img className='img-fluid rounded-4' src="/assets/img/pet transport.webp" alt="" />
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 text-sm-end">
@@ -71,14 +71,14 @@ const page = () => {
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-4">
               <div className='custom-height-imges-serives ServicesImg'>
-                <img className='img-fluid rounded-4 ' src="/assets/img/pet behaviour training.png" alt="" />
+                <img className='img-fluid rounded-4 ' src="/assets/img/pet behaviour training.webp" alt="" />
               </div>
             </div>
           </div>
-           <div className="row m-0 my-sm-5">
+          <div className="row m-0 my-sm-5">
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className='custom-height-imges-serives'>
-                <img className='img-fluid rounded-4' src="/assets/img/pet relocationn.png" alt="" />
+                <img className='img-fluid rounded-4' src="/assets/img/pet relocationn.webp" alt="" />
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 text-sm-end">
@@ -89,12 +89,11 @@ const page = () => {
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
-    
 
-      
       <section className='my-5'>
         <div className="container">
           <div className="row m-0">
@@ -107,14 +106,86 @@ const page = () => {
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
               <div className='custom-height-imges-serives'>
-                <img className='img-fluid rounded-4' src="/assets/img/pet insurance.png" alt="" />
+                <img className='img-fluid rounded-4' src="/assets/img/pet insurance.webp" alt="" />
               </div>
             </div>
 
           </div>
         </div>
       </section>
-      <Footer/>
+
+      <section className='my-5'>
+        <div className="container">
+          <div className="row m-0">
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
+              <div className='custom-height-imges-serives'>
+                <img className='img-fluid rounded-4' src="/assets/img/CUDDLE THERAPY.webp" alt="" />
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
+              <div>
+                <h2 className='m-0 pb-3 fw-bold'>Cuddle Therapy <span className='fw-bold fs-16'>(For People)</span> </h2>
+                <p>Our Cuddle Therapy is a wellness experience for people, offering calm, joyful interaction with
+                  trained puppies. Guided by professional handlers, sessions focus on stress relief, emotional
+                  comfort, and mindful connection. Safe, hygienic, and supervised at all times—because
+                  gentle animal companionship can be deeply healing.</p>
+
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+      <section className='my-5'>
+        <div className="container">
+          <div className="row m-0">
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
+              <div>
+                <h2 className='m-0 pb-3 fw-bold'>Puppy Party <span className='fs-16 fw-bold'>(For People)</span></h2>
+                <p>Puppy Parties are happiness-filled experiences where people spend quality time with
+                  trained, friendly puppies. Perfect for birthdays, corporate events, or mental-wellness
+                  gatherings. All sessions are supervised by professional trainers to ensure safety, comfort,
+                  and ethical care—for both guests and puppies.
+                </p>
+
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
+              <div className='custom-height-imges-serives'>
+                <img className='img-fluid rounded-4' src="/assets/img/puppy partyy.webp" alt="" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className='my-5'>
+        <div className="container">
+          <div className="row m-0">
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
+              <div className='custom-height-imges-serives'>
+                <img className='img-fluid rounded-4' src="/assets/img/pet adoption.webp" alt="" />
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
+              <div>
+                <h2 className='m-0 pb-3 fw-bold'>Pet Adoption <span className='fw-bold fs-16'>(Dogs & Cats)</span> </h2>
+                <p>We support ethical dog and cat adoption by connecting responsible adopters with healthy,
+                  well-cared-for pets. From compatibility matching to post-adoption guidance, our process
+                  ensures a smooth transition into loving homes. Because adoption is a lifelong commitment,
+                  not just a moment</p>
+
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+      <Footer />
 
     </>
   )

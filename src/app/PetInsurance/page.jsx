@@ -8,11 +8,10 @@ const Page = () => {
   return (
     <>
       <Navbar />
-
-      {/* Hero Section */}
+ 
       <section className="insurance-hero">
         <img
-          src="/assets/img/pet insurance.png"
+          src="/assets/img/pet insurance.webp"
           alt="Pet Insurance"
           className="img-fluid w-100"
         />
@@ -21,12 +20,10 @@ const Page = () => {
           <p>Secure your dog’s health with the right insurance plan</p>
         </div>
       </section>
-
-      {/* Content Section */}
+ 
       <section className="container py-5">
         <div className="row align-items-center g-4">
-
-          {/* Left Content */}
+ 
           <div className="col-lg-6 col-md-6 col-12">
             <h2 className="fw-bold mb-2">
               Insurance plans that suit your dog’s well-being
@@ -38,8 +35,7 @@ const Page = () => {
               <li>Affordable monthly plans</li>
             </ul>
           </div>
-
-          {/* Right Card */}
+ 
           <div className="col-lg-6 col-md-6 col-12">
             <div className="contact-card">
               <h5 className="fw-bold mb-3">Contact Details</h5>
