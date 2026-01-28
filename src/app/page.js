@@ -6,8 +6,7 @@ import Footer from '@/Components/Footer';
 import BannerCurrent from '@/Components/BannerCurrent';
 import Link from 'next/link';
 import { ReviewsRating } from '@/Components/ReviewsRating';
-import BlogData from '@/Data/BlogData';
-
+import BlogData from '@/Data/BlogData'; 
 export default function Home() {
 
 
@@ -20,7 +19,7 @@ export default function Home() {
 
 
   return (
-    <>
+    <> 
       <Navbar />
       <BannerCurrent />
 

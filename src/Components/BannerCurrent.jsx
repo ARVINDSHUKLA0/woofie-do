@@ -76,7 +76,7 @@ const BannerCurrent = () => {
 
     return (
         <>
-            <section className='mt-100 d-lg-flex d-flex flex-column-reverse flex-lg-row  align-items-center gap-2'>
+            <section className='mt-md-4 mt-3 d-lg-flex d-flex flex-column-reverse flex-lg-row  align-items-center gap-2'>
                 <div className='main-banner-warper'>
                     <div className='banner-imges-main-conatiner'>
                         <div className='mt-3'>
